@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+echo -e "power on\nconnect 03:7B:06:69:0B:41\nquit" | bluetoothctl

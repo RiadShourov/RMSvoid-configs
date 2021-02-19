@@ -1,0 +1,79 @@
+:adblock-update 
+:open qute://settings
+:open how to setup your qute browser
+:open -t qute://settings/
+/audio
+:q
+:open qutebrowser archwiki
+:open -t does spacemacs-base contains org and evil mode
+:open -t running emacs in graphics mode
+:open https://www.youtube.com/watch?v=3iW_PtI-NNA
+:open cnn.com
+:open prothomalo.com
+:open meet.google.com
+:open gmail.com
+:open how to toggle xresources theme with keyboard
+:open -t meet.google.com
+:open -t voidlinux service wiki
+/service
+:open -t man pamixer
+:open !sp pamixer manpage
+:open pamixer manpage
+:open -t amixer toggle mute command
+:open -t amixer allow boost command
+:open -t display if mute using amixer
+:open check sound level percentage using alsamixer
+:open alsamixer archwiki
+:open Xresources not autoloading
+:open -t graphical emacs not loading
+:open emacsclient not loading graphical window
+:open !g emacsclient only working on terminal
+/gui
+:open -t emacs-x11 vs emacs-gtk3
+:open meet.google.com
+:open https://www.prothomalo.com/
+:open lightweight word processor for linux
+:open vim keybindings for lyx
+:open texlive langextra
+:open lyx and vim
+:open gen.lib.rus.ec
+:open youtube.com
+:open -t https://www.youtube.com/
+:open lightweight emacs with evil and org-mode
+:open -t gmail.com
+:open exwm archwiki
+:open gksudo in voidlinux
+:open how to setup polkit in voidlinux
+/polkit
+:open -t spacemacs github
+:open -t gmail.com
+:open -t list of packages in spacemacs
+:open -t !g lightweight spacemacs install based on base
+/org
+/package
+/editing
+:open -t spacemacs cheatsheet
+/magit
+/spell
+/brows
+:open -t weather dhaka
+:open -t https://www.youtube.com/
+:bookmark-add
+:bookmark-del
+:open gksu replacement 
+:open -t PolicyKit1.Erro no session for cookie
+:open -t polkit-agent-helper-1 wrong number of arguments
+/wrong 
+:open suyash bire 1 github
+:open qutebrowser vi bindings
+:open aw qutebrowser
+:open qutebroser darkmode
+:open cnn.com
+:config-write-py -d ~/config/qutebrowser
+:config-write-py -d ~/.config/qutebrowser/
+:config-write-py -d ~/.config/qutebrowser -use --force
+:config-write-py -d ~/.config/qutebrowser --force
+:config-write-py
+:open bbc.com
+:open cnn.com
+:open -t bbc.com

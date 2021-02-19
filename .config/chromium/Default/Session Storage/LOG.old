@@ -1,0 +1,39 @@
+2021/02/18-19:18:42.092 5 Reusing MANIFEST /home/rshourov/.config/chromium/Default/Session Storage/MANIFEST-000001
+2021/02/18-19:18:42.094 5 Recovering log #242
+2021/02/18-19:18:42.194 5 Reusing old log /home/rshourov/.config/chromium/Default/Session Storage/000242.log 
+2021/02/18-19:40:03.518 d Level-0 table #246: started
+2021/02/18-19:40:03.575 d Level-0 table #246: 20953 bytes OK
+2021/02/18-19:40:03.610 d Delete type=0 #242
+2021/02/18-22:46:25.306 3f Level-0 table #248: started
+2021/02/18-22:46:25.367 3f Level-0 table #248: 17256 bytes OK
+2021/02/18-22:46:25.416 3f Delete type=0 #245
+2021/02/18-22:46:25.417 41 Compacting 4@0 + 1@1 files
+2021/02/18-22:46:25.512 41 Generated table #249@0: 9500 keys, 218639 bytes
+2021/02/18-22:46:25.513 41 Compacted 4@0 + 1@1 files => 218639 bytes
+2021/02/18-22:46:25.548 41 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/02/18-22:46:25.549 41 Delete type=2 #248
+2021/02/18-22:46:25.550 41 Delete type=2 #246
+2021/02/18-22:46:25.550 41 Delete type=2 #237
+2021/02/18-22:46:25.550 41 Delete type=2 #243
+2021/02/18-22:46:25.550 41 Delete type=2 #240
+2021/02/18-22:48:45.650 44 Level-0 table #251: started
+2021/02/18-22:48:45.702 44 Level-0 table #251: 18795 bytes OK
+2021/02/18-22:48:45.740 44 Delete type=0 #247
+2021/02/18-22:49:45.651 44 Level-0 table #253: started
+2021/02/18-22:49:45.688 44 Level-0 table #253: 16995 bytes OK
+2021/02/18-22:49:45.719 44 Delete type=0 #250
+2021/02/18-22:52:05.856 44 Level-0 table #255: started
+2021/02/18-22:52:05.890 44 Level-0 table #255: 19684 bytes OK
+2021/02/18-22:52:05.959 44 Delete type=0 #252
+2021/02/18-22:52:49.588 47 Level-0 table #257: started
+2021/02/18-22:52:49.707 47 Level-0 table #257: 17036 bytes OK
+2021/02/18-22:52:49.843 47 Delete type=0 #254
+2021/02/18-22:52:49.843 44 Compacting 4@0 + 1@1 files
+2021/02/18-22:52:49.944 44 Generated table #258@0: 9549 keys, 285535 bytes
+2021/02/18-22:52:49.944 44 Compacted 4@0 + 1@1 files => 285535 bytes
+2021/02/18-22:52:50.056 44 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/02/18-22:52:50.057 44 Delete type=2 #251
+2021/02/18-22:52:50.057 44 Delete type=2 #253
+2021/02/18-22:52:50.057 44 Delete type=2 #249
+2021/02/18-22:52:50.058 44 Delete type=2 #257
+2021/02/18-22:52:50.058 44 Delete type=2 #255

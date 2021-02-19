@@ -1,0 +1,47 @@
+[org/gtk/settings/file-chooser]
+window-position=(138, 0)
+window-size=(1096, 715)
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+sidebar-width=312
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+
+show-type-column=true
+type-format='category'
+
+[org/virt-manager/virt-manager/vmlist-fields]
+disk-usage=false
+network-traffic=false
+
+[org/virt-manager/virt-manager/connections]
+uris=['qemu:///session', 'qemu:///system']
+autoconnect=['qemu:///system', 'qemu:///session']
+
+[org/virt-manager/virt-manager]
+manager-window-width=1360
+manager-window-height=745
+
+[org/virt-manager/virt-manager/paths]
+media-default='/home/rshourov/Downloads/isos'
+
+[org/virt-manager/virt-manager/urls]
+isos=['/home/rshourov/Downloads/isos/openbsd-20191113.iso']
+
+[org/virt-manager/virt-manager/details]
+show-toolbar=true
+
+[org/virt-manager/virt-manager/vms/eca608788fcf45fd9ece8da4ce77b010]
+vm-window-size=(1360, 745)
+
+[org/virt-manager/virt-manager/confirm]
+delete-storage=true
+
+[org/blueman/plugins/powermanager]
+auto-power-on=false
+
+[org/blueman/plugins/recentconns]
+recent-connections=[{'adapter': '90:48:9A:23:C0:9C', 'address': 'B0:E2:35:03:50:F9', 'alias': 'RMS-MI5', 'icon': 'phone', 'name': 'Auto connect profiles', 'uuid': '00000000-0000-0000-0000-000000000000', 'time': '1574533039.194786', 'device': '', 'mitem': ''}, {'adapter': '90:48:9A:23:C0:9C', 'address': 'B0:E2:35:03:50:F9', 'alias': 'RMS-MI5', 'icon': 'phone', 'name': 'Network Access Point', 'uuid': '00001116-0000-1000-8000-00805f9b34fb', 'time': '1574533094.5864282', 'device': '', 'mitem': ''}, {'adapter': '90:48:9A:23:C0:9C', 'address': '03:7B:06:69:0B:41', 'alias': 'UiiSii TWS12', 'icon': 'audio-card', 'name': 'Serial Port', 'uuid': '00001101-0000-1000-8000-00805f9b34fb', 'time': '1574533126.1124384', 'device': '', 'mitem': ''}]

@@ -1,0 +1,5 @@
+2021/02/05-14:43:01.390 6d53 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_www.renegadetravels.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/05-14:43:33.504 5b18 Level-0 table #5: started
+2021/02/05-14:43:33.549 5b18 Level-0 table #5: 840 bytes OK
+2021/02/05-14:43:33.578 5b18 Delete type=0 #3
+2021/02/05-14:43:33.579 5b18 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

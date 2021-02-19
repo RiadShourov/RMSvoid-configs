@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Display manager - ArchWiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"30a0aa91f3e284da3c0e0504","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Display_manager","wgTitle":"Display manager","wgCurRevisionId":649685,"wgRevisionId":649685,"wgArticleId":999,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Graphical user interfaces","Lists of software"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Display_manager","wgRelevantArticleId":999,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":
+"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.responsive":"ready","zzz.ext.archLinux.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=mediawiki.toc.styles%7Cskins.vector.styles.legacy%2Cresponsive%7Czzz.ext.archLinux.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ArchWiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Display_manager rootpage-Display_manager skin-vector action-view skin-vector-legacy"><div id="archnavbar" class="noprint">
+    <div id="archnavbarlogo">
+        <p><a id="logo" href="https://www.archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://www.archlinux.org/">Home</a></li>            <li id="anb-packages"><a href="https://www.archlinux.org/packages/">Packages</a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li>            <li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li>            <li id="anb-download"><a href="https://www.archlinux.org/download/">Download</a></li>        </ul>
+    </div>
+</div>
+
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Display manager</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From ArchWiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="archwiki-template-meta-related-articles-start"><p>Related articles</p><ul>
+<li><a href="/index.php/Start_X_at_login" class="mw-redirect" title="Start X at login">Start X at login</a></li>
+</ul></div>
+<p>A <a href="https://en.wikipedia.org/wiki/X_display_manager_(program_type)" class="extiw" title="wikipedia:X display manager (program type)">display manager</a>, or login manager, is typically a graphical user interface that is displayed at the end of the boot process in place of the default shell. There are various implementations of display managers, just as there are various types of <a href="/index.php/Window_managers" class="mw-redirect" title="Window managers">window managers</a> and <a href="/index.php/Desktop_environments" class="mw-redirect" title="Desktop environments">desktop environments</a>. There is usually a certain amount of customization and themeability available with each one.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#List_of_display_managers"><span class="tocnumber">1</span> <span class="toctext">List of display managers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Console"><span class="tocnumber">1.1</span> <span class="toctext">Console</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Graphical"><span class="tocnumber">1.2</span> <span class="toctext">Graphical</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Login_daemons"><span class="tocnumber">1.3</span> <span class="toctext">Login daemons</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Loading_the_display_manager"><span class="tocnumber">2</span> <span class="toctext">Loading the display manager</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Using_systemd-logind"><span class="tocnumber">2.1</span> <span class="toctext">Using systemd-logind</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Session_configuration"><span class="tocnumber">3</span> <span class="toctext">Session configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Run_~/.xinitrc_as_a_session"><span class="tocnumber">3.1</span> <span class="toctext">Run ~/.xinitrc as a session</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Starting_applications_without_a_window_manager"><span class="tocnumber">3.2</span> <span class="toctext">Starting applications without a window manager</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Tips_and_tricks"><span class="tocnumber">4</span> <span class="toctext">Tips and tricks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Autostarting"><span class="tocnumber">4.1</span> <span class="toctext">Autostarting</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Set_language_for_user_session"><span class="tocnumber">4.2</span> <span class="toctext">Set language for user session</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="List_of_display_managers">List of display managers</span></h2>
+<h3><span class="mw-headline" id="Console">Console</span></h3>
+<ul><li><b><a href="/index.php/CDM" title="CDM">CDM</a></b> &#8212; Ultra-minimalistic, yet full-featured login manager written in Bash.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/evertiro/cdm">https://github.com/evertiro/cdm</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/cdm/">cdm</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b><a href="/index.php/Console_TDM" title="Console TDM">Console TDM</a></b> &#8212; Extension for <i>xinit</i> written in pure Bash.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/dopsi/console-tdm">https://github.com/dopsi/console-tdm</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/console-tdm/">console-tdm</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b><a href="/index.php/Nodm" title="Nodm">nodm</a></b> &#8212; Minimalistic display manager for automatic logins, unmaintained since 2017.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/spanezz/nodm">https://github.com/spanezz/nodm</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=nodm">nodm</a></span></dd></dl>
+<ul><li><b>Ly</b> &#8212; Lightweight TUI (ncurses-like) display manager for Linux and BSD.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/nullgemm/ly">https://github.com/nullgemm/ly</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/ly/">ly</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>tbsm</b> &#8212; A pure bash session or application launcher. Supports X and Wayland sessions.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://loh-tar.github.io/tbsm/">https://loh-tar.github.io/tbsm/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/tbsm/">tbsm</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>emptty</b> &#8212; Dead simple CLI Display Manager on TTY with X and Wayland support.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/tvrzna/emptty/">https://github.com/tvrzna/emptty/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/emptty-git/">emptty-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<h3><span class="mw-headline" id="Graphical">Graphical</span></h3>
+<ul><li><b><a href="/index.php/Entrance" class="mw-redirect" title="Entrance">Entrance</a></b> &#8212; <a href="/index.php/Enlightenment" title="Enlightenment">Enlightenment</a> display manager.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/Obsidian-StudiosInc/entrance">https://github.com/Obsidian-StudiosInc/entrance</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/entrance-git/">entrance-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b><a href="/index.php/GDM" title="GDM">GDM</a></b> &#8212; <a href="/index.php/GNOME" title="GNOME">GNOME</a> display manager.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://wiki.gnome.org/Projects/GDM">https://wiki.gnome.org/Projects/GDM</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=gdm">gdm</a></span></dd></dl>
+<ul><li><b><a href="/index.php/LightDM" title="LightDM">LightDM</a></b> &#8212; Cross-desktop display manager, can use various front-ends written in any toolkit.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/CanonicalLtd/lightdm/">https://github.com/CanonicalLtd/lightdm/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=lightdm">lightdm</a></span></dd></dl>
+<ul><li><b><a href="/index.php/LXDM" title="LXDM">LXDM</a></b> &#8212; <a href="/index.php/LXDE" title="LXDE">LXDE</a> display manager. Can be used independent of the LXDE desktop environment.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://sourceforge.net/projects/lxdm/">https://sourceforge.net/projects/lxdm/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=lxdm">lxdm</a></span></dd></dl>
+<ul><li><b><a href="/index.php/SDDM" title="SDDM">SDDM</a></b> &#8212; QML-based display manager and successor to KDM; recommended for <a href="/index.php/Plasma" class="mw-redirect" title="Plasma">Plasma</a> and <a href="/index.php/LXQt" title="LXQt">LXQt</a>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/sddm/sddm">https://github.com/sddm/sddm</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=sddm">sddm</a></span></dd></dl>
+<ul><li><b><a href="/index.php/XDM" title="XDM">XDM</a></b> &#8212; X display manager with support for XDMCP, host chooser.</li></ul>
+<dl><dd><span class="plainlinks archwiki-template-man" title="$ man 8 xdm"><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/xdm.8">xdm(8)</a></span> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=xorg-xdm">xorg-xdm</a></span></dd></dl>
+<h3><span class="mw-headline" id="Login_daemons">Login daemons</span></h3>
+<ul><li><b><a href="/index.php/Greetd" title="Greetd">greetd</a></b> &#8212; Minimal, flexible and agnostic login daemon which supports both console and graphical greeters.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://git.sr.ht/~kennylevinsen/greetd">https://git.sr.ht/~kennylevinsen/greetd</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/greetd-git/">greetd-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<h2><span class="mw-headline" id="Loading_the_display_manager">Loading the display manager</span></h2>
+<p>To enable graphical login, <a href="/index.php/Enable" class="mw-redirect" title="Enable">enable</a> the appropriate systemd service. For example, for <a href="/index.php/SDDM" title="SDDM">SDDM</a>, enable <code>sddm.service</code>.
+</p><p>This should work out of the box. If not, you might have to reset a custom <code>default.target</code> symlink to point to the default <code>graphical.target</code>. See <a href="/index.php/Systemd#Change_default_target_to_boot_into" title="Systemd">systemd#Change default target to boot into</a>.
+</p><p>After enabling <a href="/index.php/SDDM" title="SDDM">SDDM</a> a symlink <code>display-manager.service</code> should be set in <code>/etc/systemd/system/</code>. You may need to use <code>--force</code> to override old symlinks.
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">$ file /etc/systemd/system/display-manager.service</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">/etc/systemd/system/display-manager.service: symbolic link to /usr/lib/systemd/system/sddm.service
+</pre>
+<h3><span class="mw-headline" id="Using_systemd-logind">Using systemd-logind</span></h3>
+<p>In order to check the status of your user session, you can use <i>loginctl</i>. All <a href="/index.php/Polkit" title="Polkit">polkit</a> actions like suspending the system or mounting external drives will work out of the box.
+</p>
+<pre>$ loginctl show-session $XDG_SESSION_ID
+</pre>
+<h2><span class="mw-headline" id="Session_configuration">Session configuration</span></h2>
+<p>Many display managers read available sessions from <code>/usr/share/xsessions/</code> directory. It contains standard <a rel="nofollow" class="external text" href="https://specifications.freedesktop.org/desktop-entry-spec/latest/">desktop entry files</a> for each desktop environment or window manager. Some display managers use a separate <code>/usr/share/wayland-sessions/</code> to list <a href="/index.php/Wayland" title="Wayland">Wayland</a>-specific sessions.
+</p><p>To add/remove entries to your display manager's session list; create/remove the <i>.desktop</i> files in <code>/usr/share/xsessions/</code> as desired. A typical <i>.desktop</i> file will look something like:
+</p>
+<pre>[Desktop Entry]
+Name=Openbox
+Comment=Log in using the Openbox window manager (without a session manager)
+Exec=/usr/bin/openbox-session
+TryExec=/usr/bin/openbox-session
+Icon=openbox.png
+Type=Application
+</pre>
+<h3><span id="Run_.7E.2F.xinitrc_as_a_session"></span><span class="mw-headline" id="Run_~/.xinitrc_as_a_session">Run ~/.xinitrc as a session</span></h3>
+<p>Installing <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/xinit-xsession/">xinit-xsession</a></span><sup><small>AUR</small></sup> will provide an option to run your <a href="/index.php/Xinitrc" class="mw-redirect" title="Xinitrc">xinitrc</a> as a session. Simply set <code>xinitrc</code> as the session in your display manager's settings and make sure that the <code>~/.xinitrc</code> file is executable.
+</p>
+<h3><span class="mw-headline" id="Starting_applications_without_a_window_manager">Starting applications without a window manager</span></h3>
+<p>You can also launch an application without any decoration, desktop, or window management. For example to launch <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/google-chrome/">google-chrome</a></span><sup><small>AUR</small></sup> create a <code>web-browser.desktop</code> file in <code>/usr/share/xsessions/</code> like this:
+</p>
+<pre>[Desktop Entry]
+Name=Web Browser
+Comment=Use a web browser as your session
+Exec=/usr/bin/google-chrome --auto-launch-at-startup
+TryExec=/usr/bin/google-chrome --auto-launch-at-startup
+Icon=google-chrome
+Type=Application
+</pre>
+<p>In this case, once you login, the application set with <code>Exec</code> will be launched immediately. When you close the application, you will be taken back to the login manager (same as logging out of a normal desktop environment or window manager).
+</p><p>It is important to remember that most graphical applications are not intended to be launched this way and you might have manual tweaking to do or limitations to live with (there is no window manager, so do not expect to be able to move or resize <i>any</i> windows, including dialogs; nonetheless, you might be able to set the window geometry in the application's configuration files).
+</p><p>See also <a href="/index.php/Xinitrc#Starting_applications_without_a_window_manager" class="mw-redirect" title="Xinitrc">xinitrc#Starting applications without a window manager</a>.
+</p>
+<h2><span class="mw-headline" id="Tips_and_tricks">Tips and tricks</span></h2>
+<h3><span class="mw-headline" id="Autostarting">Autostarting</span></h3>
+<p>Most display managers source <code>/etc/xprofile</code>, <code>~/.xprofile</code> and <code>/etc/X11/xinit/xinitrc.d/</code>. For more details, see <a href="/index.php/Xprofile" title="Xprofile">xprofile</a>.
+</p>
+<h3><span class="mw-headline" id="Set_language_for_user_session">Set language for user session</span></h3><p>
+For display managers that use <a rel="nofollow" class="external text" href="https://freedesktop.org/wiki/Software/AccountsService/">AccountsService</a> the <a href="/index.php/Locale" title="Locale">locale</a> for the user session can be set by editing:</p><pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/var/lib/AccountsService/users/$USER</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">[User]
+Language=<i>your_locale</i></pre>
+<p>where <i>your_locale</i> is a value such as <code>en_GB.UTF-8</code>.
+</p><p>Alternatively, you can achieve this using <a href="/index.php/D-Bus" title="D-Bus">D-Bus</a>:
+<code>busctl call org.freedesktop.Accounts /org/freedesktop/Accounts/User$UID org.freedesktop.Accounts.User SetLanguage s <i>your_locale</i></code>
+</p><p>Log out and then back in again for the changes to take effect.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20210126142932
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.092 seconds
+Real time usage: 0.101 seconds
+Preprocessor visited node count: 524/1000000
+Post‐expand include size: 6950/2097152 bytes
+Template argument size: 3991/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   61.458      1 -total
+ 41.81%   25.696     13 Template:App
+ 16.02%    9.843     19 Template:Ic
+ 14.78%    9.086      1 Template:Related_articles_start
+  9.71%    5.969      6 Template:Pkg
+  9.61%    5.906      1 Template:Man
+  8.37%    5.142      9 Template:AUR
+  8.09%    4.970      2 Template:Hc
+  6.84%    4.206      1 Template:Related_articles_end
+  6.83%    4.197      1 Template:META_Related_articles_start
+-->
+
+<!-- Saved in parser cache with key archwiki:pcache:idhash:999-0!canonical and timestamp 20210126142932 and revision id 649685
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=Display_manager&amp;oldid=649685">https://wiki.archlinux.org/index.php?title=Display_manager&amp;oldid=649685</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/index.php/Category:Graphical_user_interfaces" title="Category:Graphical user interfaces">Graphical user interfaces</a></li><li><a href="/index.php/Category:Lists_of_software" title="Category:Lists of software">Lists of software</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=Display+manager" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Display+manager" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/index.php/Display_manager" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="/index.php/Talk:Display_manager" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="/index.php/Display_manager">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="/index.php?title=Display_manager&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="/index.php?title=Display_manager&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search ArchWiki" title="Search ArchWiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/index.php/Main_page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/index.php/Main_page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-Table-of-contents"><a href="/index.php/Table_of_contents">Table of contents</a></li><li id="n-portal"><a href="/index.php/Getting_involved" title="Various ways Archers can contribute to the community">Getting involved</a></li><li id="n-currentevents"><a href="/index.php/ArchWiki:News" title="The latest lowdown on the wiki">Wiki news</a></li><li id="n-randompage"><a href="/index.php/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Interaction" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Interaction-label" role="navigation" 
+	 >
+	<h3 id="p-Interaction-label">
+		<span>Interaction</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/index.php/Category:Help" title="Wiki navigation, reading, and editing help">Help</a></li><li id="n-Contributing"><a href="/index.php/ArchWiki:Contributing">Contributing</a></li><li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php?title=Special:RecentChanges&amp;namespace=all-discussions" rel="nofollow">Recent talks</a></li><li id="n-newpages"><a href="/index.php/Special:NewPages">New pages</a></li><li id="n-Statistics"><a href="/index.php/ArchWiki:Statistics">Statistics</a></li><li id="n-Requests"><a href="/index.php/ArchWiki_talk:Requests">Requests</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/Display_manager" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/Display_manager" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=Display_manager&amp;oldid=649685" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=Display_manager&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>In other languages</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ar"><a href="https://wiki.archlinux.org/index.php/Display_manager_(%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9)" title="Display manager – العربية" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="https://wiki.archlinux.org/index.php/Display_manager_(%C4%8Cesky)" title="Display manager – čeština" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://wiki.archlinux.de/title/Login-Manager" title="Login-Manager – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://wiki.archlinux.org/index.php/Display_manager_(Espa%C3%B1ol)" title="Display manager – español" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://wiki.archusers.ir/index.php/Display_manager" title="Display manager – فارسی" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://wiki.archlinux.fr/Gestionnaire_de_connexions" title="Gestionnaire de connexions – français" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-he"><a href="https://wiki.archlinux.org/index.php/Display_manager_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)" title="Display manager – עברית" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-it"><a href="https://wiki.archlinux.org/index.php/Display_manager_(Italiano)" title="Display manager – italiano" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://wiki.archlinux.jp/index.php/%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="ディスプレイマネージャ – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://wiki.archlinux.org/index.php/Display_manager_(Portugu%C3%AAs)" title="Display manager – português" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://wiki.archlinux.org/index.php/Display_manager_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" title="Display manager – русский" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.archlinux.org/index.php/Display_manager_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="Display manager – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target">中文（简体）‎</a></li><li class="interlanguage-link interwiki-zh-hant"><a href="https://wiki.archlinux.org/index.php/Display_manager_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)" title="Display manager – 中文（繁體）‎" lang="zh-Hant" hreflang="zh-Hant" class="interlanguage-link-target">中文（繁體）‎</a></li><li class="interlanguage-link interwiki-ko"><a href="https://wiki.archlinux.org/index.php/Display_manager_(%ED%95%9C%EA%B5%AD%EC%96%B4)" title="Display manager – 한국어" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li></ul>
+		
+	</div>
+</nav>
+
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 23 January 2021, at 12:54.</li>
+		<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="/index.php/ArchWiki:Privacy_policy" title="ArchWiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/index.php/ArchWiki:About" title="ArchWiki:About">About ArchWiki</a></li>
+		<li id="footer-places-disclaimer"><a href="/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.092","walltime":"0.101","ppvisitednodes":{"value":524,"limit":1000000},"postexpandincludesize":{"value":6950,"limit":2097152},"templateargumentsize":{"value":3991,"limit":2097152},"expansiondepth":{"value":7,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   61.458      1 -total"," 41.81%   25.696     13 Template:App"," 16.02%    9.843     19 Template:Ic"," 14.78%    9.086      1 Template:Related_articles_start","  9.71%    5.969      6 Template:Pkg","  9.61%    5.906      1 Template:Man","  8.37%    5.142      9 Template:AUR","  8.09%    4.970      2 Template:Hc","  6.84%    4.206      1 Template:Related_articles_end","  6.83%    4.197      1 Template:META_Related_articles_start"]},"cachereport":{"timestamp":"20210126142932","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":116});});</script></body><!-- Cached/compressed 20210127041238 -->
+</html>

@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>i3 - ArchWiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"4eba35edcac72e6a052b4a04","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"I3","wgTitle":"I3","wgCurRevisionId":645736,"wgRevisionId":645736,"wgArticleId":7739,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages or sections flagged with Template:Merge","Tiling WMs","Dynamic WMs"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"I3","wgRelevantArticleId":7739,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready",
+"noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.responsive":"ready","zzz.ext.archLinux.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=mediawiki.toc.styles%7Cskins.vector.styles.legacy%2Cresponsive%7Czzz.ext.archLinux.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ArchWiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-I3 rootpage-I3 skin-vector action-view skin-vector-legacy"><div id="archnavbar" class="noprint">
+    <div id="archnavbarlogo">
+        <p><a id="logo" href="https://www.archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://www.archlinux.org/">Home</a></li>            <li id="anb-packages"><a href="https://www.archlinux.org/packages/">Packages</a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li>            <li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li>            <li id="anb-download"><a href="https://www.archlinux.org/download/">Download</a></li>        </ul>
+    </div>
+</div>
+
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">i3</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From ArchWiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><span></span>
+</p>
+<div class="archwiki-template-meta-related-articles-start"><p>Related articles</p><ul>
+<li><a href="/index.php/Comparison_of_tiling_window_managers" title="Comparison of tiling window managers">Comparison of tiling window managers</a></li>
+<li><a href="/index.php/Window_manager" title="Window manager">Window manager</a></li>
+</ul></div>
+<p><a rel="nofollow" class="external text" href="http://i3wm.org/">i3</a> is a dynamic <a href="https://en.wikipedia.org/wiki/Tiling_window_manager" class="extiw" title="wikipedia:Tiling window manager">tiling window manager</a> inspired by wmii that is primarily targeted at developers and advanced users.
+</p><p>The stated goals for <i>i3</i> include clear documentation, proper multi-monitor support, a tree structure for windows, and different modes like in <a href="/index.php/Vim" title="Vim">vim</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Starting"><span class="tocnumber">2</span> <span class="toctext">Starting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#From_tty"><span class="tocnumber">2.1</span> <span class="toctext">From tty</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Display_manager"><span class="tocnumber">2.2</span> <span class="toctext">Display manager</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Usage"><span class="tocnumber">3</span> <span class="toctext">Usage</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Keybindings"><span class="tocnumber">3.1</span> <span class="toctext">Keybindings</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Containers_and_layouts"><span class="tocnumber">3.2</span> <span class="toctext">Containers and layouts</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Application_launcher"><span class="tocnumber">3.3</span> <span class="toctext">Application launcher</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#KRunner_as_application_launcher_in_KDE_Plasma/i3"><span class="tocnumber">3.3.1</span> <span class="toctext">KRunner as application launcher in KDE Plasma/i3</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Configuration"><span class="tocnumber">4</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Configuration_wizard_and_alternative_keyboard_layouts"><span class="tocnumber">4.1</span> <span class="toctext">Configuration wizard and alternative keyboard layouts</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Autostart"><span class="tocnumber">4.2</span> <span class="toctext">Autostart</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Colorschemes"><span class="tocnumber">4.3</span> <span class="toctext">Colorschemes</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#i3bar"><span class="tocnumber">4.4</span> <span class="toctext">i3bar</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#i3bar_alternatives"><span class="tocnumber">4.4.1</span> <span class="toctext">i3bar alternatives</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#i3status"><span class="tocnumber">4.5</span> <span class="toctext">i3status</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#i3status_replacements"><span class="tocnumber">4.5.1</span> <span class="toctext">i3status replacements</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#i3status_wrappers"><span class="tocnumber">4.5.2</span> <span class="toctext">i3status wrappers</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Iconic_fonts_in_the_status_bar"><span class="tocnumber">4.5.3</span> <span class="toctext">Iconic fonts in the status bar</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="#Terminal_emulator"><span class="tocnumber">4.6</span> <span class="toctext">Terminal emulator</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Disable_title_click"><span class="tocnumber">4.7</span> <span class="toctext">Disable title click</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Tips_and_tricks"><span class="tocnumber">5</span> <span class="toctext">Tips and tricks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#Jump_to_open_window"><span class="tocnumber">5.1</span> <span class="toctext">Jump to open window</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Jump_to_urgent_window"><span class="tocnumber">5.2</span> <span class="toctext">Jump to urgent window</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Save_and_restore_the_window_layout"><span class="tocnumber">5.3</span> <span class="toctext">Save and restore the window layout</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="#Save_the_current_window_layout_of_a_single_workspace"><span class="tocnumber">5.3.1</span> <span class="toctext">Save the current window layout of a single workspace</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#Restore_the_window_layout_of_the_workspace"><span class="tocnumber">5.3.2</span> <span class="toctext">Restore the window layout of the workspace</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#Scratchpad_containers"><span class="tocnumber">5.4</span> <span class="toctext">Scratchpad containers</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Screensaver_and_power_management"><span class="tocnumber">5.5</span> <span class="toctext">Screensaver and power management</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Shutdown,_reboot,_lock_screen"><span class="tocnumber">5.6</span> <span class="toctext">Shutdown, reboot, lock screen</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Swallow_terminal_window"><span class="tocnumber">5.7</span> <span class="toctext">Swallow terminal window</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#External_displays_manual_management"><span class="tocnumber">5.8</span> <span class="toctext">External displays manual management</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Tabbed_or_stacked_web-browsing"><span class="tocnumber">5.9</span> <span class="toctext">Tabbed or stacked web-browsing</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#Workspace_variables"><span class="tocnumber">5.10</span> <span class="toctext">Workspace variables</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#Correct_handling_of_floating_dialogs"><span class="tocnumber">5.11</span> <span class="toctext">Correct handling of floating dialogs</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#Network_Download/Upload_speed_in_statusbar"><span class="tocnumber">5.12</span> <span class="toctext">Network Download/Upload speed in statusbar</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#Automatically_switch_horizontal_/_vertical_window_split_orientation"><span class="tocnumber">5.13</span> <span class="toctext">Automatically switch horizontal / vertical window split orientation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-39"><a href="#General"><span class="tocnumber">6.1</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="#Buttons_in_the_i3_message_bar_do_not_work"><span class="tocnumber">6.2</span> <span class="toctext">Buttons in the i3 message bar do not work</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="#Faulty_line_wraps_in_tiled_terminals"><span class="tocnumber">6.3</span> <span class="toctext">Faulty line wraps in tiled terminals</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="#Mouse_cursor_remains_in_waiting_mode"><span class="tocnumber">6.4</span> <span class="toctext">Mouse cursor remains in waiting mode</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="#Unresponsive_key_bindings"><span class="tocnumber">6.5</span> <span class="toctext">Unresponsive key bindings</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="#Tearing"><span class="tocnumber">6.6</span> <span class="toctext">Tearing</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="#Tray_icons_not_visible"><span class="tocnumber">6.7</span> <span class="toctext">Tray icons not visible</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="#Default_workspace_for_Spotify"><span class="tocnumber">6.8</span> <span class="toctext">Default workspace for Spotify</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-47"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p><i>i3</i> can be installed with the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=i3-wm">i3-wm</a></span> package.
+</p><p>An <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/groups/x86_64/i3/">i3</a></span> package group is also available. It includes the window manager, a screen locker and two programs which write a status line to i3bar through <a href="https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29" class="extiw" title="wikipedia:Standard streams">stdout</a>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=i3-wm">i3-wm</a></span> conflicts with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=i3-gaps">i3-gaps</a></span> (a fork of <i>i3</i> with gaps and other features) and by default <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=i3-gaps">i3-gaps</a></span> will be installed.</div>
+<h2><span class="mw-headline" id="Starting">Starting</span></h2>
+<h3><span class="mw-headline" id="From_tty">From tty</span></h3>
+<p>Run <code>i3</code> with <a href="/index.php/Xinit" title="Xinit">xinit</a>.
+</p>
+<h3><span class="mw-headline" id="Display_manager">Display manager</span></h3>
+<p><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=i3-wm">i3-wm</a></span> includes <code>i3.desktop</code> as <a href="/index.php/Xsession" class="mw-redirect" title="Xsession">Xsession</a> which starts the window manager. <code>i3-with-shmlog.desktop</code> enables logs (useful for debugging). <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3-gnome/">i3-gnome</a></span><sup><small>AUR</small></sup> integrates <i>i3</i> into <a href="/index.php/GNOME" title="GNOME">GNOME</a>.
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>See the <a rel="nofollow" class="external text" href="http://i3wm.org/docs">official documentation</a> for more information, namely the <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html">i3 User's Guide</a>.
+</p>
+<h3><span class="mw-headline" id="Keybindings">Keybindings</span></h3>
+<p>In <i>i3</i>, commands are invoked with a modifier key, referred to as <code>$mod</code>. This is <code>Alt</code> (Mod1) by default, with <code>Super</code> (Mod4) being a popular alternative. Super is the key usually represented on a keyboard as a Windows icon, or on an Apple keyboard as a Command key.
+</p><p>See the <a rel="nofollow" class="external text" href="http://i3wm.org/docs/refcard.html">i3 reference card</a> and <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html#_using_i3">Using i3</a> for the defaults. See <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html#keybindings">Keyboard bindings</a> to add new shortcuts.
+</p><p>Users of non-Qwerty keyboard layouts may wish to circumvent the "configuration wizard" as <a href="#Configuration_wizard_and_alternative_keyboard_layouts">described below</a>.
+</p><p>If switching between multiple window managers or desktop environments, consider using <a href="/index.php/Sxhkd" title="Sxhkd">sxhkd</a> or another environment agnostic program to manage bindings. More information can be found in <a href="/index.php/Keyboard_shortcuts#Xorg" title="Keyboard shortcuts">Keyboard shortcuts#Xorg</a>.
+</p>
+<h3><span class="mw-headline" id="Containers_and_layouts">Containers and layouts</span></h3>
+<p><i>i3</i> manages windows in a tree structure, with containers as building blocks. This structure branches with horizontal or vertical splits. Containers are tiled by default, but can be set to <a rel="nofollow" class="external text" href="https://i3wm.org/docs/userguide.html#_layout_mode_for_new_containers">tabbed or stacking</a> layouts, as well as made floating (such as for dialog windows). Floating windows are always on top.
+</p><p>See <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html#_tree">i3 Tree</a> and <a rel="nofollow" class="external text" href="http://www.youtube.com/watch?v=AWA8Pl57UBY">Containers and the tree data structure</a> for details.
+</p>
+<h3><span class="mw-headline" id="Application_launcher">Application launcher</span></h3>
+<p><i>i3</i> uses <a href="/index.php/Dmenu" title="Dmenu">dmenu</a> as an application launcher, which is bound by default to <code>$mod+d</code>. As it is an optional dependency <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=dmenu">dmenu</a></span> must first be installed before this functionality can be used.
+</p><p><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=i3-wm">i3-wm</a></span> contains <i>i3-dmenu-desktop</i>, a <a href="https://en.wikipedia.org/wiki/Perl" class="extiw" title="wikipedia:Perl">Perl</a> wrapper for <i>dmenu</i> which uses <a href="/index.php/Desktop_entries" title="Desktop entries">desktop entries</a> to create a list of all installed applications. Alternatively, the package <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/j4-dmenu-desktop-git/">j4-dmenu-desktop-git</a></span><sup><small>AUR</small></sup> can be used.
+</p><p><a href="/index.php/Rofi#Rofi_as_dmenu_replacement" title="Rofi">rofi</a> is a popular <i>dmenu</i> replacement and more that can list desktop entries.
+</p>
+<h4><span id="KRunner_as_application_launcher_in_KDE_Plasma.2Fi3"></span><span class="mw-headline" id="KRunner_as_application_launcher_in_KDE_Plasma/i3">KRunner as application launcher in KDE Plasma/i3</span></h4>
+<p>It is possible to have i3 running alongside KDE Plasma as seen here: <a href="/index.php/KDE#Use_a_different_window_manager" title="KDE">KDE#Use a different window manager</a>
+</p><p>When running Plasma with <code>KDEWM=/usr/bin/i3</code>, one can set <a href="/index.php/KRunner" title="KRunner">KRunner</a> as alternative application launcher with <code>$mod+d</code> by adding the following to the <i>i3</i> config:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.config/i3/config</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">set $menu --no-startup-id qdbus org.kde.krunner /App display
+bindsym $mod+d exec $menu</pre>
+<h2><span class="mw-headline" id="Configuration">Configuration</span></h2>
+<p>See <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html#configuring">Configuring i3</a> for details. The rest of this article assumes the <i>i3</i> configuration file to be in the folder <code>~/.config/</code>.
+</p>
+<h3><span class="mw-headline" id="Configuration_wizard_and_alternative_keyboard_layouts">Configuration wizard and alternative keyboard layouts</span></h3>
+<p>When <i>i3</i> is first started, it offers to run the configuration wizard <i>i3-config-wizard</i>. This tool creates <code>~/.config/i3/config</code> by rewriting a template configuration file in <code>/etc/i3/config.keycodes</code>. It makes two modifications to the default template: 
+</p>
+<ol><li>It asks the user to choose a default modifier key, which it adds to the template as a single line, like <code>set $mod Mod1</code>; and</li>
+<li>it replaces all <i>bindcode</i> lines with <i>bindsym</i> lines corresponding to the user's current keyboard layout.</li></ol>
+<p>Step 2 is designed to ensure that the four navigation shortcuts, <code>j</code>, <code>k</code>, <code>l</code> and "semicolon" on a Qwerty keyboard, will be mapped to keysyms which have the same location, e.g. <code>h</code>, <code>t</code>, <code>n</code>, <code>s</code> on a <a href="/index.php/Dvorak" title="Dvorak">Dvorak</a> keyboard. The side-effect of this magic is that up to fifteen other keysyms may be remapped in ways which break the mnemonics - so that, for a Dvorak user, "restart" is bound to <code>$mod1+p</code> instead of <code>$mod1+r</code>, "split horizontally" is bound to <code>$mod1+d</code> instead of <code>$mod1+h</code>, and so on.
+</p><p>Therefore, users of alternate keyboard layouts who want straightforward key bindings, which match the bindings given in tutorials, may prefer to circumvent the "config wizard". This can be done by just copying <code>/etc/i3/config</code> into <code>~/.config/i3/config</code> (or <code>~/.i3/config</code>), and editing that file.
+</p><p>Note that a keycode-based configuration is also possible, e.g. for users who often switch between keyboard layouts, but want the <i>i3</i> bindings to stay the same.
+</p>
+<h3><span class="mw-headline" id="Autostart">Autostart</span></h3>
+<p>Add an <code>exec</code> command in <code>~/.config/i3/config</code> file. For example:
+</p>
+<pre>exec terminator
+</pre>
+<p>Alternatively, you can use <a href="/index.php/XDG_Autostart" title="XDG Autostart">XDG Autostart</a>.
+</p>
+<h3><span class="mw-headline" id="Colorschemes">Colorschemes</span></h3>
+<p>The configuration file allows for customization of window decoration colors, but the syntax makes it impractical to create or share themes. There are several projects which make this easier and include a variety of user-contributed themes.
+</p>
+<ul><li><b>j4-make-config</b> &#8212; Merge your config with a collection of themes or personal config parts, for example host-specific configuration, allowing quick changing of the theme and flexible, dynamic customization of the configuration</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/okraits/j4-make-config">https://github.com/okraits/j4-make-config</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/j4-make-config-git/">j4-make-config-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<h3><span class="mw-headline" id="i3bar">i3bar</span></h3>
+<p>In addition to showing workspace information, i3bar can act as an input for i3status or an alternative, such as those mentioned in the next section. For example:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.config/i3/config</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">bar {
+    output            LVDS1
+    status_command    i3status
+    position          top
+    mode              hide
+    workspace_buttons yes
+    tray_output       none
+    
+    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+    colors {
+        background #000000
+        statusline #ffffff
+
+        focused_workspace  #ffffff #285577
+        active_workspace   #ffffff #333333
+        inactive_workspace #888888 #222222
+        urgent_workspace   #ffffff #900000
+    }
+}</pre>
+<p>See the <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html#_configuring_i3bar">Configuring i3bar</a> for details.
+</p>
+<h4><span class="mw-headline" id="i3bar_alternatives">i3bar alternatives</span></h4>
+<p>Some users may prefer panels such as those provided by conventional <a href="/index.php/Desktop_environment" title="Desktop environment">Desktop Environments</a>. This can be achieved within <i>i3</i> by launching the panel application of choice during startup.
+</p><p>For example, to use the <a href="/index.php/Xfce" title="Xfce">Xfce</a> panel (<span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=xfce4-panel">xfce4-panel</a></span>), add the following line anywhere in <code>~/.config/i3/config</code>:
+</p>
+<pre>exec --no-startup-id xfce4-panel --disable-wm-check
+</pre>
+<p>i3bar can be disabled by commenting the <code>bar{ }</code> section of <code>~/.config/i3/config</code>, or defining a keybind to toggle the bar:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.config/i3/config</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;"># bar toggle, hide or show 
+bindsym $mod+m bar mode toggle
+</pre>
+<p>Replacements independent of the desktop environment are listed below:
+</p>
+<ul><li><b><a href="/index.php/Polybar" title="Polybar">polybar</a></b> &#8212; A fast and easy-to-use tool for creating status bars.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/jaagr/polybar">https://github.com/jaagr/polybar</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/polybar/">polybar</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>excalibar</b> &#8212; Lightweight yet customizable status bar written in C.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/cylgom/excalibar">https://github.com/cylgom/excalibar</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/excalibar-git/">excalibar-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<h3><span class="mw-headline" id="i3status">i3status</span></h3>
+<p>Copy over the default configuration files to the home directory:
+</p>
+<pre>$ cp /etc/i3status.conf ~/.config/i3status/config
+</pre>
+<p>Not all plugins are defined in the default configuration and some configuration values may be invalid for your system, so they need to be updated accordingly. See <span class="plainlinks archwiki-template-man" title="$ man 1 i3status"><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/i3status.1">i3status(1)</a></span> for details.
+</p>
+<h4><span class="mw-headline" id="i3status_replacements">i3status replacements</span></h4>
+<ul><li><b><a href="/index.php/Conky" title="Conky">conky</a></b> &#8212;  Highly extensible system monitor. For usage with i3bar see <a rel="nofollow" class="external text" href="http://i3wm.org/docs/user-contributed/conky-i3bar.html">this tutorial</a></li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/brndnmtthws/conky">https://github.com/brndnmtthws/conky</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=conky">conky</a></span></dd></dl>
+<ul><li><b>i3blocks</b> &#8212; Extensible via shell scripts. It can handle click events, interrupts, and defining of refresh intervals on a per-block basis.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/vivien/i3blocks">https://github.com/vivien/i3blocks</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=i3blocks">i3blocks</a></span>, <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3blocks-git/">i3blocks-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>i3pystatus</b> &#8212; Extensible Python 3 status bar with many plugins and configuration options by default.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/enkore/i3pystatus">https://github.com/enkore/i3pystatus</a> i3pystatus || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3pystatus-git/">i3pystatus-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>i3situation</b> &#8212; Another Python 3 status bar generator.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/HarveyHunt/i3situation">https://github.com/HarveyHunt/i3situation</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3situation-git/">i3situation-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>j4status</b> &#8212; Provides a statusline, configurable via plugins, and written in C. Extra plugins are provided by <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/j4status-plugins-git/">j4status-plugins-git</a></span><sup><small>AUR</small></sup>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://sardemff7.github.io/j4status/">https://sardemff7.github.io/j4status/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/j4status-git/">j4status-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>goi3bar</b> &#8212; i3status replacement written in Go. Configuration-file driven with several plugins, concurrency options, and rich plugin support.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/denbeigh2000/goi3bar/">https://github.com/denbeigh2000/goi3bar/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/goi3bar-git/">goi3bar-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>goblocks</b> &#8212; Fast, lightweight i3status replacement written in Go.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/davidscholberg/goblocks">https://github.com/davidscholberg/goblocks</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/goblocks/">goblocks</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>bumblebee-status</b> &#8212; Theme-able Python status bar generator.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/tobi-wan-kenobi/bumblebee-status">https://github.com/tobi-wan-kenobi/bumblebee-status</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/bumblebee-status/">bumblebee-status</a></span><sup><small>AUR</small></sup> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/bumblebee-status-git/">bumblebee-status-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>ty3status</b> &#8212; i3status replacement written in Typescript. Built with first class support for javascript blocks.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/mrkmg/ty3status">https://github.com/mrkmg/ty3status</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/ty3status-git/">ty3status-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>i3status-rust</b> &#8212; Highly efficient and feature-rich replacement written in Rust. Can handle push updates, individual update intervals, theming and click events</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/greshake/i3status-rust">https://github.com/greshake/i3status-rust</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=i3status-rust">i3status-rust</a></span> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3status-rust-git/">i3status-rust-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<h4><span class="mw-headline" id="i3status_wrappers">i3status wrappers</span></h4>
+<ul><li><b>i3cat</b> &#8212; A <a href="/index.php/Go" title="Go">go</a> based wrapper which can concatenate inputs from multiple external sources. It can handle click events and forwarding user specified signals to its subprocesses.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://vincent-petithory.github.io/i3cat/">https://vincent-petithory.github.io/i3cat/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3cat-git/">i3cat-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>py3status</b> &#8212; An extensible i3status wrapper written in Python.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/ultrabug/py3status">https://github.com/ultrabug/py3status</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=py3status">py3status</a></span></dd></dl>
+<ul><li><b>YaGoStatus</b> &#8212; Yet Another i3status replacement written in Go.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/burik666/yagostatus">https://github.com/burik666/yagostatus</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/yagostatus-git/">yagostatus-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<h4><span class="mw-headline" id="Iconic_fonts_in_the_status_bar">Iconic fonts in the status bar</span></h4>
+<p>To enable titlebar icon support install <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3-wm-iconpatch/">i3-wm-iconpatch</a></span><sup><small>AUR</small></sup>. You can also use iconic font sets instead.
+</p>
+<ul><li><b>ttf-font-awesome</b> &#8212; Scalable vector icons that can be customized with CSS. A <a rel="nofollow" class="external text" href="https://fortawesome.github.io/Font-Awesome/cheatsheet/">cheatsheet</a> shows the Unicode point for each glyph.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://fortawesome.github.io/Font-Awesome/">https://fortawesome.github.io/Font-Awesome/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=ttf-font-awesome">ttf-font-awesome</a></span></dd></dl>
+<ul><li><b>ttf-font-icons</b> &#8212; Non-overlapping and consistently sized mix of Awesome and Ionicons. This also avoids minor overlapping between DejaVu Sans and Awesome.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="http://kageurufu.net/icons.pdf">http://kageurufu.net/icons.pdf</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/ttf-font-icons/">ttf-font-icons</a></span><sup><small>AUR</small></sup>.</dd></dl>
+<ul><li><b>ttf-ionicons</b> &#8212; The premium icon font for Ionic Framework.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://ionicframework.com/docs/ionicons/">https://ionicframework.com/docs/ionicons/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=ttf-ionicons">ttf-ionicons</a></span>.</dd></dl>
+<p>To combine fonts, define a font fallback sequence in your configuration file, separating fonts with <code>,</code> like so:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.config/i3/config</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">bar {
+  ...
+  font pango:DejaVu Sans Mono, Icons 8
+  ...
+}</pre>
+<p>In accordance with <a rel="nofollow" class="external text" href="https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-from-string">pango syntax</a>, font size is specified only once, at the end of the comma-separated list of font families. Setting a size for each font would cause all but the last font to be ignored.
+</p><p>Add icons to the format strings in <code>~/.config/i3status/config</code> using the unicode numbers given in the cheatsheets linked above. The input method will vary between text editors. For instance, to insert the "heart" icon (unicode number f004):
+</p>
+<div class="noprint archwiki-template-message">
+<p><a href="/index.php/File:Merge-arrows-2.png" class="image"><img alt="Merge-arrows-2.png" src="/images/c/c9/Merge-arrows-2.png" decoding="async" width="48" height="48" /></a><b>This article or section is a candidate for merging with <a href="/index.php/Internationalization" class="mw-redirect" title="Internationalization">Internationalization</a>.</b><a href="/index.php/File:Merge-arrows-2.png" class="image"><img alt="Merge-arrows-2.png" src="/images/c/c9/Merge-arrows-2.png" decoding="async" width="48" height="48" /></a></p>
+<div><b>Notes:</b> Should be described in one place; see also <a href="/index.php/ArchWiki:Requests#Input_methods" class="mw-redirect" title="ArchWiki:Requests">ArchWiki:Requests#Input methods</a>. (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:I3">Talk:I3#</a>)</div>
+</div>
+<ul><li>in various gui text editors (e.g. <a href="/index.php/Gedit" class="mw-redirect" title="Gedit">gedit</a>, Leafpad) and terminals (e.g. GNOME Terminal, xfce4-terminal): <code>Ctrl+Shift+u</code>, <code>f004</code>, <code>Enter</code></li>
+<li>in <a href="/index.php/Emacs" title="Emacs">Emacs</a>: <code>C-x</code>, <code>8</code>, <code>RET</code>, <code>f004</code>, <code>RET</code></li>
+<li>in <a href="/index.php/Vim" title="Vim">Vim</a> (while in insert mode): <code>Ctrl+v</code>, <code>uf004</code></li>
+<li>in <a href="/index.php/Urxvt" class="mw-redirect" title="Urxvt">urxvt</a>: while holding <code>Ctrl+Shift</code>, type <code>f004</code></li></ul>
+<h3><span class="mw-headline" id="Terminal_emulator">Terminal emulator</span></h3>
+<p>By default when pressing <code>$mod+Return</code> it launches the <code>i3-sensible-terminal</code> which is a script that invokes a terminal. See <span class="plainlinks archwiki-template-man" title="$ man 1 i3-sensible-terminal"><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/i3-sensible-terminal.1">i3-sensible-terminal(1)</a></span> for the order terminals are invoked in.
+</p><p>To instead launch a terminal of choice, modify this line in <code>~/.config/i3/config</code>:
+</p>
+<pre>bindsym $mod+Return exec i3-sensible-terminal
+</pre>
+<p>Alternatively, set the <code>$TERMINAL</code> <a href="/index.php/Environment_variable" class="mw-redirect" title="Environment variable">environment variable</a>.
+</p>
+<h3><span class="mw-headline" id="Disable_title_click">Disable title click</span></h3>
+<p>Add <code>bindsym button1 nop</code> to not select a window when you click on it's title frame. Useful if your default layout is tabbed and you often miss click i3's tabs instead of something in an application.
+</p>
+<h2><span class="mw-headline" id="Tips_and_tricks">Tips and tricks</span></h2>
+<h3><span class="mw-headline" id="Jump_to_open_window">Jump to open window</span></h3>
+<ul><li><b>quickswitch-i3</b> &#8212; Python utility to quickly change to and locate windows in <i>i3</i></li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/OliverUv/quickswitch-for-i3/">https://github.com/OliverUv/quickswitch-for-i3/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/quickswitch-i3/">quickswitch-i3</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>i3-wm-scripts</b> &#8212; search for and jump to windows with particular names matching regexp</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/yiuin/i3-wm-scripts">https://github.com/yiuin/i3-wm-scripts</a> ||</dd></dl>
+<ul><li><b>winmenupy</b> &#8212; Launches dmenu with a list of clients, sorted after workspaces. Selecting a client jumps to that window.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/ziberna/i3-py/blob/master/examples/winmenu.py">https://github.com/ziberna/i3-py/blob/master/examples/winmenu.py</a> ||</dd></dl>
+<ul><li><b><a href="/index.php/Rofi" title="Rofi">rofi</a></b> &#8212; Search and jump to open and scratchpad window</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/davatorium/rofi">https://github.com/davatorium/rofi</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=rofi">rofi</a></span></dd></dl>
+<ul><li><b>i3-easyfocus</b> &#8212; Focus and select windows in <i>i3</i></li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/cornerman/i3-easyfocus">https://github.com/cornerman/i3-easyfocus</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3-easyfocus-git/">i3-easyfocus-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>wmfocus</b> &#8212; Focus and select windows in <i>i3</i> and other window managers</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/svenstaro/wmfocus">https://github.com/svenstaro/wmfocus</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/wmfocus/">wmfocus</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>i3-cycle-focus</b> &#8212; Provides an Alt-Tab functionality for <i>i3</i></li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/acrisci/i3ipc-python/blob/master/examples/i3-cycle-focus.py">https://github.com/acrisci/i3ipc-python/blob/master/examples/i3-cycle-focus.py</a> ||</dd></dl>
+<h3><span class="mw-headline" id="Jump_to_urgent_window">Jump to urgent window</span></h3>
+<p>Add to <code>~/.config/i3/config</code>: <a rel="nofollow" class="external autonumber" href="https://faq.i3wm.org/question/853/how-to-jump-to-urgent-workspace/">[1]</a>
+</p>
+<pre>bindsym $mod+x [urgent=latest] focus
+</pre>
+<h3><span class="mw-headline" id="Save_and_restore_the_window_layout">Save and restore the window layout</span></h3>
+<p>From version 4.8, and onward <i>i3</i> can save and restore workspace layouts. To do this, the following packages are needed: <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=perl-anyevent-i3">perl-anyevent-i3</a></span> and <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=perl-json-xs">perl-json-xs</a></span> from the <a href="/index.php/Official_repositories" title="Official repositories">official repositories</a>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong>  This section only provides a quick tutorial on how to save the current window layout of a single workspace and how to restore it for later use. Refer to the <a rel="nofollow" class="external text" href="http://i3wm.org/docs/layout-saving.html">official documentation</a> for more details</div>
+<h4><span class="mw-headline" id="Save_the_current_window_layout_of_a_single_workspace">Save the current window layout of a single workspace</span></h4>
+<p>To save the current window layout, follow these steps:
+</p>
+<ol><li>First, execute various commands to open windows in a preferred workspace and resize them if needed. Make sure to write down each executed command for each window.</li>
+<li>Now, in a new workspace, open a terminal and run the following: <pre>i3-save-tree --workspace N &gt; ~/.config/i3/workspace_N.json</pre> where N is the number of the preferred workspace. This will save the current layout of workspace N to the file <code>~/.config/i3/workspace_N.json</code>.</li>
+<li>The newly created file needs to be edited, however this may be done with the following commands: <pre>tail -n +2 ~/.config/i3/workspace_N.json | fgrep -v '// split' | sed 's|//||g' &gt; ~/.config/i3/workspace_N.json</pre></li></ol>
+<h4><span class="mw-headline" id="Restore_the_window_layout_of_the_workspace">Restore the window layout of the workspace</span></h4>
+<p>There are two ways to restore the layout of the workspace: by writing a script, or by editing <code>~/.config/i3/config</code> to automatically load the layout. In this section only the first case will be considered, refer to the <a rel="nofollow" class="external text" href="http://i3wm.org/docs/layout-saving.html#_restoring_the_layout">official documentation</a> for the second case.
+</p><p>To restore the saved layout in the previous section, write a file named <code>load_layout.sh</code> with the following contents:
+</p>
+<ul><li>The starting lines:</li></ul>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/load_layout.sh</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">#!/bin/bash
+i3-msg "workspace M; append_layout ~/.config/i3/workspace_N.json"</pre>
+<p>where M is the number of the workspace in which you would like to load the previously saved layout and N is the number of workspaces saved in the previous section.
+</p>
+<ul><li>And the commands used in the previous section to get the preferred windows, but enclosed in parentheses and with an ampersand appended before the last parentheses.</li></ul>
+<p>For example, if the saved layout contained three <code>uxterm</code> windows:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/load_layout.sh</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">#!/bin/bash
+
+# First we append the saved layout of workspace N to workspace M
+i3-msg "workspace M; append_layout ~/.config/i3/workspace_N.json"
+
+# And finally we fill the containers with the programs they had
+(uxterm &amp;)
+(uxterm &amp;)
+(uxterm &amp;)</pre>
+<p>Then set the file as executable:
+</p>
+<pre>chmod u+x ~/load_layout.sh
+</pre>
+<p>And finally, the layout of workspace N can be loaded onto to workspace M by running:
+</p>
+<pre>~/load_layout.sh
+</pre>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> Adding <code>bindsym $mod+g exec ~/load_layout.sh</code> to <code>~/.config/i3/config</code> and restarting <i>i3</i> will bind Mod+g to run the above script.</div>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> If the above script does not work properly, refer to the <a rel="nofollow" class="external text" href="http://i3wm.org/docs/layout-saving.html#_editing_layout_files">official documentation</a>. The <i>swallows</i> sections of <code>~/.config/i3/workspace_N.json</code> needs to be manually edited.</div>
+<h3><span class="mw-headline" id="Scratchpad_containers">Scratchpad containers</span></h3>
+<p>By default, <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html#_scratchpad">scratchpads</a> only contain a single window. However, containers can also be made a scratchpad.
+</p><p>Create a new container (for example, <code>Mod+Enter</code>), split it (<code>Mod+v</code>) and create another container. Focus the parent (<code>Mod+a</code>), split in the opposite direction (<code>Mod+h</code>), and create again. 
+</p><p>Focus the first container (with focus parent as needed), make the window floating (<code>Mod+Shift+Space</code>), and move it to the scratchpad (<code>Mod+Shift+-</code>). You can now split containers to preference.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Containers cannot be resized individually in floating windows.  Resize the containers before making windows floating.</div>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> When only using terminal applications, consider a multiplexer such as <a href="/index.php/Tmux" title="Tmux">tmux</a> instead.</div>
+<h3><span class="mw-headline" id="Screensaver_and_power_management">Screensaver and power management</span></h3>
+<p>With <a href="/index.php/Power_management#xss-lock" title="Power management">Power management#xss-lock</a> you can register a screenlocker for your <i>i3</i> session. The <code>-time</code> option with <i>xautolock</i> locks the screen after a given time period:
+</p>
+<pre>xautolock -time 10 -locker "i3lock -i 'background_image.png'" &amp;
+</pre>
+<p>A <a href="/index.php/Systemd" title="Systemd">systemd</a> service file can be used to lock the screen before the system is being sent to sleep or hibernation state. See <a href="/index.php/Power_management#Suspend/resume_service_files" title="Power management">Power management#Suspend/resume service files</a>. Note that i3lock requires the type of service to be <code>forking</code>.
+</p><p>See also <a href="/index.php/DPMS" class="mw-redirect" title="DPMS">DPMS</a>.
+</p><p>Another option is to use <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/xidlehook/">xidlehook</a></span><sup><small>AUR</small></sup> with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/betterlockscreen/">betterlockscreen</a></span><sup><small>AUR</small></sup> or any other screensaver. <i>xidlehook</i> is a <i>xautolock</i> replacement written in <a href="/index.php/Rust" title="Rust">Rust</a>, but with a few extra features. This includes the option to disable locking when audio is playing or when the screen is in full screen. The <code>--timer</code> option is given in seconds:
+</p>
+<pre>xidlehook --not-when-audio --not-when-fullscreen --timer 360 "betterlockscreen -l dim" "" &amp;
+</pre>
+<h3><span id="Shutdown.2C_reboot.2C_lock_screen"></span><span class="mw-headline" id="Shutdown,_reboot,_lock_screen">Shutdown, reboot, lock screen</span></h3>
+<p>Key combinations for shutdown, reboot and screenlock can be added to <code>~/.config/i3/config</code>. The below example assumes you have <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=polkit">polkit</a></span> installed to allow unprivileged users to run <a href="/index.php/Systemd#Power_management" title="Systemd">power management</a> commands.
+</p>
+<pre>set $Locker i3lock &amp;&amp; sleep 1
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker &amp;&amp; systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker &amp;&amp; systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Pause mode "$mode_system"
+</pre>
+<p>Once completed, you will be presented with a prompt whenever you press <code>$mod+pause</code>. For more complex behavior, use a separate script, and refer to it in the mode. <a rel="nofollow" class="external autonumber" href="https://gist.github.com/anonymous/c8cd0a59bf4acb273068">[2]</a>
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> <br />
+<ul><li><code>sleep 1</code> adds a small delay to prevent possible race conditions with suspend <a rel="nofollow" class="external autonumber" href="https://bugs.launchpad.net/ubuntu/+source/unity-2d/+bug/830348">[3]</a></li>
+<li>The <code>-i</code> argument for <code>systemctl poweroff</code> causes a shutdown even if other users are logged-in (this requires <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=polkit">polkit</a></span>), or when <i>logind</i> (wrongly) assumes so. <a rel="nofollow" class="external autonumber" href="https://bugs.freedesktop.org/show_bug.cgi?id=62676">[4]</a></li></ul></div>
+<p>For a list of alternative screen lockers, see <a href="/index.php/List_of_applications/Security#Screen_lockers" title="List of applications/Security">List of applications/Security#Screen lockers</a>.
+</p>
+<h3><span class="mw-headline" id="Swallow_terminal_window">Swallow terminal window</span></h3>
+<p>Similarly to <a href="/index.php/Dwm" title="Dwm">dwm</a>, i3 can "swallow" the current terminal window with the new GUI window launched from it. This can be done through the use of the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3-swallow/">i3-swallow</a></span><sup><small>AUR</small></sup> or <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3-swallow-git/">i3-swallow-git</a></span><sup><small>AUR</small></sup> package.
+</p><p>For example, to let <a href="/index.php/Mpv" title="Mpv">mpv</a>'s window swallow the originating terminal:
+</p>
+<pre>$ i3-swallow mpv <i>video.mp4</i>
+</pre>
+<h3><span class="mw-headline" id="External_displays_manual_management">External displays manual management</span></h3>
+<p>Thanks to <a href="/index.php/Xrandr" title="Xrandr">xrandr</a> there are many ways to easily manage systems displays. The below example integrates it in the <i>i3</i> config file, and behave as the Power Management section above.
+</p><p>Here a laptop with both VGA and HDMI outputs will use a menu selection to switch them On/Off:
+</p>
+<pre>## Manual management of external displays
+# Set the shortcuts and what they do
+set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+mode "$mode_display" {
+    bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1, mode "default"
+    bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of LVDS1, mode "default"
+    bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
+    bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# Declare here the shortcut to bring the display selection menu
+bindsym $mod+x mode "$mode_display"
+</pre>
+<p>Any window that is still open in a switched Off display will automatically come back to the remaining active display.
+</p><p>The simplest way to determine names of your devices is to plug the device you wish to use and run:
+</p>
+<pre>$ xrandr --query
+</pre>
+<p>which will output the available, recognized devices and their in-system names to set your config file appropriately. 
+</p><p>Refer to the <a href="/index.php/Xrandr" title="Xrandr">xrandr</a> page or man page for the complete list of available options, the <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html">i3 userguide</a> and/or the <a rel="nofollow" class="external text" href="https://www.reddit.com/r/i3wm">i3 FAQ on reddit</a> for more info.
+</p>
+<h3><span class="mw-headline" id="Tabbed_or_stacked_web-browsing">Tabbed or stacked web-browsing</span></h3>
+<p>Some web-browsers intentionally do not implement tabs, since managing tabs is considered to be the task of the window manager, not the task of the browser.
+</p><p>To let <i>i3</i> manage your tab-less web-browser, in this example for <a href="/index.php/Uzbl" title="Uzbl">uzbl</a>, add the following line to your <code>~/.config/i3/config</code>
+</p>
+<pre>for_window [class="Uzbl-core"] focus child, layout stacking, focus
+</pre>
+<p>This is for stacked web browsing, meaning that the windows will be shown vertically. The advantage over tabbed browsing is that the window-titles are fully visible, even if a lot of browser windows are open.
+</p><p>If you prefer tabbed browsing, with windows in horizontal direction ('tabs'), use
+</p>
+<pre>for_window [class="Uzbl-core"] focus child, layout tabbed, focus
+</pre>
+<h3><span class="mw-headline" id="Workspace_variables">Workspace variables</span></h3>
+<p>As workspaces are defined multiple times in <i>i3</i>, assigning workspace variables can be helpful. For example:
+</p>
+<pre>set $WS1 term
+set $WS2 web
+set $WS3 misc
+set $WS4 media
+set $WS5 code
+</pre>
+<p>Then replace workspace names with their matching variables:
+</p>
+<pre>bindsym $mod+1          workspace $WS1
+...
+bindsym $mod+Shift+1    move container to workspace $WS1
+</pre>
+<p>See <a rel="nofollow" class="external text" href="http://i3wm.org/docs/userguide.html#_changing_named_workspaces_moving_to_workspaces">Changing named workspaces</a> for more information.
+</p>
+<h3><span class="mw-headline" id="Correct_handling_of_floating_dialogs">Correct handling of floating dialogs</span></h3>
+<p>While dialogs should open in floating mode by default <a rel="nofollow" class="external autonumber" href="http://i3wm.org/docs/userguide.html#_floating">[5]</a>, many still open in tiling mode. To change this behaviour, check the dialog's <code>WM_WINDOW_ROLE</code> with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=xorg-xprop">xorg-xprop</a></span> and add the correct rules to <code>~/.i3/config</code> (using <a rel="nofollow" class="external text" href="http://www.pcre.org/">pcre</a> syntax):
+</p>
+<pre>for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+</pre>
+<p>You can also use title rules and regular expressions:
+</p>
+<pre>for_window [title="Preferences$"] floating enable
+</pre>
+<p>or <code>WM_CLASS</code>:
+</p>
+<pre>for_window [class="(?i)mplayer"] floating enable
+</pre>
+<h3><span id="Network_Download.2FUpload_speed_in_statusbar"></span><span class="mw-headline" id="Network_Download/Upload_speed_in_statusbar">Network Download/Upload speed in statusbar</span></h3>
+<p>You might adapt this upstream <a rel="nofollow" class="external text" href="http://code.stapelberg.de/git/i3status/tree/contrib/net-speed.sh">script</a>. For that,
+</p>
+<ul><li>rename both network cards according to your system (use <code>ip addr</code>)</li>
+<li>find them on <code>/sys/devices</code> then replace them appropriately:</li></ul>
+<pre>$ find /sys/devices -name <i>network_interface</i>
+</pre>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> Use <code>/sys/class/net/<i>interface</i>/statistics/</code> to not depend on PCI location.</div>
+<p>Now, just save the script in a suitable place (for example <code>~/.config/i3</code>) and point your status program to it.
+</p>
+<h3><span id="Automatically_switch_horizontal_.2F_vertical_window_split_orientation"></span><span class="mw-headline" id="Automatically_switch_horizontal_/_vertical_window_split_orientation">Automatically switch horizontal / vertical window split orientation</span></h3>
+<p>The <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/autotiling/">autotiling</a></span><sup><small>AUR</small></sup> package can be used for automatic switching horizontal / vertical window split orientation resulting in a similar behavior to the spiral tiling of bspwm. After installation add the following to your <code>~/.config/i3/config</code> and reload i3.
+</p>
+<pre>exec_always --no-startup-id <i>autotiling</i>
+</pre>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="General">General</span></h3>
+<p>In many cases, bugs are fixed in the development versions <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3-git/">i3-git</a></span><sup><small>AUR</small></sup> and <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/i3status-git/">i3status-git</a></span><sup><small>AUR</small></sup>, and upstream will ask to reproduce any errors with this version. <a rel="nofollow" class="external autonumber" href="http://i3wm.org/docs/debugging.html">[6]</a> See also <a href="/index.php/Debug_-_Getting_Traces#General" title="Debug - Getting Traces">Debug - Getting Traces#General</a>.
+</p>
+<h3><span class="mw-headline" id="Buttons_in_the_i3_message_bar_do_not_work">Buttons in the i3 message bar do not work</span></h3>
+<p>Buttons such as "Edit config" in <code>i3-nagbar</code> call <code>i3-sensible-terminal</code>, so make sure your <a href="#Terminal_emulator">Terminal emulator</a> is recognized by <i>i3</i>.
+</p>
+<h3><span class="mw-headline" id="Faulty_line_wraps_in_tiled_terminals">Faulty line wraps in tiled terminals</span></h3>
+<p><i>i3</i> v4.3 and higher ignore size increment hints for tiled windows <a rel="nofollow" class="external autonumber" href="https://www.mail-archive.com/i3-discuss@i3.zekjur.net/msg00709.html">[7]</a>. This may cause terminals to wrap lines prematurely, amongst other issues. As a workaround, make the offending window floating, before tiling it again.
+</p>
+<h3><span class="mw-headline" id="Mouse_cursor_remains_in_waiting_mode">Mouse cursor remains in waiting mode</span></h3>
+<p>When starting a script or application which does not support startup notifications, the mouse cursor will remain in busy/watch/clock mode for 60 seconds.
+</p><p>To solve this for a particlar application, use the <code>--no-startup-id</code> parameter, for example:
+</p>
+<pre>exec --no-startup-id ~/script
+bindsym $mod+d exec --no-startup-id dmenu_run
+</pre>
+<p>To disable this animation globally, see <a href="/index.php/Cursor_themes#Create_links_to_missing_cursors" title="Cursor themes">Cursor themes#Create links to missing cursors</a>.
+</p>
+<h3><span class="mw-headline" id="Unresponsive_key_bindings">Unresponsive key bindings</span></h3>
+<p>Some tools such as <a href="/index.php/Taking_a_screenshot#scrot" class="mw-redirect" title="Taking a screenshot">scrot</a> may not work when used with a regular key binding (executed after key press). In those cases, execute commands after key release with the <code>--release</code> argument <a rel="nofollow" class="external autonumber" href="http://i3wm.org/docs/userguide.html#keybindings">[8]</a>:
+</p>
+<pre>bindsym --release Print exec --no-startup-id scrot
+bindsym --release Shift+Print exec --no-startup-id scrot -s
+</pre>
+<h3><span class="mw-headline" id="Tearing">Tearing</span></h3>
+<p><i>i3</i> does not properly implement double buffering <a rel="nofollow" class="external autonumber" href="https://github.com/i3/i3/issues/661">[9]</a> hence tearing or flickering may occur. See <a href="/index.php/Compton" class="mw-redirect" title="Compton">Compton</a> and <a rel="nofollow" class="external autonumber" href="https://faq.i3wm.org/question/3279/do-i-need-a-composite-manager-compton.1#post-id-3282">[10]</a>.
+</p>
+<h3><span class="mw-headline" id="Tray_icons_not_visible">Tray icons not visible</span></h3>
+<p>The <code>tray_output primary</code> directive may require setting a primary output with <i>xrandr</i>, specifying the output explicitly or simply removing this directive. <a rel="nofollow" class="external autonumber" href="https://github.com/i3/i3/issues/1144">[11]</a> See <a href="/index.php/Xrandr" title="Xrandr">Xrandr</a> for details. The default configuration created by i3-config-wizard no longer adds this directive to the configuration from <i>i3</i> 4.12.
+</p>
+<h3><span class="mw-headline" id="Default_workspace_for_Spotify">Default workspace for Spotify</span></h3>
+<p>To assign a default workspace for spotify windows one cannot use the standard route with <code>assign</code> and should rather use a <code>for_window</code> command, such as
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.config/i3/config</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">...
+for_window [class="Spotify"] move container to workspace $ws10</pre>
+<p>To ensure <code>for_window</code> does not move the window if already in <code>$ws10</code>, one can instead use <code>move --no-auto-back-and-forth</code>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://i3wm.org">Official website</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.funtoo.org/I3_Tiling_Window_Manager">funtoo Wiki</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/i3/i3">i3 Source code</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/ashinkarov/i3-extras">i3-extras</a> - Collection of scripts and patches</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/acrisci/i3ipc-glib">i3ipc-glib</a> - A library for <i>i3</i> extensions</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/veelenga/i3ipc-ruby">i3ipc-ruby</a> - An improved library for <i>i3</i> extensions in Ruby</li>
+<li><a rel="nofollow" class="external text" href="https://j4tools.github.io/">j4tools</a> - non-official tools designed to work with <i>i3</i></li></ul>
+<p><b>Arch Linux Forums</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://bbs.archlinux.org/viewtopic.php?id=99064">The i3 thread</a> - A general discussion about <i>i3</i></li>
+<li><a rel="nofollow" class="external text" href="https://bbs.archlinux.org/viewtopic.php?id=103369">i3 desktop screenshots and config sharing</a></li></ul>
+<p><b>Screencasts</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://www.youtube.com/watch?v=Wx0eNaGzAZU">i3 window manager v4.1 screencast</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=j1I63wGcvU4&amp;index=1&amp;list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf">i3 window manager v4.1X screencasts</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20210128172246
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.230 seconds
+Real time usage: 0.242 seconds
+Preprocessor visited node count: 1826/1000000
+Post‐expand include size: 24909/2097152 bytes
+Template argument size: 14015/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 119/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  119.359      1 -total
+ 13.34%   15.917     26 Template:App
+  9.53%   11.369     92 Template:Ic
+  8.56%   10.218      1 Template:Related_articles_start
+  8.09%    9.659      1 Template:Merge
+  5.86%    7.000      3 Template:Bc
+  5.59%    6.672     29 Template:AUR
+  5.34%    6.369      5 Template:Note
+  5.33%    6.361      7 Template:Hc
+  5.02%    5.988     20 Template:Pkg
+-->
+
+<!-- Saved in parser cache with key archwiki:pcache:idhash:7739-0!canonical and timestamp 20210128172246 and revision id 645736
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=I3&amp;oldid=645736">https://wiki.archlinux.org/index.php?title=I3&amp;oldid=645736</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/index.php/Category:Tiling_WMs" title="Category:Tiling WMs">Tiling WMs</a></li><li><a href="/index.php/Category:Dynamic_WMs" title="Category:Dynamic WMs">Dynamic WMs</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden category: <ul><li><a href="/index.php/Category:Pages_or_sections_flagged_with_Template:Merge" title="Category:Pages or sections flagged with Template:Merge">Pages or sections flagged with Template:Merge</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=I3" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=I3" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/index.php/I3" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="/index.php/Talk:I3" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="/index.php/I3">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="/index.php?title=I3&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="/index.php?title=I3&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search ArchWiki" title="Search ArchWiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/index.php/Main_page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/index.php/Main_page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-Table-of-contents"><a href="/index.php/Table_of_contents">Table of contents</a></li><li id="n-portal"><a href="/index.php/Getting_involved" title="Various ways Archers can contribute to the community">Getting involved</a></li><li id="n-currentevents"><a href="/index.php/ArchWiki:News" title="The latest lowdown on the wiki">Wiki news</a></li><li id="n-randompage"><a href="/index.php/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Interaction" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Interaction-label" role="navigation" 
+	 >
+	<h3 id="p-Interaction-label">
+		<span>Interaction</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/index.php/Category:Help" title="Wiki navigation, reading, and editing help">Help</a></li><li id="n-Contributing"><a href="/index.php/ArchWiki:Contributing">Contributing</a></li><li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php?title=Special:RecentChanges&amp;namespace=all-discussions" rel="nofollow">Recent talks</a></li><li id="n-newpages"><a href="/index.php/Special:NewPages">New pages</a></li><li id="n-Statistics"><a href="/index.php/ArchWiki:Statistics">Statistics</a></li><li id="n-Requests"><a href="/index.php/ArchWiki_talk:Requests">Requests</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/I3" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/I3" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=I3&amp;oldid=645736" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=I3&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>In other languages</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-de"><a href="https://wiki.archlinux.de/title/i3" title="i3 – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://wiki.archlinux.org/index.php/I3_(Espa%C3%B1ol)" title="I3 – español" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://wiki.archlinux.fr/i3" title="i3 – français" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-hu"><a href="https://wiki.archlinux.org/index.php/I3_(Magyar)" title="I3 – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://wiki.archlinux.jp/index.php/i3" title="i3 – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ko"><a href="https://wiki.archlinux.org/index.php/I3_(%ED%95%9C%EA%B5%AD%EC%96%B4)" title="I3 – 한국어" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-pt"><a href="https://wiki.archlinux.org/index.php/I3_(Portugu%C3%AAs)" title="I3 – português" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://wiki.archlinux.org/index.php/I3_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" title="I3 – русский" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.archlinux.org/index.php/I3_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="I3 – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target">中文（简体）‎</a></li></ul>
+		
+	</div>
+</nav>
+
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 16 December 2020, at 14:58.</li>
+		<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="/index.php/ArchWiki:Privacy_policy" title="ArchWiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/index.php/ArchWiki:About" title="ArchWiki:About">About ArchWiki</a></li>
+		<li id="footer-places-disclaimer"><a href="/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.230","walltime":"0.242","ppvisitednodes":{"value":1826,"limit":1000000},"postexpandincludesize":{"value":24909,"limit":2097152},"templateargumentsize":{"value":14015,"limit":2097152},"expansiondepth":{"value":6,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":119,"limit":5000000},"timingprofile":["100.00%  119.359      1 -total"," 13.34%   15.917     26 Template:App","  9.53%   11.369     92 Template:Ic","  8.56%   10.218      1 Template:Related_articles_start","  8.09%    9.659      1 Template:Merge","  5.86%    7.000      3 Template:Bc","  5.59%    6.672     29 Template:AUR","  5.34%    6.369      5 Template:Note","  5.33%    6.361      7 Template:Hc","  5.02%    5.988     20 Template:Pkg"]},"cachereport":{"timestamp":"20210128172246","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":103});});</script></body><!-- Cached/compressed 20210129041319 -->
+</html>

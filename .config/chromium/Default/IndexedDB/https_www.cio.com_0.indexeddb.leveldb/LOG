@@ -1,0 +1,5 @@
+2021/01/30-21:26:49.718 4968 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_www.cio.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/30-21:27:21.629 1c0b Level-0 table #5: started
+2021/01/30-21:27:21.681 1c0b Level-0 table #5: 804 bytes OK
+2021/01/30-21:27:21.737 1c0b Delete type=0 #3
+2021/01/30-21:27:21.737 1c0b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

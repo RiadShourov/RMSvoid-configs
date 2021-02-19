@@ -1,0 +1,12 @@
+# You can add comments to these files with #
+h	~/
+d	~/Documents
+D	~/Downloads
+L 	~/Learning
+m	~/Music
+pp	~/Pictures
+vv	~/Videos
+tr 	~/Torrents
+cf	~/.config
+sc	~/.local/bin
+mn	/mnt

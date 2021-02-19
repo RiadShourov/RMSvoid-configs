@@ -1,0 +1,8 @@
+2021/02/16-23:51:43.336 dda Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_www.zdnet.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/16-23:51:43.336 dda Recovering log #4
+2021/02/16-23:51:43.336 dda Reusing old log /home/rshourov/.config/chromium/Default/IndexedDB/https_www.zdnet.com_0.indexeddb.leveldb/000004.log 
+2021/02/16-23:51:53.675 dd8 Level-0 table #8: started
+2021/02/16-23:51:53.675 dd8 Level-0 table #8: 0 bytes OK
+2021/02/16-23:51:53.886 dd8 Delete type=0 #4
+2021/02/16-23:51:53.893 dd8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/16-23:51:53.893 dd8 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

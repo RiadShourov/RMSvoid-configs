@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>LXDM - ArchWiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"924fe5bd8d7fbbbecd9558c1","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"LXDM","wgTitle":"LXDM","wgCurRevisionId":637970,"wgRevisionId":637970,"wgArticleId":12967,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Display managers","LXDE"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"LXDM","wgRelevantArticleId":12967,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready",
+"user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.responsive":"ready","zzz.ext.archLinux.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=mediawiki.toc.styles%7Cskins.vector.styles.legacy%2Cresponsive%7Czzz.ext.archLinux.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ArchWiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-LXDM rootpage-LXDM skin-vector action-view skin-vector-legacy"><div id="archnavbar" class="noprint">
+    <div id="archnavbarlogo">
+        <p><a id="logo" href="https://www.archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://www.archlinux.org/">Home</a></li>            <li id="anb-packages"><a href="https://www.archlinux.org/packages/">Packages</a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li>            <li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li>            <li id="anb-download"><a href="https://www.archlinux.org/download/">Download</a></li>        </ul>
+    </div>
+</div>
+
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">LXDM</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From ArchWiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="archwiki-template-meta-related-articles-start"><p>Related articles</p><ul>
+<li><a href="/index.php/LXDE" title="LXDE">LXDE</a></li>
+<li><a href="/index.php/Display_manager" title="Display manager">Display manager</a></li>
+</ul></div>
+<p>LXDM is a lightweight <a href="/index.php/Display_manager" title="Display manager">display manager</a> for the <a href="/index.php/LXDE" title="LXDE">LXDE</a> <a href="/index.php/Desktop_environment" title="Desktop environment">desktop environment</a>. The UI is implemented with <a href="/index.php/GTK" title="GTK">GTK</a> 2.
+</p><p>LXDM does not support the <a href="/index.php/XDMCP" title="XDMCP">XDMCP</a> protocol. An alternative that does is <a href="/index.php/LightDM" title="LightDM">LightDM</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Configuration"><span class="tocnumber">2</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Default_session"><span class="tocnumber">2.1</span> <span class="toctext">Default session</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Globally"><span class="tocnumber">2.1.1</span> <span class="toctext">Globally</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Per_user"><span class="tocnumber">2.1.2</span> <span class="toctext">Per user</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Autologin"><span class="tocnumber">2.2</span> <span class="toctext">Autologin</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Last_used_options"><span class="tocnumber">2.3</span> <span class="toctext">Last used options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Tips_and_tricks"><span class="tocnumber">3</span> <span class="toctext">Tips and tricks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Adding_face_icons"><span class="tocnumber">3.1</span> <span class="toctext">Adding face icons</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Simultaneous_users_and_switching_users"><span class="tocnumber">3.2</span> <span class="toctext">Simultaneous users and switching users</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Themes"><span class="tocnumber">3.3</span> <span class="toctext">Themes</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Advanced_Session_Configuration"><span class="tocnumber">3.4</span> <span class="toctext">Advanced Session Configuration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Troubleshooting"><span class="tocnumber">4</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#White_flash"><span class="tocnumber">4.1</span> <span class="toctext">White flash</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Logout_Issue"><span class="tocnumber">4.2</span> <span class="toctext">Logout Issue</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p><a href="/index.php/Install" class="mw-redirect" title="Install">Install</a> the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=lxdm">lxdm</a></span> package, or <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=lxdm-gtk3">lxdm-gtk3</a></span> for the GTK3 version. The development package is <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/lxdm-git/">lxdm-git</a></span><sup><small>AUR</small></sup>.
+</p><p><a href="/index.php/Enable" class="mw-redirect" title="Enable">Enable</a> the provided <code>lxdm.service</code> <a href="/index.php/Systemd" title="Systemd">systemd</a> unit to start LXDM at boot.
+</p>
+<h2><span class="mw-headline" id="Configuration">Configuration</span></h2>
+<p>The configuration files for LXDM are all located in <code>/etc/lxdm/</code>. The main configuration file is <code>lxdm.conf</code>. Its format is documented in its comments. Another file, <code>Xsession</code>, is the systemwide x session configuration file and should generally not be edited. All other files in this folder are shell scripts, which are run when certain events happen in LXDM.
+</p><p>These are:
+</p>
+<ol><li><code>LoginReady</code> is executed with root privileges when LXDM is ready to show the login window.</li>
+<li><code>PreLogin</code> is run as root before logging a user in.</li>
+<li><code>PostLogin</code> is run as the logged-in user right after they have logged in.</li>
+<li><code>PostLogout</code> is run as the logged-in user right after they have logged out.</li>
+<li><code>PreReboot</code> is run as root before rebooting with LXDM.</li>
+<li><code>PreShutdown</code> is run as root before poweroff with LXDM.</li></ol>
+<h3><span class="mw-headline" id="Default_session">Default session</span></h3>
+<p>The default session can be set globally, as well as set at an individual-user level. Individual user preferences take precedence over globally set preferences for the user in question.
+</p>
+<h4><span class="mw-headline" id="Globally">Globally</span></h4>
+<p>Edit <code>/etc/lxdm/lxdm.conf</code> and change the session line to whatever session or DE is desired:
+</p>
+<pre>session=/usr/bin/startlxde</pre>
+<p>Example using <a href="/index.php/Xfce" title="Xfce">Xfce</a>:
+</p>
+<pre>session=/usr/bin/startxfce4</pre>
+<p>Example using <a href="/index.php/Openbox" title="Openbox">Openbox</a>:
+</p>
+<pre>session=/usr/bin/openbox-session</pre>
+<p>Example using <a href="/index.php/GNOME" title="GNOME">GNOME</a>:
+</p>
+<pre>session=/usr/bin/gnome-session</pre>
+<p>This is useful for themes that have no visible session selection box, and if experiencing trouble using autologin.
+</p>
+<h4><span class="mw-headline" id="Per_user">Per user</span></h4>
+<p>To define an individual user's preferred session, simply edit their respective <code>~/.dmrc</code> to define the selection.
+</p><p>Example: user1 wants Xfce4, user2 wants <a href="/index.php/Cinnamon" title="Cinnamon">Cinnamon</a>, and user3 wants GNOME:
+</p><p>For user1:
+</p>
+<pre>[Desktop]
+Session=xfce
+</pre>
+<p>For user2:
+</p>
+<pre>[Desktop]
+Session=cinnamon
+</pre>
+<p>For user3:
+</p>
+<pre>[Desktop]
+Session=gnome
+</pre>
+<p>The list of installed sessions can be displayed by using command:
+</p>
+<pre>$ ls /usr/share/xsessions/
+</pre>
+<h3><span class="mw-headline" id="Autologin">Autologin</span></h3>
+<p>To log in to one account automatically on startup, without providing a password, find the line in <code>/etc/lxdm/lxdm.conf</code> that looks like this:
+</p>
+<pre>#autologin=dgod
+</pre>
+<p>Uncomment it, substituting the target user instead of <i>dgod</i>.
+</p>
+<h3><span class="mw-headline" id="Last_used_options">Last used options</span></h3>
+<p>Previously used LXDM options can be found in:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/var/lib/lxdm/lxdm.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">[base]
+last_session=/usr/share/xsessions/LXDE.desktop
+last_lang=sv_SE.UTF-8
+last_langs=sv_SE.UTF-8 fa_IR.UTF-8 en_US.UTF-8</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> This file is not automatically removed when uninstalling LXDM. It must be removed manually if you want to remove all traces of LXDM options.</div>
+<h2><span class="mw-headline" id="Tips_and_tricks">Tips and tricks</span></h2>
+<h3><span class="mw-headline" id="Adding_face_icons">Adding face icons</span></h3>
+<p>A 96x96 px image (jpg or png) can optionally be displayed on a per-user basis, replacing the stock icon. Copy or symlink the target image to <code>$HOME/.face</code>. The <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=gnome-control-center">gnome-control-center</a></span> package supplies some default icons suitable for the lxdm screen. Look under <code>/usr/share/pixmaps/faces</code> after installing that package.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> 
+<ul><li>Users need not keep <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=gnome-control-center">gnome-control-center</a></span> installed to use face icons. Install it, copy the images elsewhere, and remove it.</li>
+<li>The user home directory must have r-x permissions for others and the .face file must have r-- permissions for others. This may be undesirable from a security and access perspective if your system has other users: it means anyone else can browse your home directory.</li>
+<li>A graphical tool <code>lxdm-config</code> shipped with lxdm can be used to place a <code>.face</code> file in the home directory, along with other configuration.</li></ul></div>
+<h3><span class="mw-headline" id="Simultaneous_users_and_switching_users">Simultaneous users and switching users</span></h3>
+<p>LXDM allows multiple users to be logged into different TTYs simultaneously. The following command is used to allow another user to log in without logging out the current user:
+</p>
+<pre>$ lxdm -c USER_SWITCH
+</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> When the new user logs in, their session is now on the NEXT TTY from tty7. For example, user1 logs in and issues the USER_SWITCH command. Now user2 logs in. User2 will be on tty7 while user1 will be on tty1.</div>
+<h3><span class="mw-headline" id="Themes">Themes</span></h3>
+<p>The LXDM themes are located in <code>/usr/share/lxdm/themes</code>.
+</p><p>There is only one theme provided with LXDM: Industrial. To display the background file <code>wave.svg</code> which is part of this theme, install <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=librsvg">librsvg</a></span>.
+</p><p><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/lxdm-themes/">lxdm-themes</a></span><sup><small>AUR</small></sup> provides 6 extra themes: Archlinux, ArchlinuxFull, ArchlinuxTop, Arch-Dark, Arch-Stripes, and IndustrialArch. The ArchStripes and ArchDark themes are also packaged with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/lxdm-git/">lxdm-git</a></span><sup><small>AUR</small></sup> (with different names to avoid file conflicts).
+</p><p>Choice of theme is configurable in <code>/etc/lxdm/lxdm.conf</code>:
+</p>
+<pre>## the theme of greeter
+theme=theme_name
+</pre>
+<p>You can also configure LXDM to use a GTK theme (stored in <code>/usr/share/themes</code>) in <code>/etc/lxdm/lxdm.conf</code>:
+</p>
+<pre>## GTK theme
+gtk_theme=gtk_theme_name
+</pre>
+<h3><span class="mw-headline" id="Advanced_Session_Configuration">Advanced Session Configuration</span></h3>
+<p>After a user logs on, LXDM sources <i>all</i> of the following files, in the below order:
+</p>
+<ol><li><code>/etc/profile</code></li>
+<li><code>~/.profile</code></li>
+<li><code>/etc/xprofile</code></li>
+<li><code>~/.xprofile</code></li></ol>
+<p>These files can be used to set session environment variables and to start services which  must set certain environment variables in order for clients in the session to be able to use the service, like ssh-agent. See <a href="/index.php/Xprofile" title="Xprofile">Xprofile</a> for details.
+</p><p>Note that LXDM does <i>not</i> source <code>~/.xinitrc</code>, so those migrating from a DM that <i>does</i> use this file, like <a href="/index.php/SLiM" title="SLiM">SLiM</a>, will have to move their settings elsewhere — probably <code>~/.xprofile</code>. Also note LXDM does not source <code>~/.bash_profile</code>.
+</p><p>If you still want to use your <code>~/.xinitrc</code> file, you can add a line to the <code>/etc/lxdm/PostLogin</code> event file:
+</p>
+<pre>source ~/.xinitrc
+</pre>
+<p>LXDM also makes use of .<a href="/index.php/Xresources" class="mw-redirect" title="Xresources">Xresources</a>, .<a href="/index.php/Xkbmap" class="mw-redirect" title="Xkbmap">Xkbmap</a>, and .<a href="/index.php/Xmodmap" title="Xmodmap">Xmodmap</a>. See <code>/etc/lxdm/Xsession</code> for details on how LXDM uses system-wide and per-user configuration files to configure the session.<a rel="nofollow" class="external autonumber" href="https://github.com/archlinux/svntogit-community/blob/packages/lxdm/trunk/Xsession">[1]</a>
+</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="White_flash">White flash</span></h3>
+<p>When using the default LXDM <code>theme=Industrial</code> and a dark background image (e.g. <code>bg=/usr/share/backgrounds/img.png</code>) there may be a short bright flash before LXDM starts. This is caused by the <code>bg_color:</code> property of the selected <a href="/index.php/GTK" title="GTK">GTK</a> theme. To avoid this change <code>gtk_theme=Adwaita</code> to <code>gtk_theme=Adwaita-dark</code> or to another dark theme.
+</p>
+<h3><span class="mw-headline" id="Logout_Issue">Logout Issue</span></h3>
+<p>If you had trouble logging out when using lxdm (e.g. stuck, display freeze, etc..) try uncomment the <code>reset=1</code> option in <code>/etc/lxdm/lxdm.conf</code> to refresh xserver on every logout.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20210126192152
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.074 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 503/1000000
+Post‐expand include size: 4116/2097152 bytes
+Template argument size: 2017/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   48.783      1 -total
+ 17.37%    8.474      1 Template:Related_articles_start
+ 12.75%    6.221     39 Template:Ic
+ 10.04%    4.898      1 Template:Hc
+  9.69%    4.729      3 Template:Note
+  8.98%    4.379      4 Template:Bc
+  8.81%    4.298      5 Template:Pkg
+  8.38%    4.089      3 Template:AUR
+  8.12%    3.959      2 Template:Related
+  7.93%    3.867      1 Template:Related_articles_end
+-->
+
+<!-- Saved in parser cache with key archwiki:pcache:idhash:12967-0!canonical and timestamp 20210126192152 and revision id 637970
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=LXDM&amp;oldid=637970">https://wiki.archlinux.org/index.php?title=LXDM&amp;oldid=637970</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/index.php/Category:Display_managers" title="Category:Display managers">Display managers</a></li><li><a href="/index.php/Category:LXDE" title="Category:LXDE">LXDE</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=LXDM" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=LXDM" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/index.php/LXDM" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="/index.php/Talk:LXDM" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="/index.php/LXDM">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="/index.php?title=LXDM&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="/index.php?title=LXDM&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search ArchWiki" title="Search ArchWiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/index.php/Main_page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/index.php/Main_page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-Table-of-contents"><a href="/index.php/Table_of_contents">Table of contents</a></li><li id="n-portal"><a href="/index.php/Getting_involved" title="Various ways Archers can contribute to the community">Getting involved</a></li><li id="n-currentevents"><a href="/index.php/ArchWiki:News" title="The latest lowdown on the wiki">Wiki news</a></li><li id="n-randompage"><a href="/index.php/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Interaction" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Interaction-label" role="navigation" 
+	 >
+	<h3 id="p-Interaction-label">
+		<span>Interaction</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/index.php/Category:Help" title="Wiki navigation, reading, and editing help">Help</a></li><li id="n-Contributing"><a href="/index.php/ArchWiki:Contributing">Contributing</a></li><li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php?title=Special:RecentChanges&amp;namespace=all-discussions" rel="nofollow">Recent talks</a></li><li id="n-newpages"><a href="/index.php/Special:NewPages">New pages</a></li><li id="n-Statistics"><a href="/index.php/ArchWiki:Statistics">Statistics</a></li><li id="n-Requests"><a href="/index.php/ArchWiki_talk:Requests">Requests</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/LXDM" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/LXDM" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=LXDM&amp;oldid=637970" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=LXDM&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>In other languages</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-de"><a href="https://wiki.archlinux.de/title/Login-Manager#LXDM" title="Login-Manager – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fr"><a href="https://wiki.archlinux.fr/LXDM" title="LXDM – français" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://wiki.archlinux.org/index.php/LXDM_(Italiano)" title="LXDM – italiano" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://wiki.archlinux.jp/index.php/LXDM" title="LXDM – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ru"><a href="https://wiki.archlinux.org/index.php/LXDM_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" title="LXDM – русский" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.archlinux.org/index.php/LXDM_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="LXDM – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target">中文（简体）‎</a></li></ul>
+		
+	</div>
+</nav>
+
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 13 October 2020, at 22:57.</li>
+		<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="/index.php/ArchWiki:Privacy_policy" title="ArchWiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/index.php/ArchWiki:About" title="ArchWiki:About">About ArchWiki</a></li>
+		<li id="footer-places-disclaimer"><a href="/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.074","walltime":"0.080","ppvisitednodes":{"value":503,"limit":1000000},"postexpandincludesize":{"value":4116,"limit":2097152},"templateargumentsize":{"value":2017,"limit":2097152},"expansiondepth":{"value":6,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   48.783      1 -total"," 17.37%    8.474      1 Template:Related_articles_start"," 12.75%    6.221     39 Template:Ic"," 10.04%    4.898      1 Template:Hc","  9.69%    4.729      3 Template:Note","  8.98%    4.379      4 Template:Bc","  8.81%    4.298      5 Template:Pkg","  8.38%    4.089      3 Template:AUR","  8.12%    3.959      2 Template:Related","  7.93%    3.867      1 Template:Related_articles_end"]},"cachereport":{"timestamp":"20210126192152","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":96});});</script></body><!-- Cached/compressed 20210127042346 -->
+</html>

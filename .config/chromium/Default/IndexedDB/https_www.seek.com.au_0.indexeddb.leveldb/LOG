@@ -1,0 +1,5 @@
+2021/02/03-20:07:02.942 4191 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_www.seek.com.au_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/03-20:07:26.897 5977 Level-0 table #5: started
+2021/02/03-20:07:26.930 5977 Level-0 table #5: 1252 bytes OK
+2021/02/03-20:07:26.986 5977 Delete type=0 #3
+2021/02/03-20:07:26.986 5977 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

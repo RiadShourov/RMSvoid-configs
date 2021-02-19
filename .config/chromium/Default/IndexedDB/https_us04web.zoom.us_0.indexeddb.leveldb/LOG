@@ -1,0 +1,15 @@
+2021/02/19-11:27:02.320 512 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_us04web.zoom.us_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/19-11:27:02.320 512 Recovering log #4
+2021/02/19-11:27:02.320 512 Reusing old log /home/rshourov/.config/chromium/Default/IndexedDB/https_us04web.zoom.us_0.indexeddb.leveldb/000004.log 
+2021/02/19-11:37:52.177 7403 Level-0 table #8: started
+2021/02/19-11:37:52.237 7403 Level-0 table #8: 190 bytes OK
+2021/02/19-11:37:52.302 7403 Delete type=0 #4
+2021/02/19-11:37:52.303 7403 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/19-11:37:52.303 7403 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 278 : 1
+2021/02/19-11:37:52.303 7403 Compacting 1@1 + 1@2 files
+2021/02/19-11:37:52.333 7403 Generated table #9@1: 52 keys, 1002 bytes
+2021/02/19-11:37:52.333 7403 Compacted 1@1 + 1@2 files => 1002 bytes
+2021/02/19-11:37:52.368 7403 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/02/19-11:37:52.369 7403 Delete type=2 #8
+2021/02/19-11:37:52.369 7403 Delete type=2 #5
+2021/02/19-11:37:52.370 7403 Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 278 : 1 .. (end); will stop at (end)

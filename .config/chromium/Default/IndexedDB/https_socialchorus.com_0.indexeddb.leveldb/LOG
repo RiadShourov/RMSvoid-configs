@@ -1,0 +1,5 @@
+2021/01/30-21:22:12.454 2c5a Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_socialchorus.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/30-21:22:44.435 2c5a Level-0 table #5: started
+2021/01/30-21:22:44.498 2c5a Level-0 table #5: 819 bytes OK
+2021/01/30-21:22:44.533 2c5a Delete type=0 #3
+2021/01/30-21:22:44.533 2c5a Manual compaction at level-0 from (begin) .. (end); will stop at (end)

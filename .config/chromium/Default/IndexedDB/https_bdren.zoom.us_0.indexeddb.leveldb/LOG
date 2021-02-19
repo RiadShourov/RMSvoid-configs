@@ -1,0 +1,5 @@
+2021/02/12-18:48:05.152 6e3b Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_bdren.zoom.us_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/12-19:11:52.532 e4d Level-0 table #5: started
+2021/02/12-19:11:52.690 e4d Level-0 table #5: 3826 bytes OK
+2021/02/12-19:11:52.778 e4d Delete type=0 #3
+2021/02/12-19:11:52.779 e4d Manual compaction at level-0 from (begin) .. (end); will stop at (end)

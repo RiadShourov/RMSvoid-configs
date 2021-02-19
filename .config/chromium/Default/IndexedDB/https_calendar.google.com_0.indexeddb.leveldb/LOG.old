@@ -1,0 +1,8 @@
+2021/01/21-10:30:45.436 47ce Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_calendar.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/21-10:30:45.436 47ce Recovering log #14
+2021/01/21-10:30:45.436 47ce Reusing old log /home/rshourov/.config/chromium/Default/IndexedDB/https_calendar.google.com_0.indexeddb.leveldb/000014.log 
+2021/01/21-10:30:49.830 43bf Level-0 table #18: started
+2021/01/21-10:30:49.831 43bf Level-0 table #18: 0 bytes OK
+2021/01/21-10:30:49.923 43bf Delete type=0 #14
+2021/01/21-10:30:49.924 43bf Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/01/21-10:30:49.925 43bf Manual compaction at level-1 from (begin) .. (end); will stop at (end)

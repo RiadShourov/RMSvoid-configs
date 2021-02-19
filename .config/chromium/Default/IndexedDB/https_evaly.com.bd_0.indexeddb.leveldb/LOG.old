@@ -1,0 +1,5 @@
+2021/02/02-20:45:39.384 1874 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_evaly.com.bd_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/02-20:46:36.002 1874 Level-0 table #5: started
+2021/02/02-20:46:36.155 1874 Level-0 table #5: 5537 bytes OK
+2021/02/02-20:46:36.197 1874 Delete type=0 #3
+2021/02/02-20:46:36.197 1874 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

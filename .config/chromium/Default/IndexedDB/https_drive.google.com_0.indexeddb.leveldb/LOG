@@ -1,0 +1,16 @@
+2021/02/19-21:03:04.743 14aa Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/19-22:26:25.869 6207 Level-0 table #5: started
+2021/02/19-22:26:26.010 6207 Level-0 table #5: 3977632 bytes OK
+2021/02/19-22:26:26.100 6207 Delete type=0 #3
+2021/02/19-22:35:26.515 1ee4 Level-0 table #7: started
+2021/02/19-22:35:26.556 1ee4 Level-0 table #7: 741614 bytes OK
+2021/02/19-22:35:26.586 1ee4 Delete type=0 #4
+2021/02/19-22:35:26.587 1ee4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/19-22:35:26.587 1ee4 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x03\x01'\x001\x00f\x00d\x007\x00c\x008\x004\x002\x00b\x006\x003\x000\x00c\x001\x00d\x002\x000\x006\x00d\x00c\x00f\x00e\x003\x008\x008\x001\x002\x003\x00d\x00d\x000\x00e\x00_\x003\x00_\x002\x00:\x000\x000' @ 4230 : 0
+2021/02/19-22:35:26.587 1ee4 Compacting 1@1 + 1@2 files
+2021/02/19-22:35:26.635 1ee4 Generated table #8@1: 72 keys, 72145 bytes
+2021/02/19-22:35:26.635 1ee4 Compacted 1@1 + 1@2 files => 72145 bytes
+2021/02/19-22:35:26.662 1ee4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/02/19-22:35:26.663 1ee4 Delete type=2 #5
+2021/02/19-22:35:26.663 1ee4 Delete type=2 #7
+2021/02/19-22:35:26.668 1ee4 Manual compaction at level-1 from '\x00\x01\x03\x03\x01'\x001\x00f\x00d\x007\x00c\x008\x004\x002\x00b\x006\x003\x000\x00c\x001\x00d\x002\x000\x006\x00d\x00c\x00f\x00e\x003\x008\x008\x001\x002\x003\x00d\x00d\x000\x00e\x00_\x003\x00_\x002\x00:\x000\x000' @ 4230 : 0 .. (end); will stop at (end)

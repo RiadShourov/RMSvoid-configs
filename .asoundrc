@@ -1,0 +1,131 @@
+# pcm.!default {
+# 	type plug
+# 	slave {
+# 		pcm {
+# 			type bluealsa
+# 			device "03:7B:06:69:0B:41"
+# 			profile "a2dp"
+# 		}
+# 		}
+# 	hint {
+# 		show on
+# 		description "UiiSii TWS12 Earpod"
+# 	}
+# }
+
+# ctl.!default {
+# 	type bluealsa
+# }
+
+
+defaults.ctl.card 1;
+defaults.pcm.card 1;
+
+
+# defaults.bluealsa.interface "org.bluealsa"
+# defaults.bluealsa.device "03:7B:06:69:0B:41"
+# defaults.bluealsa.profile "a2dp"
+# defaults.bluealsa.delay 10000
+
+# pcm.uiisii{
+# 	type plug
+# 	slave.pcm {
+# 		type bluealsa
+# 		device "03:7B:06:69:0B:41"
+# 		profile "a2dp"
+# 		delay 10000
+# 	}
+# 	hint {
+# 		show on
+# 		description "UiiSii Earpod"
+# 	}
+# }
+
+
+# ctl.uiisii{
+# 	type bluealsa
+# 	device "03:7B:06:69:0B:41"
+# }
+
+# pcm.bluetooth {
+#         type bluetooth
+# 	interface "org.bluealsa"
+#         device "03:7B:06:69:0B:41"
+#         profile "a2dp"
+# 	delay 10000
+# }
+
+# BlueALSA integration setup
+
+# defaults.bluealsa.service "org.bluealsa"
+# defaults.bluealsa.profile "a2dp"
+# defaults.bluealsa.delay 10000
+# defaults.bluealsa.battery "yes"
+
+# ctl.bluealsa {
+# 	@args [ SRV BAT ]
+# 	@args.SRV {
+# 		type string
+# 		default {
+# 			@func refer
+# 			name defaults.bluealsa.service
+# 		}
+# 	}
+# 	@args.BAT {
+# 		type string
+# 		default {
+# 			@func refer
+# 			name defaults.bluealsa.battery
+# 		}
+# 	}
+# 	type bluealsa
+# 	service $SRV
+# 	battery $BAT
+# }
+
+# pcm.bluealsa {
+# 	@args [ SRV DEV PROFILE DELAY ]
+# 	@args.SRV {
+# 		type string
+# 		default {
+# 			@func refer
+# 			name defaults.bluealsa.service
+# 		}
+# 	}
+# 	@args.DEV {
+# 		type string
+# 		default {
+# 			@func refer
+# 			name defaults.bluealsa.device
+# 		}
+# 	}
+# 	@args.PROFILE {
+# 		type string
+# 		default {
+# 			@func refer
+# 			name defaults.bluealsa.profile
+# 		}
+# 	}
+# 	@args.DELAY {
+# 		type integer
+# 		default {
+# 			@func refer
+# 			name defaults.bluealsa.delay
+# 		}
+# 	}
+# 	type plug
+# 	slave.pcm {
+# 		type bluealsa
+# 		service $SRV
+# 		device $DEV
+# 		profile $PROFILE
+# 		delay $DELAY
+# 	}
+# 	hint {
+# 		show {
+# 			@func refer
+# 			name defaults.namehint.extended
+# 		}
+# 		description "Bluetooth Audio Hub"
+# 	}
+# }

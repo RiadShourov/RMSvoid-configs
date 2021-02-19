@@ -1,0 +1,5 @@
+2021/02/03-20:07:47.917 3834 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_au.finance.yahoo.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/03-20:07:58.307 3834 Level-0 table #5: started
+2021/02/03-20:07:58.352 3834 Level-0 table #5: 1053 bytes OK
+2021/02/03-20:07:58.408 3834 Delete type=0 #3
+2021/02/03-20:07:58.408 3834 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

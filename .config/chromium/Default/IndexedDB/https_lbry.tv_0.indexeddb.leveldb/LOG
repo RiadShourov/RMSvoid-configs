@@ -1,0 +1,5 @@
+2021/01/23-12:24:54.126 15b6 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_lbry.tv_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/23-12:25:53.598 15b6 Level-0 table #5: started
+2021/01/23-12:25:53.631 15b6 Level-0 table #5: 5503 bytes OK
+2021/01/23-12:25:53.664 15b6 Delete type=0 #3
+2021/01/23-12:25:53.665 15b6 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

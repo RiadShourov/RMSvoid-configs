@@ -1,0 +1,5 @@
+2021/02/12-14:59:43.232 2549 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_www.zdnet.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/12-14:59:55.727 1101 Level-0 table #5: started
+2021/02/12-14:59:55.761 1101 Level-0 table #5: 812 bytes OK
+2021/02/12-14:59:55.817 1101 Delete type=0 #3
+2021/02/12-14:59:55.817 1101 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

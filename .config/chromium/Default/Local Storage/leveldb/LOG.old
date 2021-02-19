@@ -1,0 +1,46 @@
+2021/02/18-19:18:32.601 3 Reusing MANIFEST /home/rshourov/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2021/02/18-19:18:32.713 3 Recovering log #953
+2021/02/18-19:18:32.791 3 Reusing old log /home/rshourov/.config/chromium/Default/Local Storage/leveldb/000953.log 
+2021/02/18-19:44:57.655 11 Level-0 table #957: started
+2021/02/18-19:44:57.693 11 Level-0 table #957: 20585 bytes OK
+2021/02/18-19:44:57.732 11 Delete type=0 #953
+2021/02/18-19:44:57.733 d Compacting 4@0 + 2@1 files
+2021/02/18-19:44:57.916 d Generated table #958@0: 2333 keys, 2135576 bytes
+2021/02/18-19:44:57.972 d Generated table #959@0: 1662 keys, 263520 bytes
+2021/02/18-19:44:57.972 d Compacted 4@0 + 2@1 files => 2399096 bytes
+2021/02/18-19:44:58.007 d compacted to: files[ 0 2 1 0 0 0 0 ]
+2021/02/18-19:44:58.008 d Delete type=2 #952
+2021/02/18-19:44:58.008 d Delete type=2 #950
+2021/02/18-19:44:58.008 d Delete type=2 #947
+2021/02/18-19:44:58.008 d Delete type=2 #954
+2021/02/18-19:44:58.008 d Delete type=2 #957
+2021/02/18-19:44:58.008 d Delete type=2 #948
+2021/02/18-22:45:46.806 41 Level-0 table #961: started
+2021/02/18-22:45:46.855 41 Level-0 table #961: 146486 bytes OK
+2021/02/18-22:45:46.916 41 Delete type=0 #956
+2021/02/18-22:49:45.484 41 Level-0 table #963: started
+2021/02/18-22:49:45.553 41 Level-0 table #963: 87746 bytes OK
+2021/02/18-22:49:45.588 41 Delete type=0 #960
+2021/02/18-22:51:37.390 47 Level-0 table #965: started
+2021/02/18-22:51:37.453 47 Level-0 table #965: 117748 bytes OK
+2021/02/18-22:51:37.485 47 Delete type=0 #962
+2021/02/18-23:49:26.944 44 Level-0 table #967: started
+2021/02/18-23:49:27.036 44 Level-0 table #967: 29018 bytes OK
+2021/02/18-23:49:27.150 44 Delete type=0 #964
+2021/02/18-23:49:27.151 61 Compacting 4@0 + 2@1 files
+2021/02/18-23:49:27.329 61 Generated table #968@0: 2338 keys, 2135831 bytes
+2021/02/18-23:49:27.417 61 Generated table #969@0: 1665 keys, 280808 bytes
+2021/02/18-23:49:27.418 61 Compacted 4@0 + 2@1 files => 2416639 bytes
+2021/02/18-23:49:27.448 61 compacted to: files[ 0 2 1 0 0 0 0 ]
+2021/02/18-23:49:27.450 61 Delete type=2 #963
+2021/02/18-23:49:27.450 61 Delete type=2 #967
+2021/02/18-23:49:27.450 61 Delete type=2 #965
+2021/02/18-23:49:27.450 61 Delete type=2 #961
+2021/02/18-23:49:27.450 61 Delete type=2 #959
+2021/02/18-23:49:27.450 61 Delete type=2 #958
+2021/02/18-23:51:27.248 63 Level-0 table #971: started
+2021/02/18-23:51:27.332 63 Level-0 table #971: 106573 bytes OK
+2021/02/18-23:51:27.362 63 Delete type=0 #966
+2021/02/18-23:53:10.157 66 Level-0 table #973: started
+2021/02/18-23:53:10.190 66 Level-0 table #973: 81067 bytes OK
+2021/02/18-23:53:10.225 66 Delete type=0 #970

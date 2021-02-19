@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# This is a small script to run surf tabbed
+# I have just copied the value of $BROWSER environment from .bash_profie.
+
+tabbed -r 2 -c surf -e https://duckduckgo.com
+# tabbed -r 2 surf duckduckgo.com

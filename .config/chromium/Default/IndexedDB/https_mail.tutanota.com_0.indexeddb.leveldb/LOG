@@ -1,0 +1,5 @@
+2021/01/21-10:15:20.613 268a Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_mail.tutanota.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/21-10:32:31.134 53a5 Level-0 table #5: started
+2021/01/21-10:32:31.167 53a5 Level-0 table #5: 17987 bytes OK
+2021/01/21-10:32:31.205 53a5 Delete type=0 #3
+2021/01/21-10:32:31.206 53a5 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,666 @@
+
+
+  
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="https://engineering.purdue.edu/ECN/Support/KB/Docs/UsingTheXdefaultsFil/" />
+
+    
+  <!-- Google Tag Manager --> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-KHK4L3F');</script>
+  <!-- End Google Tag Manager -->
+    
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <link href="/Wraps/ECO/wrap6/themes/default/common/favicon.ico" rel="shortcut icon" />
+  
+  <link rel="stylesheet" type="text/css" href="/Wraps/ECO/wrap6/required/css_all.css" />
+  <link rel="stylesheet" type="text/css" href="https://engineering.purdue.edu/ECN/local.css" />
+  <link rel="stylesheet" type="text/css" href="https://engineering.purdue.edu/ECN/Support/local.css" />
+  <link rel="stylesheet" type="text/css" href="https://engineering.purdue.edu/ECN/Support/KB/local.css" />
+  <link rel="stylesheet" type="text/css" href="https://engineering.purdue.edu/ECN/Support/KB/Docs/local.css" />
+
+    
+  <meta name="verify-v1" content="JKVaFImaWT7i1dmxBtK2TCQIgB1qq6hCD7EzwbzCCys" />
+  <meta name="description" content="Using the .Xdefaults file. - Engineering Computer Network - Purdue University" />  
+  
+  
+  <title>Using the .Xdefaults file. - Engineering Computer Network - Purdue University</title>
+
+    <!-- link rel="stylesheet" type="text/css" href="/Wraps/JQueryUICSS/jquery-ui-1.8.6.custom.css" / -->
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+    
+  
+    <script src="/Javascript/Prototype/1.6.1.0/prototype.js"></script>
+  <script src="/Javascript/Scriptaculous/1.8.3/src/scriptaculous.js"></script>
+    
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="/Javascript/jQuery/jquery.maskedinput.min.js"></script>
+      <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    
+    <script type="text/javascript">
+    $j = jQuery.noConflict();
+  </script>
+    
+  <script type="text/javascript"
+        src="/ECN/Support/KB/javascripts/kb.js"></script>
+  
+  <!-- Google Analytics -->
+  <script>
+  
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    // Record page hits to the Engineering analytics account
+    ga('create', 'UA-18597052-1', 'auto');
+    ga('require', 'linkid', {
+      'cookieName': '_ela',
+      'duration': 45,
+      'levels': 5
+    });
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+      
+    // Create a tracker to record page hits to the main Purdue analytics account
+    // Commented out when we added Google Tag Manager so as to avoid duplicate pageview records.
+    // ga('create', 'UA-2785081-1', 'auto', 'purdueTracker');
+    // ga('purdueTracker.require', 'displayfeatures');
+    // ga('purdueTracker.send', 'pageview');
+    
+  </script>
+    
+  <!-- Google analytics link-logging -->
+  <script src="/Wraps/ECO/wrap6/scripts/google_jquery_link_tracking.js" type="text/javascript"></script>
+
+</head>
+<body>
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHK4L3F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="layout">
+  <div id="header" style="background-image: url(/ECN/Images/ecn_header_2015_06_25.jpg);">
+
+    <div id="head-links">
+      <a id="skip-nav" href="#content-container" tabindex="0">Jump to Main Content</a>
+      <a id="purdue-link" href="http://www.purdue.edu/" title="Purdue University"><span class="hide-link">Purdue University</span></a>
+              <a id="home-link" href="https://engineering.purdue.edu/ECN" title="Engineering Computer Network"><span class="hide-link">Engineering Computer Network</span></a>
+          </div>
+
+    <div id="search">
+      <form method="get" action="/ECN/Search/google_search">
+      <input type="hidden" name="search_key" value="005546694815405427626:vjkiafdey9e" />
+      <input type="text" name="q" id="search-field" title="Search" />
+      <input type="submit" name="btnG" value="Search" id="search-button" />
+      </form>
+    </div>
+    
+        
+    <ul class="tabs" id="sections">
+      <li id="ECNLink" >
+<a href="/ECN">Home</a>
+<div>
+<a title="About Us Overview" href="/ECN/AboutUs">Overview</a>
+<a href="/ECN/Support/TroubleReport">Trouble Report</a>
+<a href="/ECN/People/Sites">Site Specialists</a>
+<a href="/ECN/Support/KB">Knowledge Base</a>
+<a href="/ECN/Webmail">Webmail</a>
+<a href="/ECN/WebCam">WebCams</a>
+<a href="/ECN/AboutUs/ContactUs">Contact Us</a>
+</div>
+</li>
+<li id="AboutUsLink" >
+<a href="/ECN/AboutUs">About Us</a>
+<div>
+<a title="About Us Overview" href="/ECN/AboutUs">Overview</a>
+<!--<a tal:attributes="href string:${container/pyBaseURL}AboutUs/Headlines">Headlines</a>//-->
+<a href="/ECN/AboutUs/History">History of ECN</a>
+<a href="/ECN/AboutUs/News">News</a>
+<a href="/ECN/AboutUs/OrgChart">Organizational Chart</a>
+<a href="/ECN/AboutUs/SupportedGroups">Supported Units</a>
+<a href="/ECN/AboutUs/Policies">Policies</a>
+<a href="/ECN/AboutUs/NetMaps">Network Maps</a>
+<!-- a tal:attributes="href string:${container/pyBaseURL}AboutUs/FactsAndFigures">Facts &amp; Figures</a> -->
+<!-- <a tal:attributes="href string:${container/pyBaseURL}AboutUs/FunStuff">Fun Stuff</a> -->
+<a href="/ECN/AboutUs/ContactUs">Contact Us</a>
+</div>
+</li>
+<li id="PeopleLink" >
+<a href="/ECN/People">Our People</a>
+<div>
+<a href="https://engineering.purdue.edu/ECN/People">Staff Directory</a>
+<a href="https://engineering.purdue.edu/ECN/People/OrgGroups">Organizational Groups</a>
+<a href="https://engineering.purdue.edu/ECN/People/Sites">Site Specialists</a>
+<a href="https://engineering.purdue.edu/ECN/People/Students">Student Staff</a>
+</div>
+</li>
+<li id="ServicesLink" >
+<a href="/ECN/Services">Services</a>
+<div>
+<a title="Services Overview" href="/ECN/Services/">Overview</a>
+<!--<a tal:attributes="href string:${container/pyBaseURL}Services/DesktopComputing/" title="Desktop Computing Services">Desktop Computing</a>//-->
+<a title="E-Mail Services" href="/ECN/Services/Email/">E-Mail</a>
+<a title="Backup Services" href="/ECN/Services/Backups/"> Backups</a>
+<a title="Software Services" href="/ECN/Services/Software/">Software</a>
+<a title="Computer Labs" href="/ECN/Services/labs">Computer Labs</a>
+<a title="Online Tools" href="/ECN/Services/Tools/">Online Tools</a>
+<a title="Special Projects"
+   href="/ECN/Services/ProjectRequest">Special Projects</a>
+<a title="Web Hosting"
+   href="/ECN/Resources/KnowledgeBase/Docs/20031223095310/">Web Hosting</a>
+<a title="FTP Account Hosting"
+   href="/ECN/Resources/Tools/FTP/">FTP Account Hosting</a>
+<a title="Database Hosting"
+   href="/ECN/Resources/Documents/UNIX/dbform">Database Hosting</a>
+<a title="SharePoint Services"
+   href="/ECN/Services/SharePoint/">SharePoint Services</a>
+<a title="Campus Services"
+   href="/ECN/Services/CampusServices/">Campus Services</a>
+</div>
+</li>
+<li id="SupportLink" class="active">
+<a href="/ECN/Support">Support</a>
+<div>
+<a href="/ECN/Support">Getting Support</a>
+<a href="/ECN/Support/TroubleReport">Trouble Report</a>
+<a href="/ECN/Support/KB">Knowledge Base</a>
+<a href="/ECN/Support/ShortCourses">Short Courses</a>
+<a href="/ECN/Support/CampusSupport">Campus Support</a>
+</div>
+</li>
+
+    </ul>
+
+        <ul class="tabs" id="sites">
+      <li>
+        <a href="/Engr/Academics/Schools/" title="Engineering Schools">Schools</a>
+        <div><a href="/Engr" class="heading">College of Engineering</a>
+<a href="/AAE">Aeronautics and Astronautics</a>
+<a href="/ABE">Agricultural and Biological Engineering</a>
+<a href="/BME">Biomedical Engineering</a>
+<a href="/ChE">Chemical Engineering</a>
+<a href="/CE">Civil Engineering</a>
+<a href="/CEM">Construction Engineering and Management</a>
+<a href="/ECE">Electrical and Computer Engineering</a>
+<a href="/ENE">Engineering Education</a>
+<a href="/Online">Purdue Online</a>
+<a href="/EEE">Environmental and Ecological Engineering</a>
+<a href="/IE">Industrial Engineering</a>
+<a href="/MSE">Materials Engineering</a>
+<a href="/ME">Mechanical Engineering</a>
+<a href="/NE">Nuclear Engineering</a></div>
+      </li>
+      <li>
+        <a href="/Engr/Academics/Schools/" title="Engineering Programs">Programs</a>
+        <div><a href="/Engr/InfoFor/Honors">College of Engineering Honors Program</a>
+<a href="/ENE/Academics/FirstYear">First-Year Engineering Program</a>
+<a href="/OFE">Office of Future Engineers</a>
+<a href="/Engr/Academics/Undergraduate/Leadership">Engineering Leadership @ Purdue</a>
+<a href="/EPICS">EPICS (Engineering Projects In Community Service)</a>
+<a href="/GEP">Global Engineering Program</a>
+<a href="/INSGC">Indiana Space Grant Consortium</a>
+<a href="/MEP">Minority Engineering Program</a>
+<a href="/ProPractice">Professional Practice (Co-Op) Program</a>
+<a href="//www.purdue.edu/wiep">Women in Engineering Program</a></div>
+      </li>
+      <li>
+        <a href="/Intranet/Groups/Offices/ECN">Intranet</a>
+        <div>
+          <a href="/Intranet/Groups/Offices/ECN" title="Intranet Home">Intranet Home</a>
+          <a href="/Intranet/Groups/Committees/" title="Intranet Committees">Committees</a>
+          <a href="/Intranet/Groups/Schools" title="Intranet Programs">Schools</a>
+          <a href="/Intranet/Groups/Programs" title="Intranet Programs">Programs</a>
+          <a href="/Intranet/Groups/Administration/FacultyHiring" title="Faculty Hiring Intranet">Faculty Hiring</a>
+        </div>
+      </li>
+    </ul>
+        
+  </div>
+  
+  <div id="content-container"  role="main" tabindex="-1" style="position: relative;" class="float-group  no-rightbar" >
+  
+      
+      
+    <div id="breadcrumbs"><span style="text-transform: uppercase;"><a href="http://www.purdue.edu/">Purdue</a> > <a href="/Engr/">Engineering</a> > <a href="/ECN">ECN</a> > <a href="/ECN/Support">Support</a> > <a href="/ECN/Support/KB">Knowledge Base</a> > <a href="/ECN/Support/KB/Docs">Docs</a> > <strong><a href="/ECN/Support/KB/Docs/UsingTheXdefaultsFil">Using the .Xdefaults file.</a></strong></span></div>
+  
+        <div id="sidebar-left-container">
+      <div id="sidebar-left">  
+      
+                <div class="menu" id="sidebar-left-topics">
+          <div class="heading">Support</div>
+          <a href="/ECN/Support">Getting Support</a>
+<a href="/ECN/Support/TroubleReport">Trouble Report</a>
+<a href="/ECN/Support/KB">Knowledge Base</a>
+<a href="/ECN/Support/ShortCourses">Short Courses</a>
+<a href="/ECN/Support/CampusSupport">Campus Support</a>
+        </div>
+                
+                <div class="menu" id="info-for">
+          <div class="heading">Information For...</div>
+          <a href="/ECN/InfoFor/NewUsers/" title="Information for New ECN Users">New ECN Users</a>
+<a href="/ECN/InfoFor/TechUsers/" title="Information for Polytechnic Users">Polytechnic Users</a>
+<a href="/ECN/InfoFor/ECNStaff/" title=" Restricted information for ECN Staff">ECN Staff (restricted)</a>
+  
+        </div>
+                
+        
+        <div id="tools">
+
+  <div id="print-friendly-link">
+  <a href="?pp=1" >Print-Friendly:<img src="/Wraps/ECO/wrap6/themes/default/common/printer.gif" height="14" width="16" alt="Printer-Friendly" /></a>
+  </div>
+
+      <div id="short-url-link">
+      <a href="mailto:?subject=Link%20to%20Using%20the%20.Xdefaults%20file.%20-%20Engineering%20Computer%20Network%20-%20Purdue%20University&amp;body=Using%20the%20.Xdefaults%20file.%20-%20Engineering%20Computer%20Network%20-%20Purdue%20University%0A%0Ahttp://eng.purdue.edu/jump/42967" title="Send a link to this page via email.">E-mail this Page: <img src="/Wraps/ECO/wrap6/themes/default/common/email_icon.gif" height="13" width="12" alt="Send a link to this page via email." /></a>
+    </div>
+
+    <div id="short-url">
+      Shortcut URL:
+      <input type="text" value="http://eng.purdue.edu/jump/42967" onclick="this.focus(); this.select();" title="Shortcut URL" />
+    </div>
+  
+  <!-- AddThis Pro BEGIN -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-539874b17d101caa"></script>
+<script type="text/javascript"> var addthis_config = { services_exclude: 'googleplus,google_plusone_share' } </script>
+<!-- AddThis Pro END -->
+ 
+<!-- AddThis Pro BEGIN -->
+<div class="addthis_sharing_toolbox"></div>
+<!-- AddThis Pro END -->
+
+
+</div>
+        
+
+      </div>
+    </div>
+        
+                        
+    
+        
+    <div id="body-container">
+      <div id="body">
+
+    
+  <a name="content"></a>
+  <!-- END HEADER -->
+
+
+
+  
+
+  <div class="status-notice">
+     <strong>Notice!</strong> This document is currently in 
+     <strong>Archived</strong>
+     status. <br />The content of this document may be incorrect or outdated.
+  </div>
+
+  
+
+  <h1>Using the .Xdefaults file.</h1>
+
+  
+  <p>
+	<em>Purdue Engineering Computer Network</em></p>
+<hr />
+<p>
+	The file called <code>.Xdefaults</code> in your home directory is loaded into the X server using the xrdb program when you start your X session. In this file, each X application has a number of options which can be set, such as reverse video, window size, window location, and many others. You can set these options so that they are set every time you start up an application. A line in your .Xdefaults file follows this format:</p>
+<pre>
+	
+	<em>name.class.resource: value</em>
+</pre>
+<dl>
+	<dt>
+		<em>name</em></dt>
+	<dd>
+		is usually the name of the program (e.g., <strong>xterm</strong>, or <strong>xclock</strong>). You can, however, change the name a program uses to find its options in the <em>.Xdefaults</em> by invoking the command with <code>-name</code> argument.
+		<p>
+			&nbsp;</p>
+	</dd>
+	<dt>
+		<em>class</em></dt>
+	<dd>
+		is used for grouping resources together. For example, the class <em>Geometry</em> would contain all the resources which affect the geometry of any of the application&#39;s windows. For example, <strong>xterm</strong> uses the resources <em>geometry</em> for the size and location of the VT window: <em>iconGeometry</em> for the size and location of the icon and <em>tekGeometry</em> for the size and location of the Tek window. All of these are members of the class <em>Geometry</em>. The purpose of a class is to allow you to set things more easily. If you set a class to a given value, then all the individual resources in that class will be set to that value, just as if you set them individually. Thus you could set all three <strong>xterm</strong> geometries individually, or if you wanted them all to be the same you could just set the <em>Geometry</em> class. <strong>The names of classes conventionally start with an upper-case letter</strong>.
+		<p>
+			Those classes, which are understood by each application program, are described in the manual entry for that program or you can use <strong>xprop</strong>. Simply start up the X program in question, type &quot;xprop&quot; at a unix prompt, and click in the window of the X program. This will give you the class and instance of the program. For example, using xprop on an &quot;xterm&quot; window gives:</p>
+		<p>
+			<code>%</code> <strong>xprop</strong></p>
+		<pre>
+WM_STATE(WM_STATE):
+		window state: Normal
+		icon window: 0xc004a2
+WM_PROTOCOLS(ATOM): protocols  WM_DELETE_WINDOW
+WM_CLASS(STRING) = &quot;xterm&quot;, &quot;XTerm&quot;
+WM_HINTS(WM_HINTS):
+		Client accepts input or input focus: True
+		Initial state is Normal State.
+WM_NORMAL_HINTS(WM_SIZE_HINTS):
+		program specified size: 899 by 412
+		program specified minimum size: 30 by 21
+		program specified resize increment: 11 by 17
+		program specified base size: 19 by 4
+WM_CLIENT_MACHINE(STRING) = &quot;america.ecn.purdue.edu&quot;
+WM_COMMAND(STRING) = { &quot;xterm&quot; }
+WM_ICON_NAME(STRING) = &quot;xterm&quot;
+WM_NAME(STRING) = &quot;xterm&quot;
+</pre>
+		There can actually be more than one class for a given object. That is, there can be classes of classes. A good example of this is <strong>xterm</strong> which has a major class (or &quot;super-class&quot;) called <em>VT100</em>, and several minor classes (or &quot;sub-classes&quot;), such as <em>Font, Geometry</em>, so on. Generally, if you&#39;re not sure of how many classes and sub-classes there are, you can use the &quot;*&quot; character to specify &quot;match anything&quot;.
+		<p>
+			&nbsp;</p>
+	</dd>
+	<dt>
+		<em>resource</em></dt>
+	<dd>
+		indicates the name of some resource whose value can be changed. Some resources include <em>foreground</em> (the foreground color), <em>background</em> (the background color), <em>geometry</em> (the size and location of the window), <em>ScrollBar</em>, (indicate whether or not scrollbars should be used) and so on. <strong>The names of resources conventionally start with a lower-case letter</strong>. Each application program has a different set of resources which you can modify; they are described in the manual entry for the program.
+		<p>
+			<strong>Note on class and resource names</strong>: Capitalization is used to distinguish class names from resource names. Class names always begin with a capital letter, while resource names always begin with a lowercase letter. Note however that if a resource name is a compound word (such as <code>cursorColor</code>), the second word is capitalized.</p>
+		<p>
+			&nbsp;</p>
+	</dd>
+	<dt>
+		value</dt>
+	<dd>
+		can be set to three types:
+		<ul>
+			<li>
+				<em>integer</em> (a whole number)</li>
+			<li>
+				<em>Boolean</em> (on/off, yes/no)</li>
+			<li>
+				<em>string</em> (sequence of characters, e.g., a pathname or window title).</li>
+		</ul>
+	</dd>
+</dl>
+<h2>
+	Changing the Foreground and Background Colors</h2>
+<p>
+	To change the foreground color for an application, use the <em>-fg</em> command line option or the <code>foreground</code> resource. For example, suppose you have a color display and want the text in your xterm windows to be blue instead of black:</p>
+<pre>
+	% xterm -fg blue &amp;
+</pre>
+<p>
+	or set the following resource:</p>
+<pre>
+	XTerm*foreground:blue
+</pre>
+<p>
+	To change the background color, use the <em>-bg</em> command line option or the background resource. For example, suppose you want the same xterm window on your color display to have a yellow background instead of white:</p>
+<pre>
+	%xterm -bg yellow &amp;
+</pre>
+<p>
+	or set the following resource:</p>
+<pre>
+	
+	XTerm*background:yellow
+</pre>
+<h3>
+	Reverse-video Option</h3>
+<p>
+	The <em>-rv</em> (reverse-video) command line option specifies that a client be started with its foreground and background colors swapped. In many cases, this means that a window will be white on black, rather than black on white.</p>
+<p>
+	&nbsp;</p>
+<h3>
+	Changing the Title</h3>
+<p>
+	Most window managers have a titlebar which may be named for the application (program) you are running. However, you can change the name of your titlebar using the <em>title</em> command line option or the <code>title</code> resource.</p>
+<p>
+	There is also a <em>-name</em> command line option (and corresponding <code>name</code> resource). This basically changes the name of the client. The new name appears in the titlebar and in the icon name and also affects what resources apply to the client.</p>
+<p>
+	For example, using <em>-name</em> we have a class of XTerm, but an instance of xterm-big. So, you could create resources like this:</p>
+<pre>
+	XTerm*reverseVideo:   	    on
+	xterm*VT100.geometry:       80x24
+	xterm-big*VT100.geometry:   80x48
+	xterm-small*VT100.geometry: 80x10
+</pre>
+<p>
+	where EVERY xterm you start will have reverse video on. However, one started with the <code>-name xterm-big</code> option will have one geometry; one started with the <code>-name xterm-small</code> option will have another geometry, and one started with no specific name will default to the name &#39;xterm&#39; and have yet a different geometry. (The VT100 designation is used to indicate that the geometry is for the main text window, not the menus, subwindows, or Tek window).</p>
+<p>
+	The resource name (e.g. &#39;geometry&#39; in the above example) is a particular aspect of an X program. <strong>NOTE: </strong>Only particular spellings of resources are correct. Example: &#39;reverseVideo&#39; and &#39;ReverseVideo&#39; will function correctly as xterm resources, but not other spellings.</p>
+<p>
+	Other examples are:</p>
+<pre>
+	oneko*tora: true
+
+	matlab*reverseVideo: false   ! matlab windows in &quot;reverse video&quot;
+
+	emacs*Font: 8x13             ! emacs with 8x13 font, 80 columns
+	emacs*geometry: 80x48+0+0    !   wide, 48 columns high
+
+	XTerm*scrollBar: on	     ! Xterms with a scrollbar that
+	XTerm*saveLines: 250	     !   keep track of last 250 lines
+
+	XTerm*VT100.geometry:80x48+0+0  ! Make only the main xterm
+					!   window be 80x48
+</pre>
+<h3>
+	Tight Bindings and Loose Bindings</h3>
+<p>
+	An asterisk is a kind of wildcard, referred to as a &quot;loose binding&quot;. When you use the asterisk as a separator, you say: &quot;I don&#39;t care how many levels in the widget hierarchy occur between these two points&quot;. So you can say:</p>
+<pre>
+	xterm*scrollbar:  on
+</pre>
+<p>
+	without having to know what widgets have been introduced.</p>
+<p>
+	A period, by contrast, is considered a &quot;tight binding&quot; between two levels in the hierarchy. It specifies an exact relationship.</p>
+<p>
+	In an application that supports multiple levels of widgets, you can mix asterisks and periods. In general, though, the developers of X recommend always using * rather than . as the separator even with simple applications, since this gives application developers the freedom to insert new levels in the hierarchy as they produce new releases of an application.</p>
+<p>
+	The manual page for each application should always tell you to what widget the resource belongs, so that you can correctly specify the hierarchy. If you are in doubt, use the * separator.</p>
+<h2>
+	Additional Information</h2>
+<ul>
+	<li>
+		The exclamation mark (!) or /*...*/ is used to comment a line in the .Xdefaults file. For example:
+		<pre>
+	 /* this is a comment */
+</pre>
+	</li>
+	<li>
+		Instance names are considered more specific than class names. If you use both the class and instance names of a program to specify a resource with different values, the instance resource value will be used. For example:
+		<pre>
+	xterm*Background: blue
+</pre>
+		will be used, instead of:
+		<pre>
+	XTerm*Background: green
+</pre>
+	</li>
+	<li>
+		To reread your .Xresources file, and throw away your old resources, you can type:
+		<pre>
+ 	xrdb ~/.Xdefaults
+</pre>
+	</li>
+	<li>
+		To reread your .Xresources file, and keep your old resources, type:
+		<pre>
+ 	xrdb -merge ~/.Xdefaults
+</pre>
+		This will merge any new resources you&#39;ve put in with the currently active resource settings.
+		<p>
+			&nbsp;</p>
+	</li>
+	<li>
+		Avoid blank spaces at the beginning and end of lines in the .Xdefaults file.
+		<p>
+			&nbsp;</p>
+	</li>
+	<li>
+		You can change the instance of many X programs by starting them with the -name option. For example, if you start an xterm window by typing &quot;xterm -name XT1&quot;, then you can specify resources for it in your .Xdefaults file with &quot;XT1,&quot;, like this:
+		<pre>
+	XT1*Background: yellow
+</pre>
+	</li>
+</ul>
+<hr />
+
+
+  <div style="clear: both;"></div>
+
+  <p class="help">
+    Last modified: <strong>2007/05/31 13:18:43.013000 GMT-4</strong> by
+    <strong>Unknown</strong><br />
+    
+    Created: <strong>2007/05/31 13:18:43.013000 GMT-4</strong> by <strong>brian.r.brinegar.1</strong>.
+    
+  </p>
+
+  <h2>Categories</h2>
+
+  <ul>
+  </ul>
+
+  
+<h2>Search</h2>
+
+<p>
+  Type in a few keywords describing what information you 
+  are looking for in the text box below.
+</p>
+
+<form method="get" action="/ECN/Support/KB/ptSearch">
+  <input type="text" name="query" size="35"
+         title="Search ECN Knowledge Base" />
+  <input type="submit" name="submit" value="Search" />
+  <div class="search-options">
+    <input type="checkbox" name="restricted:int" value="1"
+           id="search-restricted" />
+    <label for="search-restricted">Search Restricted</label>
+    <input type="checkbox" name="archived:int" value="1"
+           id="search-archived" />
+    <label for="search-archived">Search Archived</label>
+    <input type="checkbox" name="meeting_notes:int"
+           value="1" id="search-meeting-notes" />
+    <label for="search-archived">Search Meeting Notes</label>
+  </div>
+</form>
+
+
+  <div class="kb-admin-options">
+    Admin Options:
+    <a href="./ptEditDocumentForm">Edit this Document</a>
+  </div>
+
+  
+ <!-- END FOOTER -->
+
+        <div id="content-footer" class="float-group">
+       
+    </div>
+    
+           </div> <!-- body -->
+    </div> <!-- body-container -->
+        
+  </div> <!-- content-container -->
+</div> <!-- layout -->
+
+<div id="footer" class="float-group">
+       <div class="footer-column-container">
+      <div class="footer-column">
+        <h2>Engineering</h2>
+        <ul>
+          <li> <a href="/Engr">College of Engineering</a> </li>
+          <li> <a href="/ENE/Academics/FirstYear">First Year Engineering</a> </li>
+          <li> <a href="/Engr/Academics/Schools">Schools &amp; Programs</a> </li>
+        </ul>      
+        <h2>Information Technology</h2>
+        <ul>
+          <li> <a href="/ECN">Engineering Computer Network</a> </li>
+          <li> <a href="http://www.itap.purdue.edu">Information Technology at Purdue</a> </li>
+        </ul>                 
+      </div>
+    </div>
+    <div class="footer-column-container">
+      <div class="footer-column">
+        <h2>Purdue</h2>
+        <ul>
+          <li> <a href="http://www.purdue.edu">Purdue Homepage</a> </li>
+          <li> <a href="http://www.purdue.edu/Admissions">Office of Admissions</a> </li>          
+          <li> <a href="http://search.purdue.edu">Purdue Search</a> </li>
+          <li> <a href="http://www.purdue.edu/campus_map">Campus Map</a> </li>
+          <li> <a href="http://www.itap.purdue.edu/directory">Purdue Directory</a> </li>
+        </ul>   
+      </div>
+    </div>
+    <div class="footer-column-container">
+      <div class="footer-column">
+        <h2>Follow Us</h2>
+        <ul>
+          <li> <a href="http://www.facebook.com/PurdueUniversity">Facebook</a> </li>
+          <li> <a href="http://twitter.com/LifeAtPurdue">Twitter</a> </li>
+          <li> <a href="http://www.youtube.com/user/PurdueUniversity">YouTube</a> </li>
+        </ul> 
+      </div>
+    </div>
+    <div class="footer-column-container">
+      <div class="last footer-column">
+        <h2>Contact Us</h2>
+        <ul>
+          <li><a href="mailto:webmaster@ecn.purdue.edu" 
+                  title="Contact us with accessibility, content, or technical issues">webmaster@ecn.purdue.edu</a> </li>
+        </ul>
+      </div>
+      <div class="footer-logo">
+        &nbsp;
+      </div>
+    </div>
+
+</div>
+
+<div id="sub-footer">
+
+  
+  <p id="copyright">
+    <span style="float: right; color: #333; text-align: right; display: none;" id="debug-server">
+      Server: zeoclient-03<br />
+      Generation took 0.05 seconds
+    </span>
+    
+    <a href="/Engr/Legal/copyright">Copyright &copy; 2021, Purdue University, all rights reserved.</a><br />
+    <a href="http://www.purdue.edu/Purdue/ea_eou_statement.html" title="Nondiscrimination Policy">An equal access/equal opportunity university.</a><br />
+    <a href="mailto:webmaster@ecn.purdue.edu?subject=Accessibility%20question"  title="Contact us with accessibility questions and issues">If you have trouble accessing this page because of a disability, please contact the Webmaster at webmaster@ecn.purdue.edu.</a><br />
+    <a href="/Engr/AboutUs/why_ssl">Why secure web services?</a><br />
+  </p>
+  
+</div>
+
+<script type="text/javascript" src="/Wraps/ECO/wrap6/scripts/menus.js"></script>
+    
+<!-- Twitter universal website tag code -->
+<script>
+  !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+  // Insert Twitter Pixel ID and Standard Event data below
+  twq('init','nzn6s');
+  twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<script type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//us1.siteimprove.com/js/siteanalyze_66358400.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+</script> 
+
+</body>
+</html>
+
+

@@ -1,0 +1,5 @@
+2021/01/26-20:59:04.204 6aba Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/26-21:04:23.978 798f Level-0 table #5: started
+2021/01/26-21:04:24.011 798f Level-0 table #5: 1334 bytes OK
+2021/01/26-21:04:24.042 798f Delete type=0 #3
+2021/01/26-21:04:24.042 798f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

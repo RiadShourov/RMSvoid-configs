@@ -1,0 +1,5 @@
+2021/02/13-11:13:23.534 2eca Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_www.pacificprime.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/13-11:14:29.152 12cb Level-0 table #5: started
+2021/02/13-11:14:29.184 12cb Level-0 table #5: 19276 bytes OK
+2021/02/13-11:14:29.217 12cb Delete type=0 #3
+2021/02/13-11:14:29.218 12cb Manual compaction at level-0 from (begin) .. (end); will stop at (end)

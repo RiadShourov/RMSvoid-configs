@@ -1,0 +1,5 @@
+[user]
+	name = RiadShourov
+	email = riadmashrub.shourov@gmail.com
+[core]
+	editor = nvim

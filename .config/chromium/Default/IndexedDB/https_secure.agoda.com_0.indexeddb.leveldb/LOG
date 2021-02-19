@@ -1,0 +1,5 @@
+2021/02/11-20:37:24.914 1b18 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_secure.agoda.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/11-20:39:35.972 22b3 Level-0 table #5: started
+2021/02/11-20:39:36.015 22b3 Level-0 table #5: 2342 bytes OK
+2021/02/11-20:39:36.061 22b3 Delete type=0 #3
+2021/02/11-20:39:36.062 22b3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

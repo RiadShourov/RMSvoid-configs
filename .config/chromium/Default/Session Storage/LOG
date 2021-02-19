@@ -1,0 +1,27 @@
+2021/02/19-10:55:36.870 3 Reusing MANIFEST /home/rshourov/.config/chromium/Default/Session Storage/MANIFEST-000001
+2021/02/19-10:55:36.871 3 Recovering log #256
+2021/02/19-10:55:37.172 3 Reusing old log /home/rshourov/.config/chromium/Default/Session Storage/000256.log 
+2021/02/19-10:56:15.564 5 Level-0 table #261: started
+2021/02/19-10:56:15.622 5 Level-0 table #261: 23418 bytes OK
+2021/02/19-10:56:15.659 5 Delete type=0 #256
+2021/02/19-11:34:46.918 1e Level-0 table #263: started
+2021/02/19-11:34:47.020 1e Level-0 table #263: 25205 bytes OK
+2021/02/19-11:34:47.061 1e Delete type=0 #260
+2021/02/19-15:54:16.478 4e Level-0 table #265: started
+2021/02/19-15:54:16.527 4e Level-0 table #265: 24558 bytes OK
+2021/02/19-15:54:16.555 4e Delete type=0 #262
+2021/02/19-19:33:19.992 7d Level-0 table #267: started
+2021/02/19-19:33:20.070 7d Level-0 table #267: 21837 bytes OK
+2021/02/19-19:33:20.124 7d Delete type=0 #264
+2021/02/19-19:33:20.125 7c Compacting 4@0 + 1@1 files
+2021/02/19-19:33:20.203 7c Generated table #268@0: 9954 keys, 230137 bytes
+2021/02/19-19:33:20.204 7c Compacted 4@0 + 1@1 files => 230137 bytes
+2021/02/19-19:33:20.234 7c compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/02/19-19:33:20.236 7c Delete type=2 #258
+2021/02/19-19:33:20.236 7c Delete type=2 #263
+2021/02/19-19:33:20.236 7c Delete type=2 #267
+2021/02/19-19:33:20.237 7c Delete type=2 #265
+2021/02/19-19:33:20.237 7c Delete type=2 #261
+2021/02/19-23:26:15.799 ac Level-0 table #270: started
+2021/02/19-23:26:16.012 ac Level-0 table #270: 22842 bytes OK
+2021/02/19-23:26:16.186 ac Delete type=0 #266

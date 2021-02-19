@@ -1,0 +1,147 @@
+{
+   "checksum": "37126dbab5ac8e6a5d63589c8c8900ea",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13218887271599740",
+         "date_modified": "13218888559099744",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13218888559099744",
+            "guid": "d73aee66-65a5-4094-af10-161f858f37f9",
+            "id": "5",
+            "name": "GitHub does dotfiles - dotfiles.github.io",
+            "type": "url",
+            "url": "http://dotfiles.github.io/"
+         }, {
+            "children": [ {
+               "date_added": "13256325364617373",
+               "guid": "bd4f9bbf-0bb7-4557-a147-88c233125d17",
+               "id": "7",
+               "name": "Pinching the best bits from Spacemacs | by Chris Bowdon | Medium",
+               "type": "url",
+               "url": "https://medium.com/@CBowdon/pinching-the-best-bits-from-spacemacs-869b8c793ad3"
+            }, {
+               "date_added": "13256328727780338",
+               "guid": "d1452de7-20b2-4ff2-b92e-d35b58680e3f",
+               "id": "9",
+               "name": "How to build your own spacemacs · Samuel Barreto",
+               "type": "url",
+               "url": "https://sam217pa.github.io/2016/09/02/how-to-build-your-own-spacemacs/"
+            }, {
+               "date_added": "13256328736971384",
+               "guid": "f6669920-63f1-4aa1-922a-0a781dc8d855",
+               "id": "10",
+               "name": "GitHub - ianpan870102/yay-evil-emacs: 😈 A lightweight literate Emacs config with even better \"better defaults\". Shipped with a custom theme!",
+               "type": "url",
+               "url": "https://github.com/ianpan870102/yay-evil-emacs"
+            }, {
+               "date_added": "13256328756273656",
+               "guid": "48013889-ea18-4c7b-b054-32a58139d568",
+               "id": "11",
+               "name": "GitHub - jkitchin/scimax: An emacs starterkit for scientists and engineers",
+               "type": "url",
+               "url": "https://github.com/jkitchin/scimax"
+            }, {
+               "date_added": "13256329607635561",
+               "guid": "0c70353d-b220-4412-a1e7-fb5881259fc9",
+               "id": "12",
+               "name": "Config/init.org at master · cbowdon/Config · GitHub",
+               "type": "url",
+               "url": "https://github.com/cbowdon/Config/blob/master/emacs/init.org"
+            }, {
+               "date_added": "13256477301906388",
+               "guid": "e8580182-3c21-454c-8a6b-b39d77969eba",
+               "id": "14",
+               "name": "Doom Emacs Zaiste Programming Tutorial",
+               "type": "url",
+               "url": "https://www.ianjones.us/zaiste-programming-doom-emacs-tutorial#org81c82b8"
+            }, {
+               "date_added": "13256478554580348",
+               "guid": "5002a7d4-5e68-4d19-8adf-9d6bfac5c47e",
+               "id": "15",
+               "name": "Writing Assignments with Org-mode (in Doom Emacs) :: CyberChris — A student's personal blog and portfolio.",
+               "type": "url",
+               "url": "https://cyberchris.xyz/posts/org-mode-assignments/"
+            } ],
+            "date_added": "13256325389973840",
+            "date_modified": "13257594179604302",
+            "guid": "32e4059a-ba1d-4b04-a1ce-486945a9784c",
+            "id": "8",
+            "name": "Emacs",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13257594179604302",
+               "guid": "7729aeb6-8910-489c-99b0-731150259e1f",
+               "id": "17",
+               "name": "How I Take Notes With Vim, Markdown, and Pandoc - james vaughan",
+               "type": "url",
+               "url": "https://jamesbvaughan.com/markdown-pandoc-notes/"
+            }, {
+               "date_added": "13257607999363223",
+               "guid": "1f408218-9fe5-4393-a472-1d209c6269d2",
+               "id": "20",
+               "name": "vimwiki cheatsheet",
+               "type": "url",
+               "url": "http://thedarnedestthing.com/vimwiki%20cheatsheet"
+            }, {
+               "date_added": "13257662549761722",
+               "guid": "7f443ae8-34b9-4137-8416-799184b7e559",
+               "id": "22",
+               "name": "My Semi-Complete VimWiki Workflow - YouTube",
+               "type": "url",
+               "url": "https://www.youtube.com/watch?v=9Bb8Ljyqpt4"
+            }, {
+               "date_added": "13257785419974327",
+               "guid": "4d90dde4-f254-4c98-ba04-d743f858d121",
+               "id": "24",
+               "name": "vimwiki/vimwiki.txt at 57d23fa763b498561aca7eb4efb05b52efd120c9 · vimwiki/vimwiki",
+               "type": "url",
+               "url": "https://github.com/vimwiki/vimwiki/blob/57d23fa763b498561aca7eb4efb05b52efd120c9/doc/vimwiki.txt#L1248-L1313"
+            }, {
+               "date_added": "13257785441029517",
+               "guid": "96e8efb0-025f-490d-b59e-f4097eace4ad",
+               "id": "25",
+               "name": "vimwiki/vimwiki.txt at 57d23fa763b498561aca7eb4efb05b52efd120c9 · vimwiki/vimwiki",
+               "type": "url",
+               "url": "https://github.com/vimwiki/vimwiki/blob/57d23fa763b498561aca7eb4efb05b52efd120c9/doc/vimwiki.txt"
+            } ],
+            "date_added": "13257594211224525",
+            "date_modified": "13257785441029517",
+            "guid": "f83ad76e-4540-4407-b71e-3a0acf784812",
+            "id": "18",
+            "name": "VIM",
+            "type": "folder"
+         }, {
+            "date_added": "13257607503538400",
+            "guid": "ef1a2879-aa7e-4602-969a-2e3e59d16a41",
+            "id": "19",
+            "name": "Introduction to the Zettelkasten Method • Zettelkasten Method",
+            "type": "url",
+            "url": "https://zettelkasten.de/introduction/"
+         } ],
+         "date_added": "13218887271599757",
+         "date_modified": "13257607999363223",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13218887271599762",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

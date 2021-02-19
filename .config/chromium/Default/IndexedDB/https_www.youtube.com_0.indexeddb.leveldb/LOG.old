@@ -1,0 +1,15 @@
+2021/02/19-13:03:34.176 644e Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/19-13:03:34.176 644e Recovering log #193
+2021/02/19-13:03:34.176 644e Reusing old log /home/rshourov/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000193.log 
+2021/02/19-20:41:05.398 1bdc Level-0 table #198: started
+2021/02/19-20:41:05.933 1bdc Level-0 table #198: 583533 bytes OK
+2021/02/19-20:41:06.038 1bdc Delete type=0 #193
+2021/02/19-20:41:06.039 1bdc Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/19-20:41:06.039 1bdc Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x04\x02\x02\x01\x14\x00s\x00h\x00e\x00l\x00l\x00_\x00i\x00d\x00e\x00n\x00t\x00i\x00f\x00i\x00e\x00r\x00_\x00k\x00e\x00y' @ 140031 : 0
+2021/02/19-20:41:06.039 1bdc Compacting 1@1 + 1@2 files
+2021/02/19-20:41:06.089 1bdc Generated table #199@1: 143 keys, 7609 bytes
+2021/02/19-20:41:06.089 1bdc Compacted 1@1 + 1@2 files => 7609 bytes
+2021/02/19-20:41:06.123 1bdc compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/02/19-20:41:06.123 1bdc Delete type=2 #198
+2021/02/19-20:41:06.123 1bdc Delete type=2 #195
+2021/02/19-20:41:06.135 1bdc Manual compaction at level-1 from '\x00\x04\x02\x02\x01\x14\x00s\x00h\x00e\x00l\x00l\x00_\x00i\x00d\x00e\x00n\x00t\x00i\x00f\x00i\x00e\x00r\x00_\x00k\x00e\x00y' @ 140031 : 0 .. (end); will stop at (end)

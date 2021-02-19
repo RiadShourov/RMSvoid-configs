@@ -1,0 +1,15 @@
+2021/01/31-00:07:36.000 6c41 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_thesaurus.yourdictionary.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/31-00:07:36.000 6c41 Recovering log #4
+2021/01/31-00:07:36.000 6c41 Reusing old log /home/rshourov/.config/chromium/Default/IndexedDB/https_thesaurus.yourdictionary.com_0.indexeddb.leveldb/000004.log 
+2021/01/31-00:08:57.541 6c41 Level-0 table #8: started
+2021/01/31-00:08:57.613 6c41 Level-0 table #8: 691 bytes OK
+2021/01/31-00:08:57.649 6c41 Delete type=0 #4
+2021/01/31-00:08:57.650 6c41 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/01/31-00:08:57.650 6c41 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x009\x007\x000\x002\x008\x002\x003\x000' @ 78 : 1
+2021/01/31-00:08:57.650 6c41 Compacting 1@1 + 1@2 files
+2021/01/31-00:08:57.681 6c41 Generated table #9@1: 18 keys, 579 bytes
+2021/01/31-00:08:57.681 6c41 Compacted 1@1 + 1@2 files => 579 bytes
+2021/01/31-00:08:57.715 6c41 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/01/31-00:08:57.716 6c41 Delete type=2 #8
+2021/01/31-00:08:57.716 6c41 Delete type=2 #5
+2021/01/31-00:08:57.717 6c41 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x009\x007\x000\x002\x008\x002\x003\x000' @ 78 : 1 .. (end); will stop at (end)

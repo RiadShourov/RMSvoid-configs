@@ -1,0 +1,5 @@
+2021/02/12-18:22:50.222 2bee Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_roamresearch.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/12-18:24:12.151 2bee Level-0 table #5: started
+2021/02/12-18:24:12.184 2bee Level-0 table #5: 5870 bytes OK
+2021/02/12-18:24:12.216 2bee Delete type=0 #3
+2021/02/12-18:24:12.216 2bee Manual compaction at level-0 from (begin) .. (end); will stop at (end)

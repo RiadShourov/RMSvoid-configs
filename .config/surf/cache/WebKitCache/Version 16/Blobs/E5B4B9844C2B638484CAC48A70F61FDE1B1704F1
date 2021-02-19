@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/mandoc.css" type="text/css" media="all">
+  <title>xbps-query(1) - Void Linux manpages</title>
+</head>
+<body>
+<nav id="void-nav" class="noprint">
+    <div class="wrap">
+        <ul>
+            <li><a href="http://www.voidlinux.org">Home</a></li>
+            <li><a href="http://www.voidlinux.org/news/">News</a></li>
+            <li><a href="http://www.voidlinux.org/download/">Download</a></li>
+            <li><a href="http://www.voidlinux.org/packages/">Packages</a></li>
+            <li><a href="https://docs.voidlinux.org">Documentation</a></li>
+            <li><a href="https://reddit.com/r/voidlinux">Forum</a></li>
+            <li><a href="https://github.com/void-linux">GitHub</a></li>
+        </ul>
+    </div>
+</nav>
+<form action="/" method="get">
+  <fieldset>
+    <legend>Manual Page Search Parameters</legend>
+    <input type="search" name="query" value="xbps-query" size="40">
+    <button type="submit" name="apropos" value="0">man</button>
+    <button type="submit" name="apropos" value="1">apropos</button>
+    <br/>
+    <select name="sec">
+      <option value="0">All Sections</option>
+      <option value="1" selected="selected">1 - General Commands</option>
+      <option value="2">2 - System Calls</option>
+      <option value="3">3 - Library Functions</option>
+      <option value="3p">3p - Perl Library</option>
+      <option value="4">4 - Device Drivers</option>
+      <option value="5">5 - File Formats</option>
+      <option value="6">6 - Games</option>
+      <option value="7">7 - Miscellaneous Information</option>
+      <option value="8">8 - System Manager's Manual</option>
+      <option value="9">9 - Kernel Developer's Manual</option>
+    </select>
+    <select name="arch">
+      <option value="default" selected="selected">All Architectures</option>
+      <option>amd64</option>
+      <option>alpha</option>
+      <option>armv7</option>
+      <option>arm64</option>
+      <option>hppa</option>
+      <option>i386</option>
+      <option>landisk</option>
+      <option>loongson</option>
+      <option>luna88k</option>
+      <option>macppc</option>
+      <option>mips64</option>
+      <option>octeon</option>
+      <option>sgi</option>
+      <option>socppc</option>
+      <option>sparc64</option>
+      <option>amiga</option>
+      <option>arc</option>
+      <option>armish</option>
+      <option>arm32</option>
+      <option>atari</option>
+      <option>aviion</option>
+      <option>beagle</option>
+      <option>cats</option>
+      <option>hppa64</option>
+      <option>hp300</option>
+      <option>ia64</option>
+      <option>mac68k</option>
+      <option>mvme68k</option>
+      <option>mvme88k</option>
+      <option>mvmeppc</option>
+      <option>palm</option>
+      <option>pc532</option>
+      <option>pegasos</option>
+      <option>pmax</option>
+      <option>powerpc</option>
+      <option>solbourne</option>
+      <option>sparc</option>
+      <option>sun3</option>
+      <option>vax</option>
+      <option>wgrisc</option>
+      <option>x68k</option>
+      <option>zaurus</option>
+    </select>
+    <select name="manpath">
+      <option selected="selected">x86_64</option>
+      <option>x86_64-musl</option>
+      <option>armv7l</option>
+      <option>armv7l-musl</option>
+    </select>
+  </fieldset>
+</form>
+<hr>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">XBPS-QUERY(1)</td>
+    <td class="head-vol">General Commands Manual</td>
+    <td class="head-rtitle">XBPS-QUERY(1)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<section class="Sh">
+<h1 class="Sh" id="NAME"><a class="permalink" href="#NAME">NAME</a></h1>
+<code class="Nm">xbps-query</code> &#x2014;
+<div class="Nd">XBPS utility to query for package and repository
+  information</div>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">SYNOPSIS</a></h1>
+<table class="Nm">
+  <tr>
+    <td><code class="Nm">xbps-query</code></td>
+    <td>[OPTIONS] <var class="Ar">MODE</var> [ARGUMENTS]</td>
+  </tr>
+</table>
+</section>
+<h1 class="Sh">TABLE OF CONTENTS</h1>
+<ul class="Bl-compact">
+  <li><a href="#DESCRIPTION">DESCRIPTION</a></li>
+  <li><a href="#PACKAGE_EXPRESSION">PACKAGE EXPRESSION</a></li>
+  <li><a href="#OPTIONS">OPTIONS</a></li>
+  <li><a href="#MODE">MODE</a></li>
+  <li><a href="#ENVIRONMENT">ENVIRONMENT</a></li>
+  <li><a href="#FILES">FILES</a></li>
+  <li><a href="#SEE_ALSO">SEE ALSO</a></li>
+  <li><a href="#AUTHORS">AUTHORS</a></li>
+  <li><a href="#BUGS">BUGS</a></li>
+</ul>
+<section class="Sh">
+<h1 class="Sh" id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">DESCRIPTION</a></h1>
+The <code class="Nm">xbps-query</code> utility prints information of a specific
+  package or packages stored in target root directory or in registered
+  repositories. The argument <var class="Ar">PKG</var> is a package expression,
+  which is explained in the <i class="Em">PACKAGE EXPRESSION</i> section.
+</section>
+<section class="Sh">
+<h1 class="Sh" id="PACKAGE_EXPRESSION"><a class="permalink" href="#PACKAGE_EXPRESSION">PACKAGE
+  EXPRESSION</a></h1>
+A package expression is a form to match a pattern; currently xbps supports 3
+  ways to specify them:
+<ul class="Bl-dash">
+  <li>by package name, i.e: &#x201C;<b class="Sy">foo</b>&#x201D;.</li>
+  <li>by exact package name and version, i.e:
+      &#x201C;<b class="Sy">foo-1.0_1</b>&#x201D;.</li>
+  <li>by specifying a package name and version separated by any of the following
+      version comparators:
+    <p class="Pp"></p>
+    <ul class="Bl-item Bl-compact">
+      <li><b class="Sy">&lt;</b> less than</li>
+      <li><b class="Sy">&gt;</b> greater than</li>
+      <li><b class="Sy">&lt;=</b> less or equal than</li>
+      <li><b class="Sy">&gt;=</b> greater or equal than
+        <p class="Pp">Example:
+          &#x201C;<b class="Sy">foo&gt;=2.0</b>&#x201D;.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p class="Pp">The first repository matching the package expression wins.</p>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="OPTIONS"><a class="permalink" href="#OPTIONS">OPTIONS</a></h1>
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#C,"><code class="Fl" id="C,">-C,</code></a>
+    <code class="Fl">--config</code> <var class="Ar">dir</var></dt>
+  <dd>Specifies a path to the XBPS configuration directory. If the first
+      character is not '/' then it's a relative path of
+      <var class="Ar">rootdir</var>.</dd>
+  <dt><a class="permalink" href="#c,"><code class="Fl" id="c,">-c,</code></a>
+    <code class="Fl">--cachedir</code> <var class="Ar">dir</var></dt>
+  <dd>Specifies a path to the cache directory, where binary packages are stored.
+      If the first character is not '/' then it's a relative path of
+      <var class="Ar">rootdir</var>.</dd>
+  <dt><a class="permalink" href="#d,"><code class="Fl" id="d,">-d,</code></a>
+    <code class="Fl">--debug</code></dt>
+  <dd>Enables extra debugging shown to stderr.</dd>
+  <dt><a class="permalink" href="#h,"><code class="Fl" id="h,">-h,</code></a>
+    <code class="Fl">--help</code></dt>
+  <dd>Show the help message.</dd>
+  <dt><a class="permalink" href="#i,"><code class="Fl" id="i,">-i,</code></a>
+    <code class="Fl">--ignore-conf-repos</code></dt>
+  <dd>Ignore repositories defined in configuration files. Only repositories
+      specified in the command line via <var class="Ar">--repository</var> will
+      be used.</dd>
+  <dt><a class="permalink" href="#M,"><code class="Fl" id="M,">-M,</code></a>
+    <code class="Fl">--memory-sync</code></dt>
+  <dd>For remote repositories, the data is fetched and stored in memory for the
+      current operation. This ignores the existing on-disk repository archives
+      in rootdir.</dd>
+  <dt><a class="permalink" href="#p,"><code class="Fl" id="p,">-p,</code></a>
+    <code class="Fl">--property</code> <var class="Ar">PROP[,...]</var></dt>
+  <dd>Only match this package property. Multiple properties can be specified by
+      delimiting them with commas.</dd>
+  <dt><a class="permalink" href="#R"><code class="Fl" id="R">-R</code></a></dt>
+  <dd>Enable repository mode. This mode explicitly looks in repositories, rather
+      than looking in the target root directory.</dd>
+  <dt><a class="permalink" href="#-repository=url"><code class="Fl" id="-repository=url">--repository=url</code></a></dt>
+  <dd>Appends the specified repository to the top of the list. The
+      <var class="Ar">url</var> argument expects a URL to the repository for
+      remote repositories or a path for local repositories. Note that remote
+      repositories must be signed using
+      <a class="Xr" href="/xbps-rindex.1">xbps-rindex(1)</a>. This option can be
+      specified multiple times.</dd>
+  <dt><a class="permalink" href="#-regex"><code class="Fl" id="-regex">--regex</code></a></dt>
+  <dd>Enables string matching by using Extended Regular Expressions in
+      compatible modes, currently in the <b class="Sy">ownedby</b> and
+      <b class="Sy">search</b> modes.</dd>
+  <dt><a class="permalink" href="#-fulldeptree"><code class="Fl" id="-fulldeptree">--fulldeptree</code></a></dt>
+  <dd>Prints a full dependency tree in the <b class="Sy">show dependencies</b>
+      mode.</dd>
+  <dt><a class="permalink" href="#r,"><code class="Fl" id="r,">-r,</code></a>
+    <code class="Fl">--rootdir</code> <var class="Ar">dir</var></dt>
+  <dd>Specifies a full path for the target root directory.</dd>
+  <dt><a class="permalink" href="#v,"><code class="Fl" id="v,">-v,</code></a>
+    <code class="Fl">--verbose</code></dt>
+  <dd>Enables verbose messages.</dd>
+  <dt><a class="permalink" href="#V,"><code class="Fl" id="V,">-V,</code></a>
+    <code class="Fl">--version</code></dt>
+  <dd>Show the version information.</dd>
+</dl>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="MODE"><a class="permalink" href="#MODE">MODE</a></h1>
+Only one of the following modes can be used at a time. By default and unless the
+  <code class="Fl">-R</code> option is specified, the target
+  <var class="Ar">PKG</var> will be queried in the root directory, otherwise it
+  will be queried in registered repositories.
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#l,"><code class="Fl" id="l,">-l,</code></a>
+    <code class="Fl">--list-pkgs</code></dt>
+  <dd>Lists registered packages in the package database (pkgdb). A package can
+      be in any of the following states:
+    <p class="Pp"></p>
+    <ul class="Bl-item Bl-compact">
+      <li><b class="Sy">ii</b> Package is installed.</li>
+      <li><b class="Sy">uu</b> Package is unpacked but must be configured with
+          <a class="Xr" href="/xbps-reconfigure.1">xbps-reconfigure(1)</a>.</li>
+      <li><b class="Sy">hr</b> Package is <b class="Sy">half-removed</b>, and
+          can be fully removed with
+          <a class="Xr" href="/xbps-remove.1">xbps-remove(1)</a>.</li>
+      <li><b class="Sy">??</b> Package state is unknown.</li>
+    </ul>
+  </dd>
+  <dt><a class="permalink" href="#H,"><code class="Fl" id="H,">-H,</code></a>
+    <code class="Fl">--list-hold-pkgs</code></dt>
+  <dd>List registered packages in the package database (pkgdb) that are on
+      <b class="Sy">hold</b>. Such packages won't be updated automatically.</dd>
+  <dt><a class="permalink" href="#L,"><code class="Fl" id="L,">-L,</code></a>
+    <code class="Fl">--list-repos</code></dt>
+  <dd>Lists repositories and the number of packages contained on them. If a
+      repository is not available the number of packages will be
+      <b class="Sy">-1</b>. The <code class="Fl">-v</code> option can be used to
+      show more detailed information of remote repositories.</dd>
+  <dt><a class="permalink" href="#m,"><code class="Fl" id="m,">-m,</code></a>
+    <code class="Fl">--list-manual-pkgs</code></dt>
+  <dd>Lists registered packages in the package database (pkgdb) that were
+      installed manually by the user (i.e not as dependency of any
+    package).</dd>
+  <dt><a class="permalink" href="#O,"><code class="Fl" id="O,">-O,</code></a>
+    <code class="Fl">--list-orphans</code></dt>
+  <dd>Lists package orphans in the package database (pkgdb), i.e packages that
+      were installed as dependencies and no package is currently depending on
+      them directly.</dd>
+  <dt><a class="permalink" href="#o,"><code class="Fl" id="o,">-o,</code></a>
+    <code class="Fl">--ownedby</code> <var class="Ar">PATTERN</var>
+    [<code class="Fl">--repository</code>]
+    [<code class="Fl">--regex</code>]</dt>
+  <dd>Search for installed package files by matching
+      <var class="Ar">PATTERN</var>. The <var class="Ar">PATTERN</var> argument
+      can be a simple string, a shell wildcard pattern as explained in
+      <a class="Xr" href="/fnmatch.3">fnmatch(3)</a> or an Extended Regular
+      Expression as explained in <a class="Xr" href="/regex.7">regex(7)</a> (if
+      <code class="Fl">--regex</code> option is set). If the
+      <code class="Fl">--repository</code> option is set, the matched
+      <var class="Ar">PATTERN</var> in repositories will be shown.</dd>
+  <dt><a class="permalink" href="#S,"><code class="Fl" id="S,">-S,</code></a>
+    <code class="Fl">--show</code> <var class="Ar">PKG</var>
+    [<code class="Fl">--repository</code>] [<code class="Fl">--property</code>
+    <var class="Ar">PROP</var>]</dt>
+  <dd>Shows information of an installed package. This is the default mode if no
+      other mode is set. If the <code class="Fl">--repository</code> option is
+      set, the matched <var class="Ar">PKG</var> in repositories will be shown.
+      If a package property is specified with
+      <code class="Fl">--property,</code> only that property will be shown.</dd>
+  <dt><a class="permalink" href="#s,"><code class="Fl" id="s,">-s,</code></a>
+    <code class="Fl">--search</code> <var class="Ar">PATTERN</var>
+    [<code class="Fl">--repository</code>] [<code class="Fl">--property</code>
+    <var class="Ar">PROP</var>] [<code class="Fl">--regex</code>]</dt>
+  <dd>Search for packages by matching <var class="Ar">PATTERN</var> on its
+      <i class="Em">pkgver</i> and/or <i class="Em">short_desc</i> properties.
+      The same rules explained in the <code class="Fl">--ownedby</code> option
+      are applied, but a <b class="Sy">PACKAGE EXPRESSION</b> is also supported.
+      If a package property is specified with
+      <code class="Fl">--property,</code> all packages matching
+      <var class="Ar">PATTERN</var> against <var class="Ar">PROP</var> will be
+      shown.</dd>
+  <dt><a class="permalink" href="#f,"><code class="Fl" id="f,">-f,</code></a>
+    <code class="Fl">--files</code> <var class="Ar">PKG</var>
+    [<code class="Fl">--repository</code>]</dt>
+  <dd>Show the package files for <var class="Ar">PKG</var>. If the
+      <code class="Fl">--repository</code> option is set, the matched
+      <var class="Ar">PKG</var> in repositories will be shown.</dd>
+  <dt><a class="permalink" href="#x,"><code class="Fl" id="x,">-x,</code></a>
+    <code class="Fl">--deps</code> <var class="Ar">PKG</var>
+    [<code class="Fl">--repository</code>]</dt>
+  <dd>Show the required dependencies for <var class="Ar">PKG</var>. Only direct
+      dependencies are shown. To see a full dependency tree, also set
+      <code class="Fl">--fulldeptree</code>. If the
+      <code class="Fl">--repository</code> option is set, the matched
+      <var class="Ar">PKG</var> in repositories will be shown.</dd>
+  <dt><a class="permalink" href="#X,"><code class="Fl" id="X,">-X,</code></a>
+    <code class="Fl">--revdeps</code> <var class="Ar">PKG</var>
+    [<code class="Fl">--repository</code>]</dt>
+  <dd>Show the reverse dependencies for <var class="Ar">PKG</var>. If the
+      <code class="Fl">--repository</code> option is set, the matched
+      <var class="Ar">PKG</var> in repositories will be shown.</dd>
+  <dt><a class="permalink" href="#-cat"><code class="Fl" id="-cat">--cat</code></a>
+    <var class="Ar">FILE</var> <var class="Ar">PKG</var></dt>
+  <dd>Prints the file <var class="Ar">FILE</var> stored in binary package
+      <var class="Ar">PKG</var> to stdout. The first repository matching the
+      <var class="Ar">PKG</var> expression wins. This expects an absolute path.
+      This mode only works with repositories.</dd>
+</dl>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="ENVIRONMENT"><a class="permalink" href="#ENVIRONMENT">ENVIRONMENT</a></h1>
+<dl class="Bl-tag">
+  <dt><b class="Sy">XBPS_ARCH</b></dt>
+  <dd>Overrides <a class="Xr" href="/uname.2">uname(2)</a> machine result with
+      this value. Useful to install packages with a fake architecture.</dd>
+  <dt><b class="Sy">XBPS_TARGET_ARCH</b></dt>
+  <dd>Sets the target architecture to this value. This variable differs from
+      <b class="Sy">XBPS_ARCH</b> in that it allows you to install packages
+      partially, because configuration phase is skipped (the target binaries
+      might not be compatible with the native architecture).</dd>
+</dl>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="FILES"><a class="permalink" href="#FILES">FILES</a></h1>
+<dl class="Bl-tag">
+  <dt><var class="Ar">/etc/xbps.d</var></dt>
+  <dd>Default configuration directory.</dd>
+  <dt><var class="Ar">/usr/share/xbps.d</var></dt>
+  <dd>Default system configuration directory.</dd>
+  <dt><var class="Ar">/var/db/xbps/.&lt;pkgname&gt;-files.plist</var></dt>
+  <dd>Package files metadata.</dd>
+  <dt><var class="Ar">/var/db/xbps/pkgdb-0.38.plist</var></dt>
+  <dd>Default package database (0.38 format). Keeps track of installed packages
+      and properties.</dd>
+  <dt><var class="Ar">/var/cache/xbps</var></dt>
+  <dd>Default cache directory to store downloaded binary packages.</dd>
+</dl>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="SEE_ALSO"><a class="permalink" href="#SEE_ALSO">SEE
+  ALSO</a></h1>
+<a class="Xr" href="/xbps-checkvers.1">xbps-checkvers(1)</a>,
+  <a class="Xr" href="/xbps-create.1">xbps-create(1)</a>,
+  <a class="Xr" href="/xbps-dgraph.1">xbps-dgraph(1)</a>,
+  <a class="Xr" href="/xbps-digest.1">xbps-digest(1)</a>,
+  <a class="Xr" href="/xbps-fbulk.1">xbps-fbulk(1)</a>,
+  <a class="Xr" href="/xbps-fetch.1">xbps-fetch(1)</a>,
+  <a class="Xr" href="/xbps-install.1">xbps-install(1)</a>,
+  <a class="Xr" href="/xbps-pkgdb.1">xbps-pkgdb(1)</a>,
+  <a class="Xr" href="/xbps-reconfigure.1">xbps-reconfigure(1)</a>,
+  <a class="Xr" href="/xbps-remove.1">xbps-remove(1)</a>,
+  <a class="Xr" href="/xbps-rindex.1">xbps-rindex(1)</a>,
+  <a class="Xr" href="/xbps-uchroot.1">xbps-uchroot(1)</a>,
+  <a class="Xr" href="/xbps-uunshare.1">xbps-uunshare(1)</a>,
+  <a class="Xr" href="/xbps.d.5">xbps.d(5)</a>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="AUTHORS"><a class="permalink" href="#AUTHORS">AUTHORS</a></h1>
+<span class="An">Juan Romero Pardines &lt;xtraeme@gmail.com&gt;</span>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="BUGS"><a class="permalink" href="#BUGS">BUGS</a></h1>
+Probably, but I try to make this not happen. Use it under your own
+  responsibility and enjoy your life.
+<p class="Pp">Report bugs at https://github.com/void-linux/xbps/issues</p>
+</section>
+</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">June 12, 2019</td>
+    <td class="foot-os"></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

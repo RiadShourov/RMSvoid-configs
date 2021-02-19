@@ -1,0 +1,16 @@
+{
+  "segments": [
+    "virtual_env",
+    "username",
+    "hostname",
+    "ssh",
+    "cwd",
+    "hg",
+    "jobs",
+    "root",
+    "time"
+  ],
+  "time": {
+  	"format": "%I:%M"
+  }
+}

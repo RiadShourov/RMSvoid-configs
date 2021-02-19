@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>policykit-1, polkit, polkitd authentication problems / Other Issues / Dev1 Galaxy Forum</title>
+<link rel="stylesheet" type="text/css" href="style/Purpy.css" />
+<link rel="canonical" href="viewtopic.php?id=675" title="Page 1" />
+<link rel="alternate" type="application/atom+xml" href="extern.php?action=feed&amp;tid=675&amp;type=atom" title="Atom topic feed" />
+</head>
+
+<body>
+
+<div id="punviewtopic" class="pun">
+<div class="top-box"></div>
+<div class="punwrap">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdtitle" class="inbox">
+			<div class="flr"><a href="https://files.devuan.org/">Download</a> | <a href="https://devuan.org">Devuan.org</a> | <a href="https://git.devuan.org/">Git</a> | <a href="https://bugs.devuan.org/">Bugs</a> | <a href="https://pkginfo.devuan.org/">Packages</a></div>
+			<a href="https://dev1galaxy.org/"><img src="style/Purpy/img/d1g_logo_p.png" width="293" height="50" border="0" /></a>
+			<div id="brddesc"><h2>The officially official Devuan Forum!</h2></div>
+		</div>
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navindex" class="isactive"><a href="index.php">Index</a></li>
+				<li id="navuserlist"><a href="userlist.php">User list</a></li>
+				<li id="navsearch"><a href="search.php">Search</a></li>
+				<li id="navregister"><a href="register.php">Register</a></li>
+				<li id="navlogin"><a href="login.php">Login</a></li>
+			</ul>
+		</div>
+		<div id="brdwelcome" class="inbox">
+			<p class="conl">You are not logged in.</p>
+			<ul class="conr">
+				<li><span>Topics: <a href="search.php?action=show_recent" title="Find topics with recent posts.">Active</a> | <a href="search.php?action=show_unanswered" title="Find topics with no replies.">Unanswered</a></span></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="brdmain">
+<div class="linkst">
+	<div class="inbox crumbsplus">
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=6">Other Issues</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=675">policykit-1, polkit, polkitd authentication problems</a></strong></li>
+		</ul>
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p1989" class="blockpost rowodd firstpost blockpost1">
+	<h2><span><span class="conr">#1</span> <a href="viewtopic.php?pid=1989#p1989">2017-06-04 19:31:42</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4802">linijkarz</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4802.jpg?m=1496607450" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2017-06-04</span></dd>
+						<dd><span>Posts: 12 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>Hello!</p><p>I believe I encountered a bug with the policykit-1 package and software provided by it since it was one of the packages that Devuan Team modified to work without systemd. I&#039;m reluctant to file a bug report yet because I want to make sure that it&#039;s actually a bug and not me missing a crucial detail.<br />Symptoms include:</p><ul><li><p>inability to mount external storage like USB flash drive - results in &quot;Not authorized to perform operatons&quot;</p></li><li><p>inability to run pkexec or any software relying on it like gparted, synaptic, system-config-printer etc.</p></li></ul><p>Running synaptic-pkexec from the commandline gives output:</p><div class="codebox"><pre><code>$ ~ synaptic-pkexec 
+==== AUTHENTICATING FOR com.ubuntu.pkexec.synaptic ===
+Authentication is required to run the Synaptic Package Manager
+Authenticating as: Firstname Lastname,,, (jakub)
+polkit-agent-helper-1: wrong number of arguments. This incident has been logged.
+==== AUTHENTICATION FAILED ===
+Error executing command as another user: Not authorized
+
+This incident has been reported.</code></pre></div><p>I get same result when trying to run a command line &quot;pkexec bash&quot;.</p><p>My /etc/polkit-1/localauthority.conf.d/51-debian-sudo.conf is standard (as shipped with the package) and says</p><div class="codebox"><pre><code>[Configuration]
+AdminIdentities=unix-group:sudo</code></pre></div><p>And my user account (jakub) is part of the sudo group (sudo works)</p><p>When attempting to run synaptic-pkexec /var/log/auth.log gives:</p><div class="codebox"><pre><code>Jun  4 21:19:26 pi2530 polkitd(authority=local): Registered Authentication Agent for unix-process:19530:2980417 (system bus name :1.85 [pkexec /usr/sbin/synaptic], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jun  4 21:19:26 pi2530 polkit-agent-helper-1[19534]: inappropriate use of helper, wrong number of arguments [uid=1000]
+Jun  4 21:19:26 pi2530 polkitd(authority=local): Operator of unix-process:19530:2980417 FAILED to authenticate to gain authorization for action com.ubuntu.pkexec.synaptic for unix-process:19530:2980417 [/bin/sh /usr/bin/synaptic-pkexec] (owned by unix-user:jakub)
+Jun  4 21:19:26 pi2530 pkexec[19531]: jakub: Error executing command as another user: Not authorized [USER=root] [TTY=/dev/pts/5] [CWD=/home/jakub] [COMMAND=/usr/sbin/synaptic]
+Jun  4 21:19:26 pi2530 polkitd(authority=local): Unregistered Authentication Agent for unix-process:19530:2980417 (system bus name :1.85, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)</code></pre></div><p>And finally restarting polkitd without the --no-debug flag gives</p><div class="codebox"><pre><code>$ ~ sudo /usr/lib/policykit-1/polkitd --replace
+Entering main event loop
+Connected to the system bus
+Registering null backend at priority -10
+Using authority class PolkitBackendLocalAuthority
+Acquired the name org.freedesktop.PolicyKit1</code></pre></div><p>There&#039;s no further input beyond that. From what i&#039;ve read online when polkitd starts it&#039;s supposed to print debug information including every &quot;local authority storage file&quot; it loads. On my installation, nothing like this happens as if it completely ignored the contents of /etc/polkit-1/localauthority and localauthority.conf.d directories</p><p>Tried loading graphical authentication agents to no avail - every one (gnome, lxpolkit and mate-polkit) of them fails as it&#039;s unable to find &quot;session PID&quot;</p><p>I&#039;m fully aware that this can be temporarily solved by making a custom .pkla file and allowing everyone do everything but I don&#039;t think it&#039;s a good or secure solution.</p><p>Please help.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1990" class="blockpost roweven">
+	<h2><span><span class="conr">#2</span> <a href="viewtopic.php?pid=1990#p1990">2017-06-04 19:43:01</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4">golinux</a></strong></dt>
+						<dd class="usertitle"><strong>Administrator</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4.jpg?m=1480131528" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2016-11-25</span></dd>
+						<dd><span>Posts: 2,109 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>Have you tried gksu?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><strong><a href="https://dev1galaxy.org/viewtopic.php?id=699" rel="nofollow">Get answers</a> - <a href="https://dev1galaxy.org/viewtopic.php?id=589" rel="nofollow">Help Devuan</a> - <a href="https://dev1galaxy.org/viewtopic.php?id=547" rel="nofollow">Report a bug</a> - <a href="https://pkginfo.devuan.org" rel="nofollow">Search packages</a></strong></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><strong>Online</strong></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1992" class="blockpost rowodd">
+	<h2><span><span class="conr">#3</span> <a href="viewtopic.php?pid=1992#p1992">2017-06-04 20:41:24</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4802">linijkarz</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4802.jpg?m=1496607450" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2017-06-04</span></dd>
+						<dd><span>Posts: 12 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>I do not intend to be mean but how exactly does using gksu solve policykit problems?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1993" class="blockpost roweven">
+	<h2><span><span class="conr">#4</span> <a href="viewtopic.php?pid=1993#p1993">2017-06-04 20:43:01</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4">golinux</a></strong></dt>
+						<dd class="usertitle"><strong>Administrator</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4.jpg?m=1480131528" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2016-11-25</span></dd>
+						<dd><span>Posts: 2,109 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>It worked for me when policykit was being headstrong.&#160; I just hopped on a different horse.&#160; Just ignore if you want to solve within policykit.&#160; Sorry for the noise.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><strong><a href="https://dev1galaxy.org/viewtopic.php?id=699" rel="nofollow">Get answers</a> - <a href="https://dev1galaxy.org/viewtopic.php?id=589" rel="nofollow">Help Devuan</a> - <a href="https://dev1galaxy.org/viewtopic.php?id=547" rel="nofollow">Report a bug</a> - <a href="https://pkginfo.devuan.org" rel="nofollow">Search packages</a></strong></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><strong>Online</strong></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1994" class="blockpost rowodd">
+	<h2><span><span class="conr">#5</span> <a href="viewtopic.php?pid=1994#p1994">2017-06-04 20:56:42</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4683">greenjeans</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4683.jpg?m=1491588267" width="60" height="56" alt="" /></dd>
+						<dd><span>Registered: 2017-04-07</span></dd>
+						<dd><span>Posts: 426 &nbsp; </span></dd>
+						<dd class="usercontacts"><span class="website"><a href="https://sourceforge.net/projects/vuu-do/" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<div class="quotebox"><cite>linijkarz wrote:</cite><blockquote><div><p>Hello!</p><p>I believe I encountered a bug with the policykit-1 package and software provided by it since it was one of the packages that Devuan Team modified to work without systemd. I&#039;m reluctant to file a bug report yet because I want to make sure that it&#039;s actually a bug and not me missing a crucial detail.<br />Symptoms include:</p><p><strong>inability to mount external storage like USB flash drive - results in &quot;Not authorized to perform operatons&quot;</strong></p><br /><br /><p>Please help.</p></div></blockquote></div><p>For this part at least, I think I would look in /usr/share/polkit-1/actions/*</p><p>Might be some settings there that need to change, I know in Openbox I had to mod the udisks2 policy because it didn&#039;t want to let me mount other partitions.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="https://sourceforge.net/projects/vuu-do/" rel="nofollow">https://sourceforge.net/projects/vuu-do/</a> <br />Vuu-do GNU/Linux, minimal 64 and 32 bit Devuan-based openbox and mate systems to build on, maximal versions if you prefer your linux fully-loaded. </p><p>Please donate to support Devuan and init freedom! <a href="https://devuan.org/os/donate" rel="nofollow">https://devuan.org/os/donate</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1996" class="blockpost roweven">
+	<h2><span><span class="conr">#6</span> <a href="viewtopic.php?pid=1996#p1996">2017-06-04 21:14:17</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4802">linijkarz</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4802.jpg?m=1496607450" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2017-06-04</span></dd>
+						<dd><span>Posts: 12 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<div class="quotebox"><cite>greenjeans wrote:</cite><blockquote><div><p>Might be some settings there that need to change, I know in Openbox I had to mod the udisks2 policy because it didn&#039;t want to let me mount other partitions.</p></div></blockquote></div><p>Thank you for mentioning OpenBox, I managed to resolve one half of the problem.<br />My .xinitrc started openbox-session like this, I basically copypasted what gentoo wiki suggested to do</p><div class="codebox"><pre><code>exec ck-launch-session dbus-launch --sh-syntax --exit-with-session openbox-session</code></pre></div><p>I changed it to</p><div class="codebox"><pre><code>exec dbus-launch --sh-syntax --exit-with-session openbox-session</code></pre></div><p>This operation successfully allowed me to mount, unmount, eject external storage via PCmanFM, I can even format it using gnome-disks no problem.</p><p>The policykit-related problem still persists. I am unable to perform authentication as if I wasn&#039;t in the sudo group.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1997" class="blockpost rowodd">
+	<h2><span><span class="conr">#7</span> <a href="viewtopic.php?pid=1997#p1997">2017-06-04 22:14:15</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=6">fsmithred</a></strong></dt>
+						<dd class="usertitle"><strong>Administrator</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/6.gif?m=1591872964" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2016-11-25</span></dd>
+						<dd><span>Posts: 1,700 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>This works in the full desktop install. My user (named &#039;user&#039;) is not in the sudo group and does not have any sudo privs. <br />You&#039;re probably missing a package or two. I see some hints in the auth.log when I start synaptic. Make sure you have consolekit and libpam-ck-connector. It&#039;s possible that you also need libsystemd0 for this to work. I don&#039;t know.</p><div class="codebox"><pre><code>Jun  4 22:02:31 user polkitd(authority=local): Operator of unix-session:/org/freedesktop/ConsoleKit/Session1 successfully authenticated as unix-user:root to gain ONE-SHOT authorization for action com.ubuntu.pkexec.synaptic for unix-process:3030:52170 [/bin/sh /usr/bin/synaptic-pkexec] (owned by unix-user:user)
+Jun  4 22:02:31 user pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Jun  4 22:02:31 user pkexec: pam_ck_connector(polkit-1:session): cannot determine display-device
+Jun  4 22:02:31 user pkexec[3031]: user: Executing command [USER=root] [TTY=unknown] [CWD=/home/user] [COMMAND=/usr/sbin/synaptic]</code></pre></div><p>If that&#039;s not enough, check the package list for the desktop install. Her&#039;e&#039;s the list for the desktop-live which is what you get if you take the default desktop installation from the dvd (plus a few packages to run it live and install it.)<br /><a href="https://files.devuan.org/devuan_jessie/desktop-live/devuan_jessie_1.0.0_amd64_desktop-live.list.txt" rel="nofollow">https://files.devuan.org/devuan_jessie/ … e.list.txt</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2038" class="blockpost roweven">
+	<h2><span><span class="conr">#8</span> <a href="viewtopic.php?pid=2038#p2038">2017-06-06 15:51:01</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4802">linijkarz</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4802.jpg?m=1496607450" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2017-06-04</span></dd>
+						<dd><span>Posts: 12 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>Thanks for your input @fsmithred<br />As You and I can both see, our outputs from auth.log are quite different.</p><p>I checked the list you&#039;ve provided and made a list of packages which come with standard devuan-live system but aren&#039;t present on my installation. I&#039;m attaching it because quite frankly I see nothing that could be the culprit but I would be extremely thankful for a second opinion.</p><div class="codebox"><pre class="vscroll"><code>alsa-base
+b43-fwcutter
+colord
+cryptsetup
+cryptsetup-bin
+discover
+evince-common
+exfalso
+exo-utils
+firmware-b43-installer
+firmware-b43legacy-installer
+firmware-bnx2
+firmware-bnx2x
+firmware-brcm80211
+firmware-intelwimax
+firmware-libertas
+firmware-myricom
+firmware-netxen
+firmware-qlogic
+firmware-ralink
+firmware-ti-connectivity
+firmware-zd1211
+gir1.2-gst-plugins-base-1.0
+gir1.2-gstreamer-1.0
+gir1.2-keybinder-3.0
+gir1.2-wnck-3.0:amd64
+gnome-orca
+gstreamer0.10-alsa:amd64
+gstreamer0.10-plugins-base:amd64
+hplip
+hyphen-en-us
+isolinux
+libbasicusageenvironment0
+libbrlapi0.6:amd64
+libburn4
+libdiscid0:amd64
+libdiscover2
+libdotconf0:amd64
+libdvbpsi9:amd64
+libevdocument3-4
+libevview3-3
+libexo-1-0:amd64
+libexo-common
+libexo-helpers
+libflite1:amd64
+libfreerdp-cache1.1:amd64
+libfreerdp-client1.1:amd64
+libfreerdp-codec1.1:amd64
+libfreerdp-common1.1.0:amd64
+libfreerdp-core1.1:amd64
+libfreerdp-crypto1.1:amd64
+libfreerdp-gdi1.1:amd64
+libfreerdp-locale1.1:amd64
+libfreerdp-primitives1.1:amd64
+libfreerdp-rail1.1:amd64
+libfreerdp-utils1.1:amd64
+libgarcon-1-0
+libgles1-mesa:amd64
+libgpod-common
+libgpod4:amd64
+libgroupsock1
+libgstreamer-plugins-base0.10-0:amd64
+libgstreamer0.10-0:amd64
+libgusb2:amd64
+libical1a
+libisoburn1
+libisofs6
+libjack-jackd2-0:amd64
+libjs-underscore
+libjte1
+libkeybinder-3.0-0:amd64
+libkeybinder0
+liblouis2:amd64
+libpostproc52
+libproxy-tools
+libsane-hpaio
+libsdl-image1.2:amd64
+libsgutils2-2
+libshine3:amd64
+libsonic0:amd64
+libthunarx-2-0
+libtidy-0.99-0
+libusageenvironment1
+libvlc5
+libvlccore8
+libvncclient0:amd64
+libvte-common
+libvte9
+libwinpr-crt0.1:amd64
+libwinpr-crypto0.1:amd64
+libwinpr-environment0.1:amd64
+libwinpr-handle0.1:amd64
+libwinpr-heap0.1:amd64
+libwinpr-input0.1:amd64
+libwinpr-pool0.1:amd64
+libwinpr-registry0.1:amd64
+libwinpr-rpc0.1:amd64
+libwinpr-synch0.1:amd64
+libwinpr-thread0.1:amd64
+libwinpr-utils0.1:amd64
+libwnck-3-0:amd64
+libwnck-3-common
+libxcb-composite0:amd64
+libxcb-xv0:amd64
+libxfce4ui-1-0
+libxfce4ui-utils
+libxfce4util-bin
+libxfce4util-common
+libxfce4util6
+libxfcegui4-4
+libxfconf-0-2
+libxklavier16
+libzvbi-common
+libzvbi0:amd64
+mousepad
+mtools
+orage
+packagekit
+packagekit-tools
+popularity-contest
+printer-driver-postscript-hp
+qtchooser
+quodlibet
+refractainstaller-base
+refractainstaller-gui
+refractasnapshot-base
+refractasnapshot-gui
+ristretto
+slim
+squashfs-tools
+syslinux
+syslinux-common
+task-desktop
+task-xfce-desktop
+thunar
+thunar-archive-plugin
+thunar-volman
+va-driver-all:amd64
+vdpau-va-driver:amd64
+vim
+vlc
+vlc-nox
+vlc-plugin-notify
+wicd
+wicd-daemon
+x11-apps
+x11-session-utils
+xarchiver
+xbrlapi
+xfburn
+xfce-keyboard-shortcuts
+xfce4
+xfce4-appfinder
+xfce4-artwork
+xfce4-clipman
+xfce4-clipman-plugin
+xfce4-cpufreq-plugin
+xfce4-cpugraph-plugin
+xfce4-dict
+xfce4-diskperf-plugin
+xfce4-fsguard-plugin
+xfce4-genmon-plugin
+xfce4-goodies
+xfce4-mixer
+xfce4-netload-plugin
+xfce4-notes
+xfce4-notes-plugin
+xfce4-notifyd
+xfce4-panel
+xfce4-places-plugin
+xfce4-power-manager
+xfce4-power-manager-plugins
+xfce4-quicklauncher-plugin
+xfce4-sensors-plugin
+xfce4-session
+xfce4-settings
+xfce4-smartbookmark-plugin
+xfce4-systemload-plugin
+xfce4-taskmanager
+xfce4-terminal
+xfce4-verve-plugin
+xfce4-wavelan-plugin
+xfce4-xkb-plugin
+xfconf
+xfdesktop4
+xorriso
+xsane
+xsane-common
+yad</code></pre></div><p>I also should&#039;ve mentioned that I tried numerous polkit authentication agents (I&#039;m hoping that I won&#039;t be forced to use graphical ones, I would be glad to stick with the CLI-based one that opens in a terminal frankly) and none of them starts successfully.<br />They all throw an error similar to:</p><div class="codebox"><pre><code>(polkit-mate-authentication-agent-1:4221): polkit-mate-1-WARNING **: Unable to determine the session we are in: No session for pid 4221</code></pre></div><p>polkitd is of course running.</p>
+						<p class="postedit"><em>Last edited by linijkarz (2017-06-06 15:51:16)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2040" class="blockpost rowodd">
+	<h2><span><span class="conr">#9</span> <a href="viewtopic.php?pid=2040#p2040">2017-06-06 16:44:09</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4672">GNUser</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4672.png?m=1495049130" width="50" height="49" alt="" /></dd>
+						<dd><span>Registered: 2017-03-16</span></dd>
+						<dd><span>Posts: 533 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>I had many problems with polkit (including the USB mount-unmount and &quot;unable to determine the session&quot; issues) when I tried running Devuan Jessie without a display manager. After many hours of troubleshooting and trial-and-error--over several days--I gave up and gave lightdm a shot.</p><p>Well, <strong>all</strong> the problems vanished once lightdm was installed. I feel mildly bad for not actually learning enough about polkit to manually fix the problems, but on the upside I got fully operational and put a stop to my headache and hair loss.</p><p>What DE and what (if any) display manager are you using? If you are not currently using a display manager, may I suggest you give lightdm a shot? If it solves your polkit-related problems, you can easily configure lightdm for autologin and it will stay completely out of your way.</p>
+						<p class="postedit"><em>Last edited by GNUser (2017-06-06 18:30:35)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2045" class="blockpost roweven">
+	<h2><span><span class="conr">#10</span> <a href="viewtopic.php?pid=2045#p2045">2017-06-06 20:41:21</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4802">linijkarz</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4802.jpg?m=1496607450" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2017-06-04</span></dd>
+						<dd><span>Posts: 12 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>Thanks for the advice. I followed it despite the fact that using a display manager is less-than-optimal solution.<br />Unfortunately - didn&#039;t work, the result is the same.</p><p>At this point I&#039;m 100% sure it&#039;s something wrong with my installation. <br />I think I&#039;ll wait it out for the release of Devuan 2.0 and just do a clean installation. <br />The most important problem (mounting) was already resolved 2 days ago.</p><p>But If anyone has any ideas, I will be more than happy to listen.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2057" class="blockpost rowodd">
+	<h2><span><span class="conr">#11</span> <a href="viewtopic.php?pid=2057#p2057">2017-06-07 03:24:22</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4672">GNUser</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4672.png?m=1495049130" width="50" height="49" alt="" /></dd>
+						<dd><span>Registered: 2017-03-16</span></dd>
+						<dd><span>Posts: 533 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>Bummer. Sorry to hear. I wish I knew more about polkit so that I could be of more help. </p><p>I hope your clean install of 2.0 goes smoother.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p3571" class="blockpost roweven">
+	<h2><span><span class="conr">#12</span> <a href="viewtopic.php?pid=3571#p3571">2017-07-23 15:11:55</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4691">nathg</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2017-04-20</span></dd>
+						<dd><span>Posts: 11 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>Hi all,</p><p>At initial stage of my upgraded ascii system I lost ability for mounting other volumes on HDD from thunar, launching synaptic from application menu and may be some CD issue. I have been using gksu and modified fstab ( like old days) for ascii without any hassle.</p><p>Recently I upgraded my devuan jessie to ascii and found those problems just after upgrade. Then I found two debian bugs #842184 &amp; #842378. Installed package &#039;policykit-1-gnome&#039;&#160; which was deleted from jessie during upgrade, Now my ascii is soid. Hope may help you.</p><p>Regards,</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p4767" class="blockpost rowodd">
+	<h2><span><span class="conr">#13</span> <a href="viewtopic.php?pid=4767#p4767">2017-08-28 00:01:09</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=6">fsmithred</a></strong></dt>
+						<dd class="usertitle"><strong>Administrator</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/6.gif?m=1591872964" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2016-11-25</span></dd>
+						<dd><span>Posts: 1,700 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>I just did an upgrade to ascii, and I was having the opposite problem. Synaptic and gparted would start without asking for a password. Only worked with the primary user. I noticed that policykit-1-gnome had been removed, so I reinstalled it, and now synaptic and gparted won&#039;t start for the user. User can still use pkexec to create another user but has to use the full path for the adduser command.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p7536" class="blockpost roweven">
+	<h2><span><span class="conr">#14</span> <a href="viewtopic.php?pid=7536#p7536">2018-02-05 19:41:50</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=5110">arjan</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2018-02-02</span></dd>
+						<dd><span>Posts: 6 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>Thanks nathg for mentioning policykit-1-gnome.</p><p>I had the problem that I wasn&#039;t prompted for root privileges anymore from GUI applications, after upgrading from Devuan Jessie to Ascii. `dpkg -l | grep policykit` said I had policykit-1-gnome installed, but when I tried `apt-get install --reinstall policykit-1-gnome` it actualy fetched and installed the package, so it seems it wasn&#039;t installed after all. After a reboot, I am now again prompted for root privileges from GUI applications.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p7847" class="blockpost rowodd">
+	<h2><span><span class="conr">#15</span> <a href="viewtopic.php?pid=7847#p7847">2018-03-04 08:08:10</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=5070">rfgmm</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2017-12-29</span></dd>
+						<dd><span>Posts: 6 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>after updating today my system started to missbehave like this, </p><p>already installed policykit-1-gnome and things still not working.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p7877" class="blockpost roweven">
+	<h2><span><span class="conr">#16</span> <a href="viewtopic.php?pid=7877#p7877">2018-03-07 10:43:29</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=5110">arjan</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2018-02-02</span></dd>
+						<dd><span>Posts: 6 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>After a recent update I got the same problem again.</p><p>I found this relevant link in the beta release discussion: <a href="https://lists.dyne.org/lurker/message/20180214.123746.e89eaef8.en.html" rel="nofollow">https://lists.dyne.org/lurker/message/2 … f8.en.html</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p7880" class="blockpost rowodd">
+	<h2><span><span class="conr">#17</span> <a href="viewtopic.php?pid=7880#p7880">2018-03-07 15:03:18</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4482">Geoff 42</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2016-12-15</span></dd>
+						<dd><span>Posts: 368 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>I worked around some problems with the little program that Didier Kryn posted on the DNG mailing list. It looks like pkexec, but just runs sudo or udevil. It can be installed into /usr/local/bin. Follow the links for details.</p><p><a href="https://dev1galaxy.org/viewtopic.php?pid=7703#p7703" rel="nofollow">https://dev1galaxy.org/viewtopic.php?pid=7703#p7703</a></p><p>Geoff</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p7882" class="blockpost roweven">
+	<h2><span><span class="conr">#18</span> <a href="viewtopic.php?pid=7882#p7882">2018-03-07 20:12:34</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4672">GNUser</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4672.png?m=1495049130" width="50" height="49" alt="" /></dd>
+						<dd><span>Registered: 2017-03-16</span></dd>
+						<dd><span>Posts: 533 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>rfgmm, when I installed ascii then mate desktop, I was having similar problems. Polkit was installed but the system would not allow me (as regular user) to mount or unmount usb drives, nor shutdown/reboot using the power button on my taskbar.</p><p>For me, the solution was to install these two packages: libpolkit-backend-1-0-elogind libpolkit-gobject-1-0-elogind and reboot.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p7901" class="blockpost rowodd">
+	<h2><span><span class="conr">#19</span> <a href="viewtopic.php?pid=7901#p7901">2018-03-09 22:29:38</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=4683">greenjeans</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="http://dev1galaxy.org/img/avatars/4683.jpg?m=1491588267" width="60" height="56" alt="" /></dd>
+						<dd><span>Registered: 2017-04-07</span></dd>
+						<dd><span>Posts: 426 &nbsp; </span></dd>
+						<dd class="usercontacts"><span class="website"><a href="https://sourceforge.net/projects/vuu-do/" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>Re-posting what I just posted from another pertinent thread:</p><p>I&#039;ve never had to do anything extensive the times i&#039;ve had a permission issue with polkit, edit the files in /usr/share/polkit-1/actions/ directly, you can spot the relative entries, it may not be the <em>correct</em> way, but it&#039;s quick and it works perfectly. The bolded part on a couple of entries in the udisks2 policy is all it takes.</p><div class="quotebox"><blockquote><div><p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />&lt;!DOCTYPE policyconfig PUBLIC<br /> &quot;-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN&quot;<br /> &quot;<a href="http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd" rel="nofollow">http://www.freedesktop.org/standards/Po … config.dtd</a>&quot;&gt;<br />&lt;policyconfig&gt;<br />&#160; &lt;vendor&gt;The udisks Project&lt;/vendor&gt;<br />&#160; &lt;vendor_url&gt;http://udisks.freedesktop.org/&lt;/vendor_url&gt;<br />&#160; &lt;icon_name&gt;drive-removable-media&lt;/icon_name&gt;</p><p>&#160; <br />&#160; &#160;&lt;action id=&quot;org.freedesktop.udisks2.filesystem-mount&quot;&gt;<br />&#160; &#160; &lt;description&gt;Mount a filesystem&lt;/description&gt;</p><p>&#160; &#160; &lt;message&gt;Authentication is required to mount the filesystem&lt;/message&gt;</p><p>&#160; &#160; &lt;defaults&gt;<br />&#160; &#160; &#160; &lt;allow_any&gt;auth_admin&lt;/allow_any&gt;<br />&#160; &#160; &#160; &lt;allow_inactive&gt;auth_admin&lt;/allow_inactive&gt;<br />&#160; &#160; &#160;<strong> &lt;allow_active&gt;yes&lt;/allow_active&gt;</strong><br />&#160; &#160; &lt;/defaults&gt;<br />&#160; &lt;/action&gt;</p></div></blockquote></div>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="https://sourceforge.net/projects/vuu-do/" rel="nofollow">https://sourceforge.net/projects/vuu-do/</a> <br />Vuu-do GNU/Linux, minimal 64 and 32 bit Devuan-based openbox and mate systems to build on, maximal versions if you prefer your linux fully-loaded. </p><p>Please donate to support Devuan and init freedom! <a href="https://devuan.org/os/donate" rel="nofollow">https://devuan.org/os/donate</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p7904" class="blockpost roweven">
+	<h2><span><span class="conr">#20</span> <a href="viewtopic.php?pid=7904#p7904">2018-03-10 01:16:07</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong><a href="profile.php?id=5110">arjan</a></strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2018-02-02</span></dd>
+						<dd><span>Posts: 6 &nbsp; </span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: policykit-1, polkit, polkitd authentication problems</h3>
+					<div class="postmsg">
+						<p>For me everything&#039;s working after following these instructions <a href="https://lists.dyne.org/lurker/message/20180214.123746.e89eaef8.en.html" rel="nofollow">https://lists.dyne.org/lurker/message/2 … f8.en.html</a>.</p><p>I was missing the policykit backend libs, and chose to install the consolekit packages.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox crumbsplus">
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=6">Other Issues</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=675">policykit-1, polkit, polkitd authentication problems</a></strong></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Board footer</span></h2>
+	<div class="box">
+		<div id="brdfooternav" class="inbox">
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label><span>Jump to<br /></span>
+					<select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Forum">
+							<option value="12">News &amp; Announcements</option>
+							<option value="10">Forum Feedback</option>
+						</optgroup>
+						<optgroup label="Support">
+							<option value="2">Installation</option>
+							<option value="7">Documentation</option>
+							<option value="3">Desktop and Multimedia</option>
+							<option value="5">Hardware &amp; System Configuration</option>
+							<option value="25">Freedom Hacks</option>
+							<option value="6" selected="selected">Other Issues</option>
+						</optgroup>
+						<optgroup label="Discuss">
+							<option value="8">Devuan</option>
+							<option value="24">ARM Builds</option>
+							<option value="9">Devuan Derivatives</option>
+							<option value="23">Intergalactic Communities</option>
+							<option value="16">DIY</option>
+							<option value="11">Off-topic</option>
+						</optgroup>
+					</select></label>
+					<input type="submit" value=" Go " accesskey="g" />
+					</div>
+				</form>
+			</div>
+			<div class="conr">
+				<p id="feedlinks"><span class="atom"><a href="extern.php?action=feed&amp;tid=675&amp;type=atom">Atom topic feed</a></span></p>
+												<p><img src="img/footer.png" alt="Forum Software" style="margin-top: 5px" /></p>
+			</div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="end-box"></div>
+</div>
+
+</body>
+</html>

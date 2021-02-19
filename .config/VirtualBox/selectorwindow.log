@@ -1,0 +1,24 @@
+00:00:02.863884 VirtualBox GUI VM Selector Window 6.1.18 r142142 linux.amd64 (Jan 24 2021 20:36:04) release log
+00:00:02.863890 Log opened 2021-02-19T17:15:05.821997000Z
+00:00:02.863892 Build Type: release
+00:00:02.863902 OS Product: Linux
+00:00:02.863906 OS Release: 5.10.16_1
+00:00:02.863909 OS Version: #1 SMP 1613224688
+00:00:02.864009 DMI Product Name: Inspiron 3442
+00:00:02.864038 DMI Product Version: Not Specified
+00:00:02.864068 Firmware type: BIOS
+00:00:02.864188 Host RAM: 3837MB (3.7GB) total, 2748MB (2.6GB) available
+00:00:02.864200 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:02.864201 Process ID: 12638
+00:00:02.864203 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:02.864290 Qt version: 5.15.2
+00:00:03.297527 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:06.171323 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 816x14 x 540x745
+00:00:06.182099 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:10.313028 GUI: UIMediumEnumerator: Medium with key={{28130b24-0600-403b-bed9-928343d73b65}} created
+00:01:11.141565 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:02:22.120513 GUI: UIMediumEnumerator: Medium with key={{ebb2f605-e8d2-4c83-b557-962ae8d26787}} created
+00:02:22.219760 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:02:23.471817 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:02:23.732422 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:02:30.484213 GUI: UIMediumEnumerator: Medium-enumeration finished!

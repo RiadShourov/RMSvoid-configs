@@ -1,0 +1,110 @@
+00:00:00.008854 main     VirtualBox XPCOM Server 6.1.18 r142142 linux.amd64 (Jan 24 2021 20:36:04) release log
+00:00:00.008858 main     Log opened 2021-02-19T17:15:04.816099000Z
+00:00:00.008859 main     Build Type: release
+00:00:00.008865 main     OS Product: Linux
+00:00:00.008866 main     OS Release: 5.10.16_1
+00:00:00.008868 main     OS Version: #1 SMP 1613224688
+00:00:00.008912 main     DMI Product Name: Inspiron 3442
+00:00:00.008928 main     DMI Product Version: Not Specified
+00:00:00.008944 main     Firmware type: BIOS
+00:00:00.009001 main     Host RAM: 3837MB (3.7GB) total, 2750MB (2.6GB) available
+00:00:00.009007 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.009008 main     Process ID: 12730
+00:00:00.009008 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.010953 main     IPC socket path: /tmp/.vbox-rshourov-ipc/ipcd
+00:00:00.227549 nspr-2   VirtualBox: object creation starts
+00:00:00.227842 nspr-2   Home directory: '/home/rshourov/.config/VirtualBox'
+00:00:00.250648 nspr-2   Loading settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.312026 nspr-2   USB: Unknown USB device detected (idVendor: 0x0cf3, idProduct: 0x0036)
+00:00:00.312158 nspr-2   Successfully initialised host USB using sysfs
+00:00:00.322310 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp6s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.328306 nspr-2   HostDnsMonitor: initializing
+00:00:00.328575 nspr-2   NAT: resolv.conf: nameserver 192.168.0.1
+00:00:00.328598 nspr-2   HostDnsMonitor: updating information
+00:00:00.328618 nspr-2   HostDnsMonitor: old information
+00:00:00.328625 nspr-2     no server entries
+00:00:00.328631 nspr-2     no domain set
+00:00:00.328637 nspr-2     no search string entries
+00:00:00.328643 nspr-2   HostDnsMonitor: new information
+00:00:00.328648 nspr-2     server 1: 192.168.0.1
+00:00:00.328655 nspr-2     no domain set
+00:00:00.328660 nspr-2     no search string entries
+00:00:00.343483 nspr-2   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:00:00.463885 nspr-2   VD: VDInit finished with VINF_SUCCESS
+00:00:00.469873 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={027bc463-929c-40e8-bf16-fea557cd8e7e} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
+00:00:00.532775 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:00.532793 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:00.577691 nspr-2   OCI: Local config file '/home/rshourov/.config/VirtualBox/oci_config' does not exist
+00:00:00.577730 nspr-2   OCI: Original config file '/home/rshourov/.oci/config' does not exist
+00:00:00.577737 nspr-2   OCI: Reading profiles finished with status NS_OK
+00:00:00.577749 nspr-2   ExtPack: Created cloud provider 'OCI' (hrc=NS_OK)
+00:00:00.577785 nspr-2   VirtualBox: object created
+00:00:03.948953 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:03.948961 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:03.949395 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:03.949401 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:03.950347 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:03.950353 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:04.003549 nspr-2   ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={The object functionality is limited}, preserve=false aResultDetail=0
+00:00:04.003585 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={d0a0163f-e254-4e5b-a1f2-011cf991c38d} aComponent={VirtualBoxWrap} aText={Could not find a registered machine named 'vmusl'}, preserve=false aResultDetail=0
+00:00:06.173380 nspr-3   ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={The object functionality is limited}, preserve=false aResultDetail=0
+00:00:06.185291 nspr-3   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.185304 nspr-3   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:06.192438 nspr-3   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.192447 nspr-3   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:06.394670 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.394678 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:06.394916 nspr-2   ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={The object functionality is limited}, preserve=false aResultDetail=0
+00:00:06.396044 nspr-2   ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={The object functionality is limited}, preserve=false aResultDetail=0
+00:00:06.398044 nspr-2   ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={The object functionality is limited}, preserve=false aResultDetail=0
+00:00:06.399027 nspr-2   ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={The object functionality is limited}, preserve=false aResultDetail=0
+00:00:06.402580 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.402589 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:06.404934 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.404940 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:06.407063 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.407069 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:06.409883 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.409889 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:06.413974 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.413980 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:06.416873 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:06.416879 nspr-2   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:07.043652 nspr-3   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/mnt/collection/VMs/vmusl/vmusl.vbox' for reading: -102 (File not found.).
+00:00:07.043662 nspr-3   /builddir/VirtualBox-6.1.18/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:08.847033 nspr-3   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:11.493349 nspr-2   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:00:11.494723 nspr-2   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:01:07.874384 createBase Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:01:08.567543 nspr-4   Saving settings file "/mnt/collection/VMs/vmusl/vmusl.vbox" with version "1.16-linux"
+00:01:08.716362 nspr-4   Saving settings file "/mnt/collection/VMs/vmusl/vmusl.vbox" with version "1.16-linux"
+00:01:08.818136 nspr-4   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:01:08.919205 nspr-2   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:01:09.055491 nspr-2   Saving settings file "/mnt/collection/VMs/vmusl/vmusl.vbox" with version "1.16-linux"
+00:01:09.677400 nspr-3   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:01:11.642278 nspr-4   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:01:12.707819 nspr-4   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:01:12.708012 nspr-2   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:01:12.708167 nspr-4   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:01:12.720473 nspr-4   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp6s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:01:12.724899 nspr-4   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp6s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:01:12.963215 nspr-3   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:20.275469 nspr-4   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:02:21.600079 nspr-2   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:02:21.636204 nspr-3   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:21.717534 nspr-3   Saving settings file "/mnt/collection/VMs/vmusl/vmusl.vbox" with version "1.16-linux"
+00:02:21.904061 nspr-3   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:23.475033 nspr-4   Launched VM: 1275075104 pid: 16822 (0x41b6) frontend: GUI/Qt name: vmusl
+00:02:23.501499 nspr-3   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:23.783293 nspr-6   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:24.624217 nspr-2   Load [/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxHostWebcam.so] vrc=VINF_SUCCESS
+00:02:24.898458 nspr-3   ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:02:24.915025 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp6s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:02:28.488898 nspr-6   Saving settings file "/mnt/collection/VMs/vmusl/vmusl.vbox" with version "1.16-linux"
+00:02:28.640786 nspr-6   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:28.718518 nspr-6   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:28.818694 nspr-8   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:30.109741 nspr-5   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:02:33.156667 nspr-4   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:02:33.284440 nspr-5   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:02:33.388441 nspr-6   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"

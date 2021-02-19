@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# declare -r layout_mask=$(xset -q | grep LED | awk '{ print $10 }')
+declare -r layout=$(setxkbmap -query | grep -oP 'layout:\s*\K\w+')
+
+case $layout in
+  "us")
+      echo -n "⌨ US"
+      # pkill -RTMIN+11 dwmblocks ;;
+      ;;
+
+  "bd")
+       echo -n "⌨ BD"
+       # pkill -RTMIN+11 dwmblocks ;;
+       ;;
+
+  *)
+      echo -n "??"
+      ;;
+esac

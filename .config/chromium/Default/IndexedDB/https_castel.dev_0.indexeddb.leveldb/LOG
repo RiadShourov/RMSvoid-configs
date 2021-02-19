@@ -1,0 +1,5 @@
+2021/02/12-12:35:52.364 7228 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_castel.dev_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/12-12:36:30.031 7679 Level-0 table #5: started
+2021/02/12-12:36:30.064 7679 Level-0 table #5: 4159 bytes OK
+2021/02/12-12:36:30.101 7679 Delete type=0 #3
+2021/02/12-12:36:30.101 7679 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

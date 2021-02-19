@@ -1,0 +1,8 @@
+2021/02/19-23:26:37.870 6fab Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_edition.cnn.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/19-23:26:37.870 6fab Recovering log #59
+2021/02/19-23:26:37.870 6fab Reusing old log /home/rshourov/.config/chromium/Default/IndexedDB/https_edition.cnn.com_0.indexeddb.leveldb/000059.log 
+2021/02/19-23:34:21.927 6f84 Level-0 table #63: started
+2021/02/19-23:34:21.927 6f84 Level-0 table #63: 0 bytes OK
+2021/02/19-23:34:21.987 6f84 Delete type=0 #59
+2021/02/19-23:34:21.988 6f84 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/19-23:34:21.988 6f84 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

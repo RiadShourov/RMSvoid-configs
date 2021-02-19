@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="google-site-verification" content="ByQMdLyQ-5hvmKWXrBv1vCfiJR-hcXO9dviLGz8xI7I">
+<link rel="icon" href="/img/favicon16.png" sizes="16x16">
+<link rel="icon" href="/img/favicon32.png" sizes="32x32">
+<link rel="icon" href="/img/favicon48.png" sizes="48x48">
+<link rel="search" type="application/opensearchdescription+xml" title="BunsenLabs Forums Search" href="https://forums.bunsenlabs.org/bunsen-forums-search.xml">
+<title>lightdm and .xinitrc / Basic Help &amp; Support / BunsenLabs Linux Forums</title>
+<link rel="stylesheet" type="text/css" href="style/Hydrogen.css" />
+<link rel="stylesheet" type="text/css" href="style/imports/pms.css" /><link rel="canonical" href="viewtopic.php?id=3757" title="Page 1" />
+<link rel="alternate" type="application/atom+xml" href="extern.php?action=feed&amp;tid=3757&amp;type=atom" title="Atom topic feed" />
+</head>
+
+<body>
+
+<div id="punviewtopic" class="pun">
+<div class="top-box"></div>
+<div class="punwrap">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdtitle" class="inbox">
+      <a href="https://forums.bunsenlabs.org" title="BunsenLabs Linux Forums"><img class="logo" src="/img/bl.svg" alt="[BunsenLabs Logo]"></img></a>
+		</div>
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navindex" class="isactive"><a href="index.php">Index</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">Rules</a></li>
+				<li id="navsearch"><a href="search.php">Search</a></li>
+				<li id="navregister"><a href="register.php">Register</a></li>
+				<li id="navlogin"><a href="login.php">Login</a></li>
+			</ul>
+		</div>
+		<div id="brdwelcome" class="inbox">
+			<p class="conl">You are not logged in.</p>
+			<ul class="conr">
+				<li><span>Topics: <a href="search.php?action=show_recent" title="Find topics with recent posts.">Active</a> | <a href="search.php?action=show_unanswered" title="Find topics with no replies.">Unanswered</a></span></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="brdmain">
+<div class="linkst">
+	<div class="inbox crumbsplus">
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=2">Basic Help &amp; Support</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=3757">lightdm and .xinitrc</a></strong></li>
+		</ul>
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p52411" class="blockpost rowodd firstpost blockpost1">
+	<h2><span><span class="conr">#1</span> <a href="viewtopic.php?pid=52411#p52411">2017-05-29 08:40:37</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>privacyrequired</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2017-05-09</span></dd>
+						<dd><span>Posts: 12</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p>I would like to know how to make .xinitrc work with lightdm because I can not do it.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52418" class="blockpost roweven">
+	<h2><span><span class="conr">#2</span> <a href="viewtopic.php?pid=52418#p52418">2017-05-29 09:22:57</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>Steve</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://forums.bunsenlabs.org/img/avatars/2478.png?m=1497187602" width="60" height="60" alt="" /></dd>
+						<dd><span>Registered: 2017-01-03</span></dd>
+						<dd><span>Posts: 642</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p>What do you want to do with .xinitrc ?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52429" class="blockpost rowodd">
+	<h2><span><span class="conr">#3</span> <a href="viewtopic.php?pid=52429#p52429">2017-05-29 12:05:49</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>Head_on_a_Stick</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://forums.bunsenlabs.org/img/avatars/74.png?m=1494016729" width="60" height="60" alt="" /></dd>
+						<dd><span>From: London</span></dd>
+						<dd><span>Registered: 2015-09-29</span></dd>
+						<dd><span>Posts: 8,759</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="https://www.kingraymotorcycles.co.uk/" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p><a href="https://github.com/BunsenLabs/bunsen-configs/blob/master/skel/.config/openbox/autostart" rel="nofollow">~/.config/openbox/autostart</a> is used to start most of the desktop programs in BunsenLabs, this file is parsed whether LightDM is used or not as long as <em>openbox-session</em> is set as <em>x-session-manager</em> in <strong>/etc/alternatives</strong></p><p><a href="https://github.com/BunsenLabs/bunsen-configs/blob/master/skel/.xsessionrc" rel="nofollow">~/.xsessionrc</a> is used to set environmental variables and suchlike, that file is read by LightDM and most other display managers.</p><p>It is also possible to drop .desktop files in <strong>~/.config/autostart</strong> and LightDM will honour these as per the <a href="https://specifications.freedesktop.org/autostart-spec/0.5/ar01s02.html" rel="nofollow">freedesktop.org specification</a>.</p><p>If you want to use <strong>~/.xinitrc</strong> with LightDM then symlink that file to <strong>~/.xsession</strong> and select &quot;Default XSession&quot; as the desktop in LightDM.</p><div class="codebox"><pre><code>ln -s ~/.xinitrc ~/.xsession</code></pre></div><p>Or, if you are as allergic to symlinks as I am:</p><div class="codebox"><pre><code>echo &quot;. ~/.xinitrc&quot; &gt; ~/.xsession</code></pre></div><p>I&#039;ve just checked my Debian jessie system and that uses a slightly more robust version:</p><div class="codebox"><pre><code># ~/.xsession
+/bin/bash --login -i ~/.xinitrc</code></pre></div>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><em>“Et ignotas animum dimittit in artes.”</em> — Ovid, Metamorphoses, VIII., 18.</p><p><a href="https://forums.bunsenlabs.org/misc.php?action=rules" rel="nofollow">Forum Rules</a>&#160; &#160;•&#160; &#160;<a href="http://www.co.kerr.tx.us/it/howtoreport.html" rel="nofollow">How to report a problem</a>&#160; &#160;•&#160; &#160;<a href="https://suckless.org/rocks" rel="nofollow">Software that rocks</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52459" class="blockpost roweven">
+	<h2><span><span class="conr">#4</span> <a href="viewtopic.php?pid=52459#p52459">2017-05-29 15:35:37</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>BLizgreat!</strong></dt>
+						<dd class="usertitle"><strong>Resident Babbler - vll!</strong></dd>
+						<dd><span>Registered: 2015-10-03</span></dd>
+						<dd><span>Posts: 1,217</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p>Cool stuff Hoas, thanks for some insights. Am currently embroiled in similar Nixish activities which parallel this topic myself. So of course ... Google !!!! Who&#039;s how to on autologin + startx + systemd goodness do I come across again ? Hoas&#039;s o course and it&#039;s a cool share and appreciated too.</p><p>Sheesh as long as I&#039;ve been dorking with gnu/Nix such should be childs play by now. Though as usual am also trying to eat the elephant one bite at a time ... as in, IN ONE BITE. <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/tongue.png" alt="tongue" /></p><p>Fourteen different inter-tangled and similar topics bleeding together. Arghhhhhh! Ok shutting it folks. <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/smile.png" alt="smile" /></p>
+						<p class="postedit"><em>Last edited by BLizgreat! (2017-05-29 15:37:02)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52463" class="blockpost rowodd">
+	<h2><span><span class="conr">#5</span> <a href="viewtopic.php?pid=52463#p52463">2017-05-29 15:53:50</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>DeepDayze</strong></dt>
+						<dd class="usertitle"><strong>Like sands through an hourglass...</strong></dd>
+						<dd><span>From: In Linux Land</span></dd>
+						<dd><span>Registered: 2017-05-28</span></dd>
+						<dd><span>Posts: 1,079</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<div class="quotebox"><cite>BLizgreat! wrote:</cite><blockquote><div><p>Cool stuff Hoas, thanks for some insights. Am currently embroiled in similar Nixish activities which parallel this topic myself. So of course ... Google !!!! Who&#039;s how to on autologin + startx + systemd goodness do I come across again ? Hoas&#039;s o course and it&#039;s a cool share and appreciated too.</p><p>Sheesh as long as I&#039;ve been dorking with gnu/Nix such should be childs play by now. Though as usual am also trying to eat the elephant one bite at a time ... as in, IN ONE BITE. <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/tongue.png" alt="tongue" /></p><p>Fourteen different inter-tangled and similar topics bleeding together. Arghhhhhh! Ok shutting it folks. <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/smile.png" alt="smile" /></p></div></blockquote></div><p>Lay off the caffeine and sugar my friend&#160; <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/tongue.png" alt="tongue" /></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Real Men Use <strong>Linux</strong></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52464" class="blockpost roweven">
+	<h2><span><span class="conr">#6</span> <a href="viewtopic.php?pid=52464#p52464">2017-05-29 15:56:45</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>BLizgreat!</strong></dt>
+						<dd class="usertitle"><strong>Resident Babbler - vll!</strong></dd>
+						<dd><span>Registered: 2015-10-03</span></dd>
+						<dd><span>Posts: 1,217</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p>^ Good point. <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/smile.png" alt="smile" /></p><p>Though atm, isn&#039;t a realistic prospect. If someone ran the &quot;uptime&quot; command on me, output would be 36+hrs. Still have things to do ! If I stop drinking coffee I&#039;m a goner. <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/tongue.png" alt="tongue" /></p><p>Update: Switched over to high gravity lager, that out to do it. Nappy time is fast approaching.</p>
+						<p class="postedit"><em>Last edited by BLizgreat! (2017-05-29 18:29:22)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52517" class="blockpost rowodd">
+	<h2><span><span class="conr">#7</span> <a href="viewtopic.php?pid=52517#p52517">2017-05-30 03:12:45</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>johnraff</strong></dt>
+						<dd class="usertitle"><strong>nullglob</strong></dd>
+						<dd class="postavatar"><img src="https://forums.bunsenlabs.org/img/avatars/7.jpg?m=1472706360" width="60" height="53" alt="" /></dd>
+						<dd><span>From: Nagoya, Japan</span></dd>
+						<dd><span>Registered: 2015-09-09</span></dd>
+						<dd><span>Posts: 7,561</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://asazuke.com" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p><strong>.xsessionrc</strong> will be read by a LightDm-free plain &#039;startx&#039; session too.</p><div class="codebox"><pre><code>grep -r &#039;.xsessionrc&#039; /etc/X11</code></pre></div><p>Although it&#039;s <em>supposed</em> to be for evvars and the like, you can use any shell commands you want, just like .config/openbox/<strong>autostart</strong>, and .config/openbox/<strong>environment</strong> for that matter. The difference of course is that the openbox files won&#039;t be run by other window managers.</p><p><strong>.xinitrc</strong> will likely be ignored by lightdm (haven&#039;t tested) and with startx its presence in ~/ will cause all the usual Debian startup commands (see /etc/X11/Xsession.d/) to be skipped, so you have to do everything yourself. Some people might prefer that.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><em>...elevator in the Brain Hotel, broken down but just as well...</em><br />( a boring <a href="http://asazuke.com" rel="nofollow">Japan blog</a> (currently paused), idle <a href="https://twitter.com/john_raff" rel="nofollow">Twitterings</a> and <a href="https://github.com/johnraff" rel="nofollow">GitStuff</a> )</p><p><a href="https://forums.bunsenlabs.org/viewtopic.php?id=6461" rel="nofollow">Introduction to the Bunsenlabs Lithium Desktop</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52565" class="blockpost roweven">
+	<h2><span><span class="conr">#8</span> <a href="viewtopic.php?pid=52565#p52565">2017-05-30 15:39:43</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>BLizgreat!</strong></dt>
+						<dd class="usertitle"><strong>Resident Babbler - vll!</strong></dd>
+						<dd><span>Registered: 2015-10-03</span></dd>
+						<dd><span>Posts: 1,217</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p>+1 John-san, if I&#039;ve read up correctly, seems ~/.xsessionrc is a Debian and based specific approach to this vs .xinitrc, which supposedly requires being used along with a display manager anyway. So between what John just added and Hoas&#039;s how to <a href="http://forums.debian.net/viewtopic.php?t=123694" rel="nofollow">here</a>. Somebody has everything they need to auto-login and startx without the bloat of a display-manager. Yay !</p><p>Thanks Hoas and John. <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/smile.png" alt="smile" /></p><div class="quotebox"><blockquote><div><p>Pointless afterthought babble:</p><p>Though believe Hoa&#039;s kickbutt tute will execute default xsession as it is. Whereas John&#039;s inclusion and use of an ~/.xsessionrc file should provide a person finer grain control over it. ie: Which gui (Desktop/windows manager)is launched kinda deal ?</p></div></blockquote></div><p>From a Debian webpg on how the X startup process works ...</p><p>The Debian reference manual describes how the defaults work:</p><p>&#160; &#160; If the user has a ~/.xsessionrc file, read it.</p><p>&#160; &#160; If a specific session was selected in gdm3, run it.</p><p>&#160; &#160; Otherwise, if the user has a ~/.xsession or ~/.Xsession file, run it.</p><p>&#160; &#160; Otherwise, if the /usr/bin/x-session-manager command exists, run it.</p><p>&#160; &#160; Otherwise, if the /usr/bin/x-window-manager command exists, run it.</p><p>&#160; &#160; Otherwise, if the /usr/bin/x-terminal-manager command exists, run it. </p><p>No mention of .xinitrc there, though assume some display-managers could check for one and execute if found. That&#039;s just a guess and assumption.</p>
+						<p class="postedit"><em>Last edited by BLizgreat! (2017-05-30 18:01:50)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52813" class="blockpost rowodd">
+	<h2><span><span class="conr">#9</span> <a href="viewtopic.php?pid=52813#p52813">2017-06-02 03:18:37</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>johnraff</strong></dt>
+						<dd class="usertitle"><strong>nullglob</strong></dd>
+						<dd class="postavatar"><img src="https://forums.bunsenlabs.org/img/avatars/7.jpg?m=1472706360" width="60" height="53" alt="" /></dd>
+						<dd><span>From: Nagoya, Japan</span></dd>
+						<dd><span>Registered: 2015-09-09</span></dd>
+						<dd><span>Posts: 7,561</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://asazuke.com" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p>.xinitrc is not needed in the standard Debian boot-up. My understanding is that if it does exist, then a lot of - going on most of - those other files are ignored. </p><p>It dates from 2012, but back in #! I dived into this stuff because it was bothering me, and wrote it up. Now reposted here: <a href="https://forums.bunsenlabs.org/viewtopic.php?id=3774" rel="nofollow">https://forums.bunsenlabs.org/viewtopic.php?id=3774</a> If you&#039;re interested...</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><em>...elevator in the Brain Hotel, broken down but just as well...</em><br />( a boring <a href="http://asazuke.com" rel="nofollow">Japan blog</a> (currently paused), idle <a href="https://twitter.com/john_raff" rel="nofollow">Twitterings</a> and <a href="https://github.com/johnraff" rel="nofollow">GitStuff</a> )</p><p><a href="https://forums.bunsenlabs.org/viewtopic.php?id=6461" rel="nofollow">Introduction to the Bunsenlabs Lithium Desktop</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52824" class="blockpost roweven">
+	<h2><span><span class="conr">#10</span> <a href="viewtopic.php?pid=52824#p52824">2017-06-02 07:07:28</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>Head_on_a_Stick</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://forums.bunsenlabs.org/img/avatars/74.png?m=1494016729" width="60" height="60" alt="" /></dd>
+						<dd><span>From: London</span></dd>
+						<dd><span>Registered: 2015-09-29</span></dd>
+						<dd><span>Posts: 8,759</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="https://www.kingraymotorcycles.co.uk/" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p>I think if ~/.xinitrc is used then Debian assumes that the user wants to specify *exactly* what starts in that file and nowhere else.</p><p>Thanks for re-posting that guide johnraff, I keep forgetting about the /etc/X11/Xsession.d quirk&#160; <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/ops.png" alt="ops" /></p><p>EDIT:</p><div class="quotebox"><cite>BLizgreat! wrote:</cite><blockquote><div><p>No mention of .xinitrc there, though assume some display-managers could check for one and execute if found.</p></div></blockquote></div><p>No, display managers will ignore ~/.xinitrc</p>
+						<p class="postedit"><em>Last edited by Head_on_a_Stick (2017-06-02 07:09:25)</em></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><em>“Et ignotas animum dimittit in artes.”</em> — Ovid, Metamorphoses, VIII., 18.</p><p><a href="https://forums.bunsenlabs.org/misc.php?action=rules" rel="nofollow">Forum Rules</a>&#160; &#160;•&#160; &#160;<a href="http://www.co.kerr.tx.us/it/howtoreport.html" rel="nofollow">How to report a problem</a>&#160; &#160;•&#160; &#160;<a href="https://suckless.org/rocks" rel="nofollow">Software that rocks</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p52837" class="blockpost rowodd">
+	<h2><span><span class="conr">#11</span> <a href="viewtopic.php?pid=52837#p52837">2017-06-02 12:57:28</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>BLizgreat!</strong></dt>
+						<dd class="usertitle"><strong>Resident Babbler - vll!</strong></dd>
+						<dd><span>Registered: 2015-10-03</span></dd>
+						<dd><span>Posts: 1,217</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: lightdm and .xinitrc</h3>
+					<div class="postmsg">
+						<p>Thanks Hoas and already thanked John for posting some useful X/ness in another thread. <img src="https://forums.bunsenlabs.org/plugins/ezbbc/style/smilies/big_smile.png" alt="big_smile" /></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox crumbsplus">
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=2">Basic Help &amp; Support</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=3757">lightdm and .xinitrc</a></strong></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Board footer</span></h2>
+	<div class="box">
+		<div id="brdfooternav" class="inbox">
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label><span>Jump to<br /></span>
+					<select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Documentation">
+							<option value="21">Getting Started</option>
+							<option value="25">Tutorials</option>
+						</optgroup>
+						<optgroup label="Distro Development">
+							<option value="12">News &amp; Announcements</option>
+							<option value="13">Development &amp; Suggestions</option>
+							<option value="14">Bug Reports</option>
+						</optgroup>
+						<optgroup label="Technical Issues and Assistance">
+							<option value="2" selected="selected">Basic Help &amp; Support</option>
+							<option value="4">GUI &amp; Applications</option>
+							<option value="5">Multimedia &amp; Games</option>
+							<option value="3">Kernel &amp; Hardware</option>
+							<option value="6">System Administration</option>
+							<option value="18">Help &amp; Support (Crunchbang 11 &quot;Waldorf&quot;)</option>
+							<option value="19">Help &amp; Support (Other)</option>
+						</optgroup>
+						<optgroup label="Userland">
+							<option value="7">Introductions</option>
+							<option value="9">Scripts, Tutorials &amp; Tips</option>
+							<option value="8">Artwork &amp; Screenshots</option>
+							<option value="23">BL &amp; General Linux Discussion</option>
+							<option value="11">Off Topic</option>
+						</optgroup>
+					</select></label>
+					<input type="submit" value=" Go " accesskey="g" />
+					</div>
+				</form>
+			</div>
+			<div class="conr">
+				<p id="feedlinks"><span class="atom"><a href="extern.php?action=feed&amp;tid=3757&amp;type=atom">Atom topic feed</a></span></p>
+				<p id="poweredby">Powered by <a href="http://fluxbb.org/">FluxBB</a></p>
+			</div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="end-box"></div>
+</div>
+</body>
+</html>

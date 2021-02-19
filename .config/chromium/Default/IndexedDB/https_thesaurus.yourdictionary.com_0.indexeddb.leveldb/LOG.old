@@ -1,0 +1,5 @@
+2021/01/31-00:07:09.497 2b43 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/https_thesaurus.yourdictionary.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/31-00:07:33.415 6dec Level-0 table #5: started
+2021/01/31-00:07:33.448 6dec Level-0 table #5: 1177 bytes OK
+2021/01/31-00:07:33.484 6dec Delete type=0 #3
+2021/01/31-00:07:33.484 6dec Manual compaction at level-0 from (begin) .. (end); will stop at (end)

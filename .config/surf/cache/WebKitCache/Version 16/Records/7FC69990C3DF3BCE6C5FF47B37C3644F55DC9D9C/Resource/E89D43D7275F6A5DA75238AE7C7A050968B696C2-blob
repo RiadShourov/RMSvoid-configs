@@ -1,0 +1,680 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<link rel="icon" href="/favicon.png">
+<title>
+#841878 - policykit-1: Authentication fails with valid credentials - Debian Bug report logs</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/bugs.css" type="text/css">
+
+<link rel="canonical" href="&lt;a href=&quot;bugreport.cgi?bug=841878&quot;&gt;841878&lt;/a&gt;">
+<script type="text/javascript">
+<!--
+function toggle_infmessages()
+{
+        allDivs=document.getElementsByTagName("div");
+        for (var i = 0 ; i < allDivs.length ; i++ )
+        {
+                if (allDivs[i].className == "infmessage")
+                {
+                        allDivs[i].style.display=(allDivs[i].style.display == 'none' | allDivs[i].style.display == '') ? 'block' : 'none';
+                }
+        }
+}
+-->
+</script>
+</head>
+<body>
+<h1>Debian Bug report logs - 
+<a href="mailto:841878@bugs.debian.org">#841878</a><br>
+policykit-1: Authentication fails with valid credentials</h1>
+<div class="versiongraph"><a href="version.cgi?info=1;package=policykit-1;found=policykit-1%2F0.113-5;fixed=policykit-1-gnome%2F0.105-5;collapse=1;absolute=0"><img alt="version graph" src="version.cgi?width=2;height=2;absolute=0;collapse=1;fixed=policykit-1-gnome%2F0.105-5;found=policykit-1%2F0.113-5;package=policykit-1"></a></div>
+<div class="pkginfo">
+  <p>Package:
+     <a class="submitter" href="pkgreport.cgi?package=policykit-1">policykit-1</a>;
+Maintainer for <a href="pkgreport.cgi?package=policykit-1">policykit-1</a> is <a href="pkgreport.cgi?maint=pkg-utopia-maintainers%40lists.alioth.debian.org">Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</a>; Source for <a href="pkgreport.cgi?package=policykit-1">policykit-1</a> is <a href="pkgreport.cgi?src=policykit-1">src:policykit-1</a> (<a href="https://tracker.debian.org/pkg/policykit-1">PTS</a>, <a href="https://buildd.debian.org/policykit-1">buildd</a>, <a href="https://qa.debian.org/popcon.php?package=policykit-1">popcon</a>). </p>
+
+</div>
+
+<div class="buginfo">
+  <p>Reported by: <a href="pkgreport.cgi?submitter=bgvaughan%40gmail.com">Brian Vaughan &lt;bgvaughan@gmail.com&gt;</a></p>
+  <p>Date: Mon, 24 Oct 2016 04:15:01 UTC</p>
+
+<p>Severity: important</p>
+<p></p>
+
+<p>Found in version policykit-1/0.113-5</p>
+<p>Fixed in version policykit-1-gnome/0.105-5</p>
+
+<p><strong>Done:</strong> Simon McVittie &lt;smcv@debian.org&gt;</p>
+
+<p>Bug is archived. No further changes may be made.<p></div>
+
+<p><a href="javascript:toggle_infmessages();">Toggle useless messages</a></p><div class="msgreceived"><p>View this report as an <a href="bugreport.cgi?bug=841878;mbox=yes">mbox folder</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;mboxstatus=yes">status mbox</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;mboxmaint=yes">maintainer mbox</a></p></div>
+
+<div class="infmessage"><hr><p>
+<a name="1"></a>
+<!-- request_addr: debian-bugs-dist@lists.debian.org, bgvaughan@gmail.com, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt; -->
+<!-- time:1477282505 -->
+<strong>Report forwarded</strong>
+to <code>debian-bugs-dist@lists.debian.org, bgvaughan@gmail.com, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>:<br>
+<code>Bug#841878</code>; Package <code>policykit-1</code>.
+ (Mon, 24 Oct 2016 04:15:05 GMT) (<a href="bugreport.cgi?bug=841878;msg=2">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=2">mbox</a>, <a href="#1">link</a>).</p></p></div>
+
+<div class="infmessage"><hr><p>
+<a name="3"></a>
+<!-- request_addr: Brian Vaughan &lt;bgvaughan@gmail.com&gt; -->
+<!-- time:1477282505 -->
+<strong>Acknowledgement sent</strong>
+to <code>Brian Vaughan &lt;bgvaughan@gmail.com&gt;</code>:<br>
+New Bug report received and forwarded.  Copy sent to <code>bgvaughan@gmail.com, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>.
+ (Mon, 24 Oct 2016 04:15:05 GMT) (<a href="bugreport.cgi?bug=841878;msg=4">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=4">mbox</a>, <a href="#3">link</a>).</p></p></div>
+
+<hr><p class="msgreceived"><a name="5"></a><a name="msg5"></a><a href="#5">Message #5</a> received at submit@bugs.debian.org (<a href="bugreport.cgi?bug=841878;msg=5">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=5">mbox</a>, <a href="mailto:841878@bugs.debian.org?References=%3C147728240493.4652.14142721022484524038.reportbug%40brian-laptop%3E&amp;subject=Re%3A%20policykit-1%3A%20Authentication%20fails%20with%20valid%20credentials&amp;body=On%20Sun%2C%2023%20Oct%202016%2021%3A13%3A24%20-0700%20Brian%20Vaughan%20%3Cbgvaughan%40gmail.com%3E%20wrote%3A%0A%3E%20Package%3A%20policykit-1%0A%3E%20Version%3A%200.113-5%0A%3E%20Severity%3A%20important%0A%3E%20%0A%3E%20Dear%20Maintainer%2C%0A%3E%20%0A%3E%20Following%20a%20recent%20update%2C%20launching%20Synaptic%20through%20the%20menu%20system%20fails%0A%3E%20silently.%20%27sudo%20synaptic%27%20at%20the%20command%20line%20launches%20Synaptic%20as%20expected.%0A%3E%20%0A%3E%20Executing%20%27synaptic-pkexec%27%20%28as%20in%20%27%2Fusr%2Fshare%2Fapplications%2Fsynaptic.desktop%27%2C%0A%3E%20and%20providing%20the%20correct%20password%2C%20produces%20the%20following%3A%0A%3E%20%0A%3E%20%0A%3E%20%3D%3D%3D%3D%20AUTHENTICATING%20FOR%20com.ubuntu.pkexec.synaptic%20%3D%3D%3D%0A%3E%20Authentication%20is%20required%20to%20run%20the%20Synaptic%20Package%20Manager%0A%3E%20Authenticating%20as%3A%20Brian%20Vaughan%2C%2C%2C%20%28brian%29%0A%3E%20Password%3A%0A%3E%20polkit-agent-helper-1%3A%20pam_authenticate%20failed%3A%20Authentication%20failure%0A%3E%20%3D%3D%3D%3D%20AUTHENTICATION%20FAILED%20%3D%3D%3D%0A%3E%20Error%20executing%20command%20as%20another%20user%3A%20Not%20authorized%0A%3E%20%0A%3E%20This%20incident%20has%20been%20reported.%0A%3E%20%0A%3E%20%0A%3E%20This%20appeared%20with%20policykit-1%200.105-17.%20I%20tried%20installing%200.113-5%20from%0A%3E%20experimental%2C%20but%20the%20behavior%20remained%20the%20same.%0A%3E%20%0A%3E%20%0A%3E%20%0A%3E%20--%20System%20Information%3A%0A%3E%20Debian%20Release%3A%20stretch%2Fsid%0A%3E%20%20%20APT%20prefers%20unstable%0A%3E%20%20%20APT%20policy%3A%20%28500%2C%20%27unstable%27%29%0A%3E%20Architecture%3A%20amd64%20%28x86_64%29%0A%3E%20Foreign%20Architectures%3A%20i386%0A%3E%20%0A%3E%20Kernel%3A%20Linux%204.7.0-1-amd64%20%28SMP%20w%2F4%20CPU%20cores%29%0A%3E%20Locale%3A%20LANG%3Den_US.utf8%2C%20LC_CTYPE%3Den_US.utf8%20%28charmap%3DUTF-8%29%0A%3E%20Shell%3A%20%2Fbin%2Fsh%20linked%20to%20%2Fbin%2Fdash%0A%3E%20Init%3A%20systemd%20%28via%20%2Frun%2Fsystemd%2Fsystem%29%0A%3E%20%0A%3E%20Versions%20of%20packages%20policykit-1%20depends%20on%3A%0A%3E%20ii%20%20adduser%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%203.115%0A%3E%20ii%20%20dbus%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%201.10.12-1%0A%3E%20ii%20%20libc6%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%202.24-5%0A%3E%20ii%20%20libexpat1%20%20%20%20%20%20%20%20%20%20%20%20%20%202.2.0-1%0A%3E%20ii%20%20libglib2.0-0%20%20%20%20%20%20%20%20%20%20%202.50.1-1%0A%3E%20ii%20%20libmozjs185-1.0%20%20%20%20%20%20%20%201.8.5-1.0.0%2Bdfsg-5%0A%3E%20ii%20%20libnspr4%20%20%20%20%20%20%20%20%20%20%20%20%20%20%202%3A4.12-6%0A%3E%20ii%20%20libpam-systemd%20%20%20%20%20%20%20%20%20231-9%0A%3E%20ii%20%20libpam0g%20%20%20%20%20%20%20%20%20%20%20%20%20%20%201.1.8-3.3%0A%3E%20ii%20%20libpolkit-agent-1-0%20%20%20%200.113-5%0A%3E%20ii%20%20libpolkit-gobject-1-0%20%200.113-5%0A%3E%20ii%20%20libsystemd0%20%20%20%20%20%20%20%20%20%20%20%20231-9%0A%3E%20%0A%3E%20policykit-1%20recommends%20no%20packages.%0A%3E%20%0A%3E%20policykit-1%20suggests%20no%20packages.%0A%3E%20%0A%3E%20--%20Configuration%20Files%3A%0A&amp;In-Reply-To=%3C147728240493.4652.14142721022484524038.reportbug%40brian-laptop%3E">reply</a>):</p>
+<div class="headers">
+<img src="/cgi-bin/libravatar.cgi?email=bgvaughan%40gmail.com" alt="">
+<div class="header"><span class="headerfield">From:</span> Brian Vaughan &lt;bgvaughan@gmail.com&gt;</div>
+<div class="header"><span class="headerfield">To:</span> Debian Bug Tracking System &lt;submit@bugs.debian.org&gt;</div>
+<div class="header"><span class="headerfield">Subject:</span> policykit-1: Authentication fails with valid credentials</div>
+<div class="header"><span class="headerfield">Date:</span> Sun, 23 Oct 2016 21:13:24 -0700</div>
+</div>
+<pre class="message">Package: policykit-1
+Version: 0.113-5
+Severity: important
+
+Dear Maintainer,
+
+Following a recent update, launching Synaptic through the menu system fails
+silently. &#39;sudo synaptic&#39; at the command line launches Synaptic as expected.
+
+Executing &#39;synaptic-pkexec&#39; (as in &#39;/usr/share/applications/synaptic.desktop&#39;,
+and providing the correct password, produces the following:
+
+
+==== AUTHENTICATING FOR com.ubuntu.pkexec.synaptic ===
+Authentication is required to run the Synaptic Package Manager
+Authenticating as: Brian Vaughan,,, (brian)
+Password:
+polkit-agent-helper-1: pam_authenticate failed: Authentication failure
+==== AUTHENTICATION FAILED ===
+Error executing command as another user: Not authorized
+
+This incident has been reported.
+
+
+This appeared with policykit-1 0.105-17. I tried installing 0.113-5 from
+experimental, but the behavior remained the same.
+
+
+
+-- System Information:
+Debian Release: stretch/sid
+  APT prefers unstable
+  APT policy: (500, &#39;unstable&#39;)
+Architecture: amd64 (x86_64)
+Foreign Architectures: i386
+
+Kernel: Linux 4.7.0-1-amd64 (SMP w/4 CPU cores)
+Locale: LANG=en_US.utf8, LC_CTYPE=en_US.utf8 (charmap=UTF-8)
+Shell: /bin/sh linked to /bin/dash
+Init: systemd (via /run/systemd/system)
+
+Versions of packages policykit-1 depends on:
+ii  adduser                3.115
+ii  dbus                   1.10.12-1
+ii  libc6                  2.24-5
+ii  libexpat1              2.2.0-1
+ii  libglib2.0-0           2.50.1-1
+ii  libmozjs185-1.0        1.8.5-1.0.0+dfsg-5
+ii  libnspr4               2:4.12-6
+ii  libpam-systemd         231-9
+ii  libpam0g               1.1.8-3.3
+ii  libpolkit-agent-1-0    0.113-5
+ii  libpolkit-gobject-1-0  0.113-5
+ii  libsystemd0            231-9
+
+policykit-1 recommends no packages.
+
+policykit-1 suggests no packages.
+
+-- Configuration Files:
+/etc/polkit-1/rules.d/40-debian-sudo.rules [Errno 13] Permission denied: u&#39;/etc/polkit-1/rules.d/40-debian-sudo.rules&#39;
+/etc/polkit-1/rules.d/50-default.rules [Errno 13] Permission denied: u&#39;/etc/polkit-1/rules.d/50-default.rules&#39;
+
+-- no debconf information
+
+
+</pre>
+
+<div class="infmessage"><hr><p>
+<a name="6"></a>
+<!-- request_addr: debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt; -->
+<!-- time:1477301582 -->
+<strong>Information forwarded</strong>
+to <code>debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>:<br>
+<code>Bug#841878</code>; Package <code>policykit-1</code>.
+ (Mon, 24 Oct 2016 09:33:02 GMT) (<a href="bugreport.cgi?bug=841878;msg=7">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=7">mbox</a>, <a href="#6">link</a>).</p></p></div>
+
+<div class="infmessage"><hr><p>
+<a name="8"></a>
+<!-- request_addr: Simon McVittie &lt;smcv@debian.org&gt; -->
+<!-- time:1477301582 -->
+<strong>Acknowledgement sent</strong>
+to <code>Simon McVittie &lt;smcv@debian.org&gt;</code>:<br>
+Extra info received and forwarded to list.  Copy sent to <code>Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>.
+ (Mon, 24 Oct 2016 09:33:02 GMT) (<a href="bugreport.cgi?bug=841878;msg=9">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=9">mbox</a>, <a href="#8">link</a>).</p></p></div>
+
+<hr><p class="msgreceived"><a name="10"></a><a name="msg10"></a><a href="#10">Message #10</a> received at 841878@bugs.debian.org (<a href="bugreport.cgi?bug=841878;msg=10">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=10">mbox</a>, <a href="mailto:841878@bugs.debian.org?References=%3C147728240493.4652.14142721022484524038.reportbug%40brian-laptop%3E%0A%20%3C20161024092848.rrblkkrt6vyrarmu%40perpetual.pseudorandom.co.uk%3E&amp;subject=Re%3A%20Bug%23841878%3A%20policykit-1%3A%20Authentication%20fails%20with%20valid%0A%20credentials&amp;body=On%20Mon%2C%2024%20Oct%202016%2010%3A28%3A48%20%2B0100%20Simon%20McVittie%20%3Csmcv%40debian.org%3E%20wrote%3A%0A%3E%20On%20Sun%2C%2023%20Oct%202016%20at%2021%3A13%3A24%20-0700%2C%20Brian%20Vaughan%20wrote%3A%0A%3E%20%3E%20Authenticating%20as%3A%20Brian%20Vaughan%2C%2C%2C%20%28brian%29%0A%3E%20%3E%20Password%3A%0A%3E%20%3E%20polkit-agent-helper-1%3A%20pam_authenticate%20failed%3A%20Authentication%20failure%0A%3E%20%0A%3E%20Please%20look%20in%20%2Fvar%2Flog%2Fauth.log%20for%20clues%20as%20to%20why%20your%20configured%20PAM%0A%3E%20stack%20might%20have%20refused%20your%20valid%20credentials.%0A%3E%20%0A%3E%20%28It%27s%20entirely%20possible%20that%20this%20was%20caused%20by%20a%20policykit-1%20change%2C%0A%3E%20but%20to%20know%20what%20to%20do%20about%20it%2C%20we%27ll%20likely%20need%20that%20information.%29%0A%3E%20%0A%3E%20Thanks%2C%0A%3E%20%20%20%20%20S%0A%3E%20%0A%3E%20%0A&amp;In-Reply-To=%3C20161024092848.rrblkkrt6vyrarmu%40perpetual.pseudorandom.co.uk%3E">reply</a>):</p>
+<div class="headers">
+<img src="/cgi-bin/libravatar.cgi?email=smcv%40debian.org" alt="">
+<div class="header"><span class="headerfield">From:</span> Simon McVittie &lt;smcv@debian.org&gt;</div>
+<div class="header"><span class="headerfield">To:</span> Brian Vaughan &lt;bgvaughan@gmail.com&gt;, 841878@bugs.debian.org</div>
+<div class="header"><span class="headerfield">Subject:</span> Re: Bug#841878: policykit-1: Authentication fails with valid
+ credentials</div>
+<div class="header"><span class="headerfield">Date:</span> Mon, 24 Oct 2016 10:28:48 +0100</div>
+</div>
+<pre class="message">On Sun, 23 Oct 2016 at 21:13:24 -0700, Brian Vaughan wrote:
+&gt; Authenticating as: Brian Vaughan,,, (brian)
+&gt; Password:
+&gt; polkit-agent-helper-1: pam_authenticate failed: Authentication failure
+
+Please look in /var/log/auth.log for clues as to why your configured PAM
+stack might have refused your valid credentials.
+
+(It&#39;s entirely possible that this was caused by a policykit-1 change,
+but to know what to do about it, we&#39;ll likely need that information.)
+
+Thanks,
+    S
+
+
+</pre>
+
+<div class="infmessage"><hr><p>
+<a name="11"></a>
+<!-- request_addr: debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt; -->
+<!-- time:1477330745 -->
+<strong>Information forwarded</strong>
+to <code>debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>:<br>
+<code>Bug#841878</code>; Package <code>policykit-1</code>.
+ (Mon, 24 Oct 2016 17:39:05 GMT) (<a href="bugreport.cgi?bug=841878;msg=12">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=12">mbox</a>, <a href="#11">link</a>).</p></p></div>
+
+<div class="infmessage"><hr><p>
+<a name="13"></a>
+<!-- request_addr: Brian Vaughan &lt;bgvaughan@gmail.com&gt; -->
+<!-- time:1477330746 -->
+<strong>Acknowledgement sent</strong>
+to <code>Brian Vaughan &lt;bgvaughan@gmail.com&gt;</code>:<br>
+Extra info received and forwarded to list.  Copy sent to <code>Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>.
+ (Mon, 24 Oct 2016 17:39:06 GMT) (<a href="bugreport.cgi?bug=841878;msg=14">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=14">mbox</a>, <a href="#13">link</a>).</p></p></div>
+
+<hr><p class="msgreceived"><a name="15"></a><a name="msg15"></a><a href="#15">Message #15</a> received at 841878@bugs.debian.org (<a href="bugreport.cgi?bug=841878;msg=15">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=15">mbox</a>, <a href="mailto:841878@bugs.debian.org?References=%3C147728240493.4652.14142721022484524038.reportbug%40brian-laptop%3E%0A%20%3C20161024092848.rrblkkrt6vyrarmu%40perpetual.pseudorandom.co.uk%3E%0A%20%3Cdb7bb5a8-1824-7884-9539-219369b324aa%40gmail.com%3E&amp;In-Reply-To=%3Cdb7bb5a8-1824-7884-9539-219369b324aa%40gmail.com%3E&amp;body=On%20Mon%2C%2024%20Oct%202016%2010%3A38%3A14%20-0700%20Brian%20Vaughan%20%3Cbgvaughan%40gmail.com%3E%20wrote%3A%0A%3E%20On%2010%2F24%2F2016%2002%3A28%20AM%2C%20Simon%20McVittie%20wrote%3A%0A%3E%20%3E%20On%20Sun%2C%2023%20Oct%202016%20at%2021%3A13%3A24%20-0700%2C%20Brian%20Vaughan%20wrote%3A%0A%3E%20%3E%3E%20Authenticating%20as%3A%20Brian%20Vaughan%2C%2C%2C%20%28brian%29%0A%3E%20%3E%3E%20Password%3A%0A%3E%20%3E%3E%20polkit-agent-helper-1%3A%20pam_authenticate%20failed%3A%20Authentication%20failure%0A%3E%20%3E%20%0A%3E%20%3E%20Please%20look%20in%20%2Fvar%2Flog%2Fauth.log%20for%20clues%20as%20to%20why%20your%20configured%20PAM%0A%3E%20%3E%20stack%20might%20have%20refused%20your%20valid%20credentials.%0A%3E%20%3E%20%0A%3E%20%3E%20%28It%27s%20entirely%20possible%20that%20this%20was%20caused%20by%20a%20policykit-1%20change%2C%0A%3E%20%3E%20but%20to%20know%20what%20to%20do%20about%20it%2C%20we%27ll%20likely%20need%20that%20information.%29%0A%3E%20%3E%20%0A%3E%20%3E%20Thanks%2C%0A%3E%20%3E%20%20%20%20%20S%0A%3E%20%3E%20%0A%3E%20%0A%3E%20Here%27s%20the%20part%20of%20the%20auth.log%20from%20first%20launching%20synaptic%20through%0A%3E%20the%20desktop%20menu%2C%20and%20second%20from%20%27synaptic-pkexec%27%20at%20the%20command%20line.%0A%3E%20%28Full%20log%20is%20attached.%29%0A%3E%20%0A%3E%20Oct%2024%2010%3A22%3A13%20brian-laptop%20polkitd%5B666%5D%3A%20Registered%20Authentication%0A%3E%20Agent%20for%20unix-process%3A1413%3A40576%20%28system%20bus%20name%20%3A1.54%20%5Bpkexec%0A%3E%20%2Fusr%2Fsbin%2Fsynaptic%5D%2C%20object%20path%0A%3E%20%2Forg%2Ffreedesktop%2FPolicyKit1%2FAuthenticationAgent%2C%20locale%20en_US.UTF-8%29%0A%3E%20Oct%2024%2010%3A22%3A24%20brian-laptop%20polkitd%5B666%5D%3A%20Operator%20of%0A%3E%20unix-process%3A1413%3A40576%20FAILED%20to%20authenticate%20to%20gain%20authorization%20for%0A%3E%20action%20com.ubuntu.pkexec.synaptic%20for%20unix-process%3A1413%3A40576%20%5B%2Fbin%2Fsh%0A%3E%20%2Fusr%2Fbin%2Fsynaptic-pkexec%5D%20%28owned%20by%20unix-user%3Abrian%29%0A%3E%20Oct%2024%2010%3A22%3A24%20brian-laptop%20pkexec%5B1414%5D%3A%20brian%3A%20Error%20executing%0A%3E%20command%20as%20another%20user%3A%20Not%20authorized%20%5BUSER%3Droot%5D%20%5BTTY%3D%2Fdev%2Fpts%2F0%5D%0A%3E%20%5BCWD%3D%2Fhome%2Fbrian%5D%20%5BCOMMAND%3D%2Fusr%2Fsbin%2Fsynaptic%5D%0A%3E%20Oct%2024%2010%3A22%3A24%20brian-laptop%20polkitd%5B666%5D%3A%20Unregistered%20Authentication%0A%3E%20Agent%20for%20unix-process%3A1413%3A40576%20%28system%20bus%20name%20%3A1.54%2C%20object%20path%0A%3E%20%2Forg%2Ffreedesktop%2FPolicyKit1%2FAuthenticationAgent%2C%20locale%20en_US.UTF-8%29%0A%3E%20Oct%2024%2010%3A22%3A55%20brian-laptop%20sudo%3A%20%20%20%20brian%20%3A%20TTY%3Dpts%2F0%20%3B%0A%3E%20PWD%3D%2Fhome%2Fbrian%20%3B%20USER%3Droot%20%3B%20COMMAND%3D%2Fbin%2Fcp%20%2Fvar%2Flog%2Fauth.log%20auth.log%0A%3E%20Oct%2024%2010%3A22%3A55%20brian-laptop%20sudo%3A%20pam_unix%28sudo%3Asession%29%3A%20session%0A%3E%20opened%20for%20user%20root%20by%20%28uid%3D0%29%0A%3E%20%0A%3E%20The%20error%20message%20in%20the%20terminal%20was%20slightly%20different.%0A%3E%20%0A%3E%20%3D%3D%3D%3D%20AUTHENTICATING%20FOR%20com.ubuntu.pkexec.synaptic%20%3D%3D%3D%0A%3E%20Authentication%20is%20required%20to%20run%20the%20Synaptic%20Package%20Manager%0A%3E%20Authenticating%20as%3A%20Brian%20Vaughan%2C%2C%2C%20%28brian%29%0A%3E%20Password%3A%0A%3E%20polkit-agent-helper-1%3A%20error%20response%20to%20PolicyKit%20daemon%3A%0A%3E%20GDBus.Error%3Aorg.freedesktop.PolicyKit1.Error.Failed%3A%20No%20session%20for%20cookie%0A%3E%20%3D%3D%3D%3D%20AUTHENTICATION%20FAILED%20%3D%3D%3D%0A%3E%20Error%20executing%20command%20as%20another%20user%3A%20Not%20authorized%0A%3E%20%0A%3E%20This%20incident%20has%20been%20reported.%0A&amp;subject=Re%3A%20Bug%23841878%3A%20policykit-1%3A%20Authentication%20fails%20with%20valid%0A%20credentials">reply</a>):</p>
+<div class="headers">
+<img src="/cgi-bin/libravatar.cgi?email=bgvaughan%40gmail.com" alt="">
+<div class="header"><span class="headerfield">From:</span> Brian Vaughan &lt;bgvaughan@gmail.com&gt;</div>
+<div class="header"><span class="headerfield">To:</span> Simon McVittie &lt;smcv@debian.org&gt;, 841878@bugs.debian.org</div>
+<div class="header"><span class="headerfield">Subject:</span> Re: Bug#841878: policykit-1: Authentication fails with valid
+ credentials</div>
+<div class="header"><span class="headerfield">Date:</span> Mon, 24 Oct 2016 10:38:14 -0700</div>
+</div>
+<pre class="mime">[<a href="bugreport.cgi?att=0;bug=841878;msg=15">Message part 1</a> (text/plain, inline)]</pre>
+<pre class="message">On 10/24/2016 02:28 AM, Simon McVittie wrote:
+&gt; On Sun, 23 Oct 2016 at 21:13:24 -0700, Brian Vaughan wrote:
+&gt;&gt; Authenticating as: Brian Vaughan,,, (brian)
+&gt;&gt; Password:
+&gt;&gt; polkit-agent-helper-1: pam_authenticate failed: Authentication failure
+&gt; 
+&gt; Please look in /var/log/auth.log for clues as to why your configured PAM
+&gt; stack might have refused your valid credentials.
+&gt; 
+&gt; (It&#39;s entirely possible that this was caused by a policykit-1 change,
+&gt; but to know what to do about it, we&#39;ll likely need that information.)
+&gt; 
+&gt; Thanks,
+&gt;     S
+&gt; 
+
+Here&#39;s the part of the auth.log from first launching synaptic through
+the desktop menu, and second from &#39;synaptic-pkexec&#39; at the command line.
+(Full log is attached.)
+
+Oct 24 10:22:13 brian-laptop polkitd[666]: Registered Authentication
+Agent for unix-process:1413:40576 (system bus name :1.54 [pkexec
+/usr/sbin/synaptic], object path
+/org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Oct 24 10:22:24 brian-laptop polkitd[666]: Operator of
+unix-process:1413:40576 FAILED to authenticate to gain authorization for
+action com.ubuntu.pkexec.synaptic for unix-process:1413:40576 [/bin/sh
+/usr/bin/synaptic-pkexec] (owned by unix-user:brian)
+Oct 24 10:22:24 brian-laptop pkexec[1414]: brian: Error executing
+command as another user: Not authorized [USER=root] [TTY=/dev/pts/0]
+[CWD=/home/brian] [COMMAND=/usr/sbin/synaptic]
+Oct 24 10:22:24 brian-laptop polkitd[666]: Unregistered Authentication
+Agent for unix-process:1413:40576 (system bus name :1.54, object path
+/org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Oct 24 10:22:55 brian-laptop sudo:    brian : TTY=pts/0 ;
+PWD=/home/brian ; USER=root ; COMMAND=/bin/cp /var/log/auth.log auth.log
+Oct 24 10:22:55 brian-laptop sudo: pam_unix(sudo:session): session
+opened for user root by (uid=0)
+
+The error message in the terminal was slightly different.
+
+==== AUTHENTICATING FOR com.ubuntu.pkexec.synaptic ===
+Authentication is required to run the Synaptic Package Manager
+Authenticating as: Brian Vaughan,,, (brian)
+Password:
+polkit-agent-helper-1: error response to PolicyKit daemon:
+GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: No session for cookie
+==== AUTHENTICATION FAILED ===
+Error executing command as another user: Not authorized
+
+This incident has been reported.
+</pre>
+<pre class="mime">[<a href="bugreport.cgi?att=1;bug=841878;filename=auth.log;msg=15">auth.log</a> (text/x-log, attachment)]</pre>
+
+<div class="infmessage"><hr><p>
+<a name="16"></a>
+<!-- request_addr: debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt; -->
+<!-- time:1477501025 -->
+<strong>Information forwarded</strong>
+to <code>debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>:<br>
+<code>Bug#841878</code>; Package <code>policykit-1</code>.
+ (Wed, 26 Oct 2016 16:57:05 GMT) (<a href="bugreport.cgi?bug=841878;msg=17">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=17">mbox</a>, <a href="#16">link</a>).</p></p></div>
+
+<div class="infmessage"><hr><p>
+<a name="18"></a>
+<!-- request_addr: Brian Vaughan &lt;bgvaughan@gmail.com&gt; -->
+<!-- time:1477501026 -->
+<strong>Acknowledgement sent</strong>
+to <code>Brian Vaughan &lt;bgvaughan@gmail.com&gt;</code>:<br>
+Extra info received and forwarded to list.  Copy sent to <code>Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>.
+ (Wed, 26 Oct 2016 16:57:06 GMT) (<a href="bugreport.cgi?bug=841878;msg=19">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=19">mbox</a>, <a href="#18">link</a>).</p></p></div>
+
+<hr><p class="msgreceived"><a name="20"></a><a name="msg20"></a><a href="#20">Message #20</a> received at 841878@bugs.debian.org (<a href="bugreport.cgi?bug=841878;msg=20">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=20">mbox</a>, <a href="mailto:841878@bugs.debian.org?In-Reply-To=%3CCAH4f8uE0rtWiBNzFeLaFjHoZ5thR9JycbYq1UMz0FEoxwSkPeA%40mail.gmail.com%3E&amp;body=On%20Wed%2C%2026%20Oct%202016%2009%3A54%3A20%20-0700%20Brian%20Vaughan%20%3Cbgvaughan%40gmail.com%3E%20wrote%3A%0A%3E%20Also%3A%20I%20had%20a%20VM%2C%20set%20up%20with%20Debian%20unstable%20and%20XFCE%2C%20which%20I%20just%0A%3E%20updated%20yesterday.%20Prior%20to%20updating%2C%20Synaptic%20launched%20from%20the%20menu%0A%3E%20system%20without%20issue%3B%20after%20updating%2C%20I%20see%20the%20same%20behavior%20as%20on%20my%0A%3E%20laptop%2C%20for%20which%20I%20filed%20the%20bug.%20The%20VM%20had%20updated%20to%20policykit-1%0A%3E%200.105-17.%0A%3E%20%0A%3E%20Both%20systems%20use%20the%20XFCE%20interface%20and%20have%20sudo%20configured.%0A%3E%20%0A%3E%20Synaptic%20is%20the%20application%20where%20I%20first%20noticed%20the%20issue%2C%20but%20I%27m%20fairly%0A%3E%20sure%20it%27s%20not%20a%20Synaptic%20issue%20per%20se.%20I%20get%20the%20same%20error%20message%20if%20I%0A%3E%20execute%20%27pkexec%20whoami%27%2C%20for%20instance.%0A%3E%20%0A%3E%20A%20few%20months%20ago%2C%20I%27d%20had%20Debian%20stretch%2C%20with%20XFCE%2C%20on%20that%20laptop.%20After%0A%3E%20a%20few%20weeks%2C%20I%20had%20what%20seemed%20to%20be%20the%20same%20issue%20I%27m%20seeing%20now.%0A%3E%20Unfortunately%20I%27d%20wiped%20the%20laptop%20in%20between%20and%20so%20don%27t%20have%20any%20logs.%0A%3E%20%0A%3E%20From%20what%20I%27ve%20seen%20from%20some%20bug%20searches%20and%20general%20Web%20searches%2C%20there%0A%3E%20are%20a%20fair%20number%20of%20reports%20of%20applications%20that%20require%20authentication%0A%3E%20failing%20to%20launch%20from%20the%20menu%20system%20after%20an%20update%2C%20but%20working%20fine%0A%3E%20when%20launched%20from%20the%20command%20line%20with%20sudo.%20Synaptic%20is%20mentioned%20most%0A%3E%20often%2C%20including%20similar%20errors%20involving%20%27synaptic-pkexec%27%20at%20the%20command%0A%3E%20line.%20None%20mention%20fixes%2C%20but%20a%20few%20mention%20the%20problem%20goes%20away%20again%0A%3E%20after%20an%20update.%20A%20lot%20of%20them%20mention%20XFCE%2C%20but%20I%20don%27t%20recall%20any%20other%0A%3E%20desktop%20environments%20mentioned.%0A%3E%20%0A%3E%20policykit-1%20was%20my%20best%20guess%20about%20where%20the%20problem%20lies.%20Please%20let%20me%0A%3E%20know%20if%20there%27s%20anything%20further%20I%20can%20do%20to%20assist%20in%20troubleshooting.%0A%3E%20%0A%3E%20On%20Oct%2024%2C%202016%2010%3A38%20AM%2C%20%22Brian%20Vaughan%22%20%3Cbgvaughan%40gmail.com%3E%20wrote%3A%0A%3E%20%0A%3E%20%3E%20On%2010%2F24%2F2016%2002%3A28%20AM%2C%20Simon%20McVittie%20wrote%3A%0A%3E%20%3E%20%3E%20On%20Sun%2C%2023%20Oct%202016%20at%2021%3A13%3A24%20-0700%2C%20Brian%20Vaughan%20wrote%3A%0A%3E%20%3E%20%3E%3E%20Authenticating%20as%3A%20Brian%20Vaughan%2C%2C%2C%20%28brian%29%0A%3E%20%3E%20%3E%3E%20Password%3A%0A%3E%20%3E%20%3E%3E%20polkit-agent-helper-1%3A%20pam_authenticate%20failed%3A%20Authentication%20failure%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20Please%20look%20in%20%2Fvar%2Flog%2Fauth.log%20for%20clues%20as%20to%20why%20your%20configured%20PAM%0A%3E%20%3E%20%3E%20stack%20might%20have%20refused%20your%20valid%20credentials.%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20%28It%27s%20entirely%20possible%20that%20this%20was%20caused%20by%20a%20policykit-1%20change%2C%0A%3E%20%3E%20%3E%20but%20to%20know%20what%20to%20do%20about%20it%2C%20we%27ll%20likely%20need%20that%20information.%29%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20Thanks%2C%0A%3E%20%3E%20%3E%20%20%20%20%20S%0A%3E%20%3E%20%3E%0A%3E%20%3E%0A%3E%20%3E%20Here%27s%20the%20part%20of%20the%20auth.log%20from%20first%20launching%20synaptic%20through%0A%3E%20%3E%20the%20desktop%20menu%2C%20and%20second%20from%20%27synaptic-pkexec%27%20at%20the%20command%20line.%0A%3E%20%3E%20%28Full%20log%20is%20attached.%29%0A%3E%20%3E%0A%3E%20%3E%20Oct%2024%2010%3A22%3A13%20brian-laptop%20polkitd%5B666%5D%3A%20Registered%20Authentication%0A%3E%20%3E%20Agent%20for%20unix-process%3A1413%3A40576%20%28system%20bus%20name%20%3A1.54%20%5Bpkexec%0A%3E%20%3E%20%2Fusr%2Fsbin%2Fsynaptic%5D%2C%20object%20path%0A%3E%20%3E%20%2Forg%2Ffreedesktop%2FPolicyKit1%2FAuthenticationAgent%2C%20locale%20en_US.UTF-8%29%0A%3E%20%3E%20Oct%2024%2010%3A22%3A24%20brian-laptop%20polkitd%5B666%5D%3A%20Operator%20of%0A%3E%20%3E%20unix-process%3A1413%3A40576%20FAILED%20to%20authenticate%20to%20gain%20authorization%20for%0A%3E%20%3E%20action%20com.ubuntu.pkexec.synaptic%20for%20unix-process%3A1413%3A40576%20%5B%2Fbin%2Fsh%0A%3E%20%3E%20%2Fusr%2Fbin%2Fsynaptic-pkexec%5D%20%28owned%20by%20unix-user%3Abrian%29%0A%3E%20%3E%20Oct%2024%2010%3A22%3A24%20brian-laptop%20pkexec%5B1414%5D%3A%20brian%3A%20Error%20executing%0A%3E%20%3E%20command%20as%20another%20user%3A%20Not%20authorized%20%5BUSER%3Droot%5D%20%5BTTY%3D%2Fdev%2Fpts%2F0%5D%0A&amp;subject=Re%3A%20Bug%23841878%3A%20policykit-1%3A%20Authentication%20fails%20with%20valid%20credentials&amp;References=%3C147728240493.4652.14142721022484524038.reportbug%40brian-laptop%3E%0A%20%3C20161024092848.rrblkkrt6vyrarmu%40perpetual.pseudorandom.co.uk%3E%20%3Cdb7bb5a8-1824-7884-9539-219369b324aa%40gmail.com%3E%0A%20%3CCAH4f8uE0rtWiBNzFeLaFjHoZ5thR9JycbYq1UMz0FEoxwSkPeA%40mail.gmail.com%3E">reply</a>):</p>
+<div class="headers">
+<img src="/cgi-bin/libravatar.cgi?email=bgvaughan%40gmail.com" alt="">
+<div class="header"><span class="headerfield">From:</span> Brian Vaughan &lt;bgvaughan@gmail.com&gt;</div>
+<div class="header"><span class="headerfield">To:</span> 841878@bugs.debian.org, Simon McVittie &lt;smcv@debian.org&gt;</div>
+<div class="header"><span class="headerfield">Subject:</span> Re: Bug#841878: policykit-1: Authentication fails with valid credentials</div>
+<div class="header"><span class="headerfield">Date:</span> Wed, 26 Oct 2016 09:54:20 -0700</div>
+</div>
+<pre class="mime">[<a href="bugreport.cgi?att=0;bug=841878;msg=20">Message part 1</a> (text/plain, inline)]</pre>
+<pre class="message">Also: I had a VM, set up with Debian unstable and XFCE, which I just
+updated yesterday. Prior to updating, Synaptic launched from the menu
+system without issue; after updating, I see the same behavior as on my
+laptop, for which I filed the bug. The VM had updated to policykit-1
+0.105-17.
+
+Both systems use the XFCE interface and have sudo configured.
+
+Synaptic is the application where I first noticed the issue, but I&#39;m fairly
+sure it&#39;s not a Synaptic issue per se. I get the same error message if I
+execute &#39;pkexec whoami&#39;, for instance.
+
+A few months ago, I&#39;d had Debian stretch, with XFCE, on that laptop. After
+a few weeks, I had what seemed to be the same issue I&#39;m seeing now.
+Unfortunately I&#39;d wiped the laptop in between and so don&#39;t have any logs.
+
+From what I&#39;ve seen from some bug searches and general Web searches, there
+are a fair number of reports of applications that require authentication
+failing to launch from the menu system after an update, but working fine
+when launched from the command line with sudo. Synaptic is mentioned most
+often, including similar errors involving &#39;synaptic-pkexec&#39; at the command
+line. None mention fixes, but a few mention the problem goes away again
+after an update. A lot of them mention XFCE, but I don&#39;t recall any other
+desktop environments mentioned.
+
+policykit-1 was my best guess about where the problem lies. Please let me
+know if there&#39;s anything further I can do to assist in troubleshooting.
+
+On Oct 24, 2016 10:38 AM, &quot;Brian Vaughan&quot; &lt;bgvaughan@gmail.com&gt; wrote:
+
+&gt; On 10/24/2016 02:28 AM, Simon McVittie wrote:
+&gt; &gt; On Sun, 23 Oct 2016 at 21:13:24 -0700, Brian Vaughan wrote:
+&gt; &gt;&gt; Authenticating as: Brian Vaughan,,, (brian)
+&gt; &gt;&gt; Password:
+&gt; &gt;&gt; polkit-agent-helper-1: pam_authenticate failed: Authentication failure
+&gt; &gt;
+&gt; &gt; Please look in /var/log/auth.log for clues as to why your configured PAM
+&gt; &gt; stack might have refused your valid credentials.
+&gt; &gt;
+&gt; &gt; (It&#39;s entirely possible that this was caused by a policykit-1 change,
+&gt; &gt; but to know what to do about it, we&#39;ll likely need that information.)
+&gt; &gt;
+&gt; &gt; Thanks,
+&gt; &gt;     S
+&gt; &gt;
+&gt;
+&gt; Here&#39;s the part of the auth.log from first launching synaptic through
+&gt; the desktop menu, and second from &#39;synaptic-pkexec&#39; at the command line.
+&gt; (Full log is attached.)
+&gt;
+&gt; Oct 24 10:22:13 brian-laptop polkitd[666]: Registered Authentication
+&gt; Agent for unix-process:1413:40576 (system bus name :1.54 [pkexec
+&gt; /usr/sbin/synaptic], object path
+&gt; /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+&gt; Oct 24 10:22:24 brian-laptop polkitd[666]: Operator of
+&gt; unix-process:1413:40576 FAILED to authenticate to gain authorization for
+&gt; action com.ubuntu.pkexec.synaptic for unix-process:1413:40576 [/bin/sh
+&gt; /usr/bin/synaptic-pkexec] (owned by unix-user:brian)
+&gt; Oct 24 10:22:24 brian-laptop pkexec[1414]: brian: Error executing
+&gt; command as another user: Not authorized [USER=root] [TTY=/dev/pts/0]
+&gt; [CWD=/home/brian] [COMMAND=/usr/sbin/synaptic]
+&gt; Oct 24 10:22:24 brian-laptop polkitd[666]: Unregistered Authentication
+&gt; Agent for unix-process:1413:40576 (system bus name :1.54, object path
+&gt; /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+&gt; Oct 24 10:22:55 brian-laptop sudo:    brian : TTY=pts/0 ;
+&gt; PWD=/home/brian ; USER=root ; COMMAND=/bin/cp /var/log/auth.log auth.log
+&gt; Oct 24 10:22:55 brian-laptop sudo: pam_unix(sudo:session): session
+&gt; opened for user root by (uid=0)
+&gt;
+&gt; The error message in the terminal was slightly different.
+&gt;
+&gt; ==== AUTHENTICATING FOR com.ubuntu.pkexec.synaptic ===
+&gt; Authentication is required to run the Synaptic Package Manager
+&gt; Authenticating as: Brian Vaughan,,, (brian)
+&gt; Password:
+&gt; polkit-agent-helper-1: error response to PolicyKit daemon:
+&gt; GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: No session for cookie
+&gt; ==== AUTHENTICATION FAILED ===
+&gt; Error executing command as another user: Not authorized
+&gt;
+&gt; This incident has been reported.
+&gt;
+</pre>
+<pre class="mime">[<a href="bugreport.cgi?att=1;bug=841878;msg=20">Message part 2</a> (text/html, inline)]</pre>
+
+<div class="infmessage"><hr><p>
+<a name="21"></a>
+<!-- request_addr: debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt; -->
+<!-- time:1477558985 -->
+<strong>Information forwarded</strong>
+to <code>debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>:<br>
+<code>Bug#841878</code>; Package <code>policykit-1</code>.
+ (Thu, 27 Oct 2016 09:03:05 GMT) (<a href="bugreport.cgi?bug=841878;msg=22">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=22">mbox</a>, <a href="#21">link</a>).</p></p></div>
+
+<div class="infmessage"><hr><p>
+<a name="23"></a>
+<!-- request_addr: 842184@bugs.debian.org -->
+<!-- time:1477558985 -->
+<strong>Acknowledgement sent</strong>
+to <code>842184@bugs.debian.org</code>:<br>
+Extra info received and forwarded to list.  Copy sent to <code>Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>.
+ (Thu, 27 Oct 2016 09:03:05 GMT) (<a href="bugreport.cgi?bug=841878;msg=24">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=24">mbox</a>, <a href="#23">link</a>).</p></p></div>
+
+<hr><p class="msgreceived"><a name="25"></a><a name="msg25"></a><a href="#25">Message #25</a> received at 841878@bugs.debian.org (<a href="bugreport.cgi?bug=841878;msg=25">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=25">mbox</a>, <a href="mailto:841878@bugs.debian.org?References=%3CVI1PR0201MB21415E19722295C55AD8550CB4AA0%40VI1PR0201MB2141.eurprd02.prod.outlook.com%3E%0A%20%3C20161027090015.jfdzlckwce4w66bi%40perpetual.pseudorandom.co.uk%3E&amp;body=On%20Thu%2C%2027%20Oct%202016%2010%3A00%3A15%20%2B0100%20Simon%20McVittie%20%3Csmcv%40debian.org%3E%20wrote%3A%0A%3E%20Control%3A%20reassign%20842184%20policykit-1-gnome%200.105-4%0A%3E%20Control%3A%20severity%20842184%20serious%0A%3E%20%0A%3E%20On%20Thu%2C%2027%20Oct%202016%20at%2007%3A27%3A05%20%2B0000%2C%20Grand%20T%20wrote%3A%0A%3E%20%3E%20The%20error%20is%20in%20%20policykit-1-gnome%200.105-4%0A%3E%20%3E%20%0A%3E%20%3E%20%20%2Fetc%2Fxdg%2Fautostart%2Fpolkit-gnome-authentication-agent-1.desktop%20refer%20to%20%0A%3E%20%3E%20%0A%3E%20%3E%20Exec%3D%2Fusr%2Flib%2Fpolicykit-1-gnome%2Fpolkit-gnome-authentication-agent-1%0A%3E%20%3E%20%0A%3E%20%3E%20but%20it%20don%27t%20exist%20so%20it%20is%20not%20started%20%21%0A%3E%20%3E%20%0A%3E%20%3E%20The%20exec%20is%20now%20at%2Fusr%2Flib%2Fx86_64-linux-gnu%2Fpolkit-gnome-authentication-agent-1%0A%3E%20%3E%20%0A%3E%20%3E%20I%20modified%20%0A%3E%20%3E%20%0A%3E%20%3E%20%2Fetc%2Fxdg%2Fautostart%2Fpolkit-gnome-authentication-agent-1.desktop%20to%20set%20up%0A%3E%20%3E%20Exec%3D%2Fusr%2Flib%2Fx86_64-linux-gnu%2Fpolkit-gnome-authentication-agent-1%0A%3E%20%0A%3E%20Good%20catch%21%20It%20looks%20as%20though%20this%20was%20caused%20by%20modernizing%20the%0A%3E%20packaging%20of%20policykit-1-gnome%20from%20debhelper%208%20to%2010%2C%20which%20changed%20its%0A%3E%20%24%7Blibexecdir%7D%2C%20without%20also%20updating%0A%3E%20debian%2Fpolkit-gnome-authentication-agent-1.desktop%20to%20use%20the%20new%0A%3E%20value%20of%20%24%7Blibexecdir%7D.%0A%3E%20%0A%3E%20So%20this%20is%20not%20actually%20a%20policykit-1%20bug%2C%20but%20rather%20policykit-1-gnome%2C%0A%3E%20which%20is%20a%20separate%20source%20package.%20Contrary%20to%20its%20name%2C%20pk-1-gnome%0A%3E%20is%20not%20actually%20used%20in%20%22full%22%20GNOME%20any%20more%20%28because%20GNOME%20Shell%20has%0A%3E%20its%20own%20built-in%20polkit%20agent%29%2C%20but%20it%20does%20get%20used%20in%20XFCE%2C%20Unity%20and%0A%3E%20GNOME%20Flashback.%0A%3E%20%0A%3E%20Brian%20%28and%20anyone%20else%20who%20is%20seeing%20%23841878%29%2C%20are%20you%20using%0A%3E%20policykit-1-gnome%20as%20your%20implementation%20of%20a%20polkit%20agent%3F%20If%20you%0A%3E%20run%20%2Fusr%2Flib%2Fx86_64-linux-gnu%2Fpolkit-gnome-authentication-agent-1%0A%3E%20%22by%20hand%22%20from%20a%20terminal%2C%20does%20authentication%20work%20normally%20for%20you%3F%0A%3E%20%0A%3E%20%28If%20you%20have%20edited%20%2Fetc%2Fxdg%2Fautostart%2Fpolkit-gnome-authentication-agent-1.desktop%0A%3E%20as%20a%20workaround%2C%20you%20will%20probably%20need%20to%20edit%20it%20again%2C%20or%20go%20back%20to%0A%3E%20the%20version%20provided%20by%20the%20package%20maintainer%2C%20after%20this%20bug%20is%20fixed%20-%0A%3E%20we%20will%20probably%20choose%20a%20different%20location%20for%20the%20authentication%20agent%2C%0A%3E%20or%20go%20back%20to%20its%20old%20location%2C%20because%20the%20architecture-dependent%20path%20is%0A%3E%20awkward%20to%20use%20in%20the%20packaging.%29%0A%3E%20%0A%3E%20Thanks%2C%0A%3E%20%20%20%20%20S%0A%3E%20%0A%3E%20%0A&amp;In-Reply-To=%3C20161027090015.jfdzlckwce4w66bi%40perpetual.pseudorandom.co.uk%3E&amp;subject=Re%3A%20Bug%23842184%3A%20policykit-1%3A%20synaptic-pkexec%20no%20more%20work">reply</a>):</p>
+<div class="headers">
+<img src="/cgi-bin/libravatar.cgi?email=smcv%40debian.org" alt="">
+<div class="header"><span class="headerfield">From:</span> Simon McVittie &lt;smcv@debian.org&gt;</div>
+<div class="header"><span class="headerfield">To:</span> Grand T &lt;grandtoubab@msn.com&gt;, 842184@bugs.debian.org</div>
+<div class="header"><span class="headerfield">Cc:</span> Brian Vaughan &lt;bgvaughan@gmail.com&gt;, 841878@bugs.debian.org,
+	policykit-1-gnome@packages.debian.org</div>
+<div class="header"><span class="headerfield">Subject:</span> Re: Bug#842184: policykit-1: synaptic-pkexec no more work</div>
+<div class="header"><span class="headerfield">Date:</span> Thu, 27 Oct 2016 10:00:15 +0100</div>
+</div>
+<pre class="message">Control: reassign 842184 policykit-1-gnome 0.105-4
+Control: severity 842184 serious
+
+On Thu, 27 Oct 2016 at 07:27:05 +0000, Grand T wrote:
+&gt; The error is in  policykit-1-gnome 0.105-4
+&gt; 
+&gt;  /etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop refer to 
+&gt; 
+&gt; Exec=/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+&gt; 
+&gt; but it don&#39;t exist so it is not started !
+&gt; 
+&gt; The exec is now at/usr/lib/x86_64-linux-gnu/polkit-gnome-authentication-agent-1
+&gt; 
+&gt; I modified 
+&gt; 
+&gt; /etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop to set up
+&gt; Exec=/usr/lib/x86_64-linux-gnu/polkit-gnome-authentication-agent-1
+
+Good catch! It looks as though this was caused by modernizing the
+packaging of policykit-1-gnome from debhelper 8 to 10, which changed its
+${libexecdir}, without also updating
+debian/polkit-gnome-authentication-agent-1.desktop to use the new
+value of ${libexecdir}.
+
+So this is not actually a policykit-1 bug, but rather policykit-1-gnome,
+which is a separate source package. Contrary to its name, pk-1-gnome
+is not actually used in &quot;full&quot; GNOME any more (because GNOME Shell has
+its own built-in polkit agent), but it does get used in XFCE, Unity and
+GNOME Flashback.
+
+Brian (and anyone else who is seeing #841878), are you using
+policykit-1-gnome as your implementation of a polkit agent? If you
+run /usr/lib/x86_64-linux-gnu/polkit-gnome-authentication-agent-1
+&quot;by hand&quot; from a terminal, does authentication work normally for you?
+
+(If you have edited /etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop
+as a workaround, you will probably need to edit it again, or go back to
+the version provided by the package maintainer, after this bug is fixed -
+we will probably choose a different location for the authentication agent,
+or go back to its old location, because the architecture-dependent path is
+awkward to use in the packaging.)
+
+Thanks,
+    S
+
+
+</pre>
+
+<div class="infmessage"><hr><p>
+<a name="26"></a>
+<!-- request_addr: debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt; -->
+<!-- time:1477591386 -->
+<strong>Information forwarded</strong>
+to <code>debian-bugs-dist@lists.debian.org, Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>:<br>
+<code>Bug#841878</code>; Package <code>policykit-1</code>.
+ (Thu, 27 Oct 2016 18:03:06 GMT) (<a href="bugreport.cgi?bug=841878;msg=27">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=27">mbox</a>, <a href="#26">link</a>).</p></p></div>
+
+<div class="infmessage"><hr><p>
+<a name="28"></a>
+<!-- request_addr: Brian Vaughan &lt;bgvaughan@gmail.com&gt; -->
+<!-- time:1477591386 -->
+<strong>Acknowledgement sent</strong>
+to <code>Brian Vaughan &lt;bgvaughan@gmail.com&gt;</code>:<br>
+Extra info received and forwarded to list.  Copy sent to <code>Utopia Maintenance Team &lt;pkg-utopia-maintainers@lists.alioth.debian.org&gt;</code>.
+ (Thu, 27 Oct 2016 18:03:06 GMT) (<a href="bugreport.cgi?bug=841878;msg=29">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=29">mbox</a>, <a href="#28">link</a>).</p></p></div>
+
+<hr><p class="msgreceived"><a name="30"></a><a name="msg30"></a><a href="#30">Message #30</a> received at 841878@bugs.debian.org (<a href="bugreport.cgi?bug=841878;msg=30">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=30">mbox</a>, <a href="mailto:841878@bugs.debian.org?References=%3CVI1PR0201MB21415E19722295C55AD8550CB4AA0%40VI1PR0201MB2141.eurprd02.prod.outlook.com%3E%0A%20%3C20161027090015.jfdzlckwce4w66bi%40perpetual.pseudorandom.co.uk%3E%0A%20%3CCAH4f8uGM6uX%3DDKWwD%3DvLNCDcWUJRWR-YjQ7pZ1UKgqAtvLZrDA%40mail.gmail.com%3E&amp;In-Reply-To=%3CCAH4f8uGM6uX%3DDKWwD%3DvLNCDcWUJRWR-YjQ7pZ1UKgqAtvLZrDA%40mail.gmail.com%3E&amp;body=On%20Thu%2C%2027%20Oct%202016%2011%3A00%3A06%20-0700%20Brian%20Vaughan%20%3Cbgvaughan%40gmail.com%3E%20wrote%3A%0A%3E%20I%20can%20confirm%20that%3A%0A%3E%20%0A%3E%20A%29%20Executing%0A%3E%20%27%2Fusr%2Flib%2Fx86_64-linux-gnu%2Fpolkit-gnome-authentication-agent-1%27%20on%20the%0A%3E%20command%20line%20enabled%20the%20expected%20dialog%20for%20launching%20Synaptic%20from%20XFCE%3B%0A%3E%20%0A%3E%20B%29%20The%20issue%20has%20been%20resolved%20with%20policykit-1-gnome%200.105-5.%0A%3E%20%0A%3E%20Thank%20you.%0A%3E%20%0A%3E%20On%20Oct%2027%2C%202016%202%3A00%20AM%2C%20%22Simon%20McVittie%22%20%3Csmcv%40debian.org%3E%20wrote%3A%0A%3E%20%0A%3E%20%3E%20Control%3A%20reassign%20842184%20policykit-1-gnome%200.105-4%0A%3E%20%3E%20Control%3A%20severity%20842184%20serious%0A%3E%20%3E%0A%3E%20%3E%20On%20Thu%2C%2027%20Oct%202016%20at%2007%3A27%3A05%20%2B0000%2C%20Grand%20T%20wrote%3A%0A%3E%20%3E%20%3E%20The%20error%20is%20in%20%20policykit-1-gnome%200.105-4%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20%20%2Fetc%2Fxdg%2Fautostart%2Fpolkit-gnome-authentication-agent-1.desktop%20refer%20to%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20Exec%3D%2Fusr%2Flib%2Fpolicykit-1-gnome%2Fpolkit-gnome-authentication-agent-1%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20but%20it%20don%27t%20exist%20so%20it%20is%20not%20started%20%21%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20The%20exec%20is%20now%20at%2Fusr%2Flib%2Fx86_64-linux-gnu%2Fpolkit-gnome-authentication-%0A%3E%20%3E%20agent-1%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20I%20modified%0A%3E%20%3E%20%3E%0A%3E%20%3E%20%3E%20%2Fetc%2Fxdg%2Fautostart%2Fpolkit-gnome-authentication-agent-1.desktop%20to%20set%20up%0A%3E%20%3E%20%3E%20Exec%3D%2Fusr%2Flib%2Fx86_64-linux-gnu%2Fpolkit-gnome-authentication-agent-1%0A%3E%20%3E%0A%3E%20%3E%20Good%20catch%21%20It%20looks%20as%20though%20this%20was%20caused%20by%20modernizing%20the%0A%3E%20%3E%20packaging%20of%20policykit-1-gnome%20from%20debhelper%208%20to%2010%2C%20which%20changed%20its%0A%3E%20%3E%20%24%7Blibexecdir%7D%2C%20without%20also%20updating%0A%3E%20%3E%20debian%2Fpolkit-gnome-authentication-agent-1.desktop%20to%20use%20the%20new%0A%3E%20%3E%20value%20of%20%24%7Blibexecdir%7D.%0A%3E%20%3E%0A%3E%20%3E%20So%20this%20is%20not%20actually%20a%20policykit-1%20bug%2C%20but%20rather%20policykit-1-gnome%2C%0A%3E%20%3E%20which%20is%20a%20separate%20source%20package.%20Contrary%20to%20its%20name%2C%20pk-1-gnome%0A%3E%20%3E%20is%20not%20actually%20used%20in%20%22full%22%20GNOME%20any%20more%20%28because%20GNOME%20Shell%20has%0A%3E%20%3E%20its%20own%20built-in%20polkit%20agent%29%2C%20but%20it%20does%20get%20used%20in%20XFCE%2C%20Unity%20and%0A%3E%20%3E%20GNOME%20Flashback.%0A%3E%20%3E%0A%3E%20%3E%20Brian%20%28and%20anyone%20else%20who%20is%20seeing%20%23841878%29%2C%20are%20you%20using%0A%3E%20%3E%20policykit-1-gnome%20as%20your%20implementation%20of%20a%20polkit%20agent%3F%20If%20you%0A%3E%20%3E%20run%20%2Fusr%2Flib%2Fx86_64-linux-gnu%2Fpolkit-gnome-authentication-agent-1%0A%3E%20%3E%20%22by%20hand%22%20from%20a%20terminal%2C%20does%20authentication%20work%20normally%20for%20you%3F%0A%3E%20%3E%0A%3E%20%3E%20%28If%20you%20have%20edited%20%2Fetc%2Fxdg%2Fautostart%2Fpolkit-%0A%3E%20%3E%20gnome-authentication-agent-1.desktop%0A%3E%20%3E%20as%20a%20workaround%2C%20you%20will%20probably%20need%20to%20edit%20it%20again%2C%20or%20go%20back%20to%0A%3E%20%3E%20the%20version%20provided%20by%20the%20package%20maintainer%2C%20after%20this%20bug%20is%20fixed%20-%0A%3E%20%3E%20we%20will%20probably%20choose%20a%20different%20location%20for%20the%20authentication%20agent%2C%0A%3E%20%3E%20or%20go%20back%20to%20its%20old%20location%2C%20because%20the%20architecture-dependent%20path%20is%0A%3E%20%3E%20awkward%20to%20use%20in%20the%20packaging.%29%0A%3E%20%3E%0A%3E%20%3E%20Thanks%2C%0A%3E%20%3E%20%20%20%20%20S%0A%3E%20%3E%0A&amp;subject=Re%3A%20Bug%23842184%3A%20policykit-1%3A%20synaptic-pkexec%20no%20more%20work">reply</a>):</p>
+<div class="headers">
+<img src="/cgi-bin/libravatar.cgi?email=bgvaughan%40gmail.com" alt="">
+<div class="header"><span class="headerfield">From:</span> Brian Vaughan &lt;bgvaughan@gmail.com&gt;</div>
+<div class="header"><span class="headerfield">To:</span> 842184@bugs.debian.org</div>
+<div class="header"><span class="headerfield">Cc:</span> policykit-1-gnome@packages.debian.org, 841878@bugs.debian.org, 
+	Grand T &lt;grandtoubab@msn.com&gt;</div>
+<div class="header"><span class="headerfield">Subject:</span> Re: Bug#842184: policykit-1: synaptic-pkexec no more work</div>
+<div class="header"><span class="headerfield">Date:</span> Thu, 27 Oct 2016 11:00:06 -0700</div>
+</div>
+<pre class="mime">[<a href="bugreport.cgi?att=0;bug=841878;msg=30">Message part 1</a> (text/plain, inline)]</pre>
+<pre class="message">I can confirm that:
+
+A) Executing
+&#39;/usr/lib/x86_64-linux-gnu/polkit-gnome-authentication-agent-1&#39; on the
+command line enabled the expected dialog for launching Synaptic from XFCE;
+
+B) The issue has been resolved with policykit-1-gnome 0.105-5.
+
+Thank you.
+
+On Oct 27, 2016 2:00 AM, &quot;Simon McVittie&quot; &lt;smcv@debian.org&gt; wrote:
+
+&gt; Control: reassign 842184 policykit-1-gnome 0.105-4
+&gt; Control: severity 842184 serious
+&gt;
+&gt; On Thu, 27 Oct 2016 at 07:27:05 +0000, Grand T wrote:
+&gt; &gt; The error is in  policykit-1-gnome 0.105-4
+&gt; &gt;
+&gt; &gt;  /etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop refer to
+&gt; &gt;
+&gt; &gt; Exec=/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+&gt; &gt;
+&gt; &gt; but it don&#39;t exist so it is not started !
+&gt; &gt;
+&gt; &gt; The exec is now at/usr/lib/x86_64-linux-gnu/polkit-gnome-authentication-
+&gt; agent-1
+&gt; &gt;
+&gt; &gt; I modified
+&gt; &gt;
+&gt; &gt; /etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop to set up
+&gt; &gt; Exec=/usr/lib/x86_64-linux-gnu/polkit-gnome-authentication-agent-1
+&gt;
+&gt; Good catch! It looks as though this was caused by modernizing the
+&gt; packaging of policykit-1-gnome from debhelper 8 to 10, which changed its
+&gt; ${libexecdir}, without also updating
+&gt; debian/polkit-gnome-authentication-agent-1.desktop to use the new
+&gt; value of ${libexecdir}.
+&gt;
+&gt; So this is not actually a policykit-1 bug, but rather policykit-1-gnome,
+&gt; which is a separate source package. Contrary to its name, pk-1-gnome
+&gt; is not actually used in &quot;full&quot; GNOME any more (because GNOME Shell has
+&gt; its own built-in polkit agent), but it does get used in XFCE, Unity and
+&gt; GNOME Flashback.
+&gt;
+&gt; Brian (and anyone else who is seeing #841878), are you using
+&gt; policykit-1-gnome as your implementation of a polkit agent? If you
+&gt; run /usr/lib/x86_64-linux-gnu/polkit-gnome-authentication-agent-1
+&gt; &quot;by hand&quot; from a terminal, does authentication work normally for you?
+&gt;
+&gt; (If you have edited /etc/xdg/autostart/polkit-
+&gt; gnome-authentication-agent-1.desktop
+&gt; as a workaround, you will probably need to edit it again, or go back to
+&gt; the version provided by the package maintainer, after this bug is fixed -
+&gt; we will probably choose a different location for the authentication agent,
+&gt; or go back to its old location, because the architecture-dependent path is
+&gt; awkward to use in the packaging.)
+&gt;
+&gt; Thanks,
+&gt;     S
+&gt;
+</pre>
+<pre class="mime">[<a href="bugreport.cgi?att=1;bug=841878;msg=30">Message part 2</a> (text/html, inline)]</pre>
+
+<div class="msgreceived"><hr><p>
+<a name="31"></a>
+<!-- request_addr: Simon McVittie &lt;smcv@debian.org&gt; -->
+<!-- time:1477599304 -->
+<strong>Reply sent</strong>
+to <code>Simon McVittie &lt;smcv@debian.org&gt;</code>:<br>
+You have taken responsibility.
+ (Thu, 27 Oct 2016 20:15:04 GMT) (<a href="bugreport.cgi?bug=841878;msg=32">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=32">mbox</a>, <a href="#31">link</a>).</p></p></div>
+
+<div class="infmessage"><hr><p>
+<a name="33"></a>
+<!-- request_addr: Brian Vaughan &lt;bgvaughan@gmail.com&gt; -->
+<!-- time:1477599304 -->
+<strong>Notification sent</strong>
+to <code>Brian Vaughan &lt;bgvaughan@gmail.com&gt;</code>:<br>
+Bug acknowledged by developer.
+ (Thu, 27 Oct 2016 20:15:04 GMT) (<a href="bugreport.cgi?bug=841878;msg=34">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=34">mbox</a>, <a href="#33">link</a>).</p></p></div>
+
+<hr><p class="msgreceived"><a name="35"></a><a name="msg35"></a><a href="#35">Message #35</a> received at 841878-done@bugs.debian.org (<a href="bugreport.cgi?bug=841878;msg=35">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=35">mbox</a>, <a href="mailto:841878@bugs.debian.org?body=On%20Thu%2C%2027%20Oct%202016%2021%3A11%3A49%20%2B0100%20Simon%20McVittie%20%3Csmcv%40debian.org%3E%20wrote%3A%0A%3E%20Package%3A%20policykit-1-gnome%0A%3E%20Version%3A%200.105-5%0A%3E%20%0A%3E%20On%20Thu%2C%2027%20Oct%202016%20at%2011%3A00%3A06%20-0700%2C%20Brian%20Vaughan%20wrote%3A%0A%3E%20%3E%20I%20can%20confirm%20that%3A%0A%3E%20%3E%20%0A%3E%20%3E%20A%29%20Executing%20%27%2Fusr%2Flib%2Fx86_64-linux-gnu%2Fpolkit-gnome-authentication-agent-1%27%20on%0A%3E%20%3E%20the%20command%20line%20enabled%20the%20expected%20dialog%20for%20launching%20Synaptic%20from%20XFCE%3B%0A%3E%20%3E%20%0A%3E%20%3E%20B%29%20The%20issue%20has%20been%20resolved%20with%20policykit-1-gnome%200.105-5.%0A%3E%20%0A%3E%20Closing%20your%20bug%20report%2C%20then.%20Thanks%21%0A%3E%20%0A%3E%20%20%20%20%20S%0A%3E%20%0A%3E%20%0A&amp;In-Reply-To=%3C20161027201149.uogtwaqdtejjwfxv%40perpetual.pseudorandom.co.uk%3E&amp;subject=Re%3A%20Bug%23841878%3A%20Bug%23842184%3A%20policykit-1%3A%20synaptic-pkexec%20no%20more%20work&amp;References=%3CVI1PR0201MB21415E19722295C55AD8550CB4AA0%40VI1PR0201MB2141.eurprd02.prod.outlook.com%3E%0A%20%3C20161027090015.jfdzlckwce4w66bi%40perpetual.pseudorandom.co.uk%3E%0A%20%3CCAH4f8uGM6uX%3DDKWwD%3DvLNCDcWUJRWR-YjQ7pZ1UKgqAtvLZrDA%40mail.gmail.com%3E%0A%20%3C20161027201149.uogtwaqdtejjwfxv%40perpetual.pseudorandom.co.uk%3E">reply</a>):</p>
+<div class="headers">
+<img src="/cgi-bin/libravatar.cgi?email=smcv%40debian.org" alt="">
+<div class="header"><span class="headerfield">From:</span> Simon McVittie &lt;smcv@debian.org&gt;</div>
+<div class="header"><span class="headerfield">To:</span> 841878-done@bugs.debian.org</div>
+<div class="header"><span class="headerfield">Subject:</span> Re: Bug#841878: Bug#842184: policykit-1: synaptic-pkexec no more work</div>
+<div class="header"><span class="headerfield">Date:</span> Thu, 27 Oct 2016 21:11:49 +0100</div>
+</div>
+<pre class="message">Package: policykit-1-gnome
+Version: 0.105-5
+
+On Thu, 27 Oct 2016 at 11:00:06 -0700, Brian Vaughan wrote:
+&gt; I can confirm that:
+&gt; 
+&gt; A) Executing &#39;/usr/lib/x86_64-linux-gnu/polkit-gnome-authentication-agent-1&#39; on
+&gt; the command line enabled the expected dialog for launching Synaptic from XFCE;
+&gt; 
+&gt; B) The issue has been resolved with policykit-1-gnome 0.105-5.
+
+Closing your bug report, then. Thanks!
+
+    S
+
+
+</pre>
+
+<div class="msgreceived"><hr><p>
+<a name="36"></a>
+<!-- command:archive -->
+<!-- requester: Debbugs Internal Request &lt;owner@bugs.debian.org&gt; -->
+<!-- request_addr: internal_control@bugs.debian.org -->
+<!-- time:1480935646 -->
+<!-- new_data:
+$new_data = {};
+-->
+<!-- old_data:
+$old_data = {};
+-->
+<strong>Bug archived.</strong>
+Request was from <code>Debbugs Internal Request &lt;owner@bugs.debian.org&gt;</code>
+to <code>internal_control@bugs.debian.org</code>.
+ (Mon, 05 Dec 2016 11:00:46 GMT) (<a href="bugreport.cgi?bug=841878;msg=37">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=37">mbox</a>, <a href="#36">link</a>).</p></p></div>
+
+<div class="msgreceived"><hr><p>
+<a name="38"></a>
+<!-- command:unarchive -->
+<!-- requester: Don Armstrong &lt;don@debian.org&gt; -->
+<!-- request_addr: control@bugs.debian.org -->
+<!-- time:1481076215 -->
+<!-- new_data:
+$new_data = {
+              &#39;unarchived&#39; =&gt; &#39;1481076215&#39;
+            };
+-->
+<!-- old_data:
+$old_data = {
+              &#39;unarchived&#39; =&gt; &#39;&#39;
+            };
+-->
+<strong>Bug unarchived.</strong>
+Request was from <code>Don Armstrong &lt;don@debian.org&gt;</code>
+to <code>control@bugs.debian.org</code>.
+ (Wed, 07 Dec 2016 02:03:35 GMT) (<a href="bugreport.cgi?bug=841878;msg=39">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=39">mbox</a>, <a href="#38">link</a>).</p></p></div>
+
+<div class="msgreceived"><hr><p>
+<a name="40"></a>
+<!-- command:archive -->
+<!-- requester: Debbugs Internal Request &lt;owner@bugs.debian.org&gt; -->
+<!-- request_addr: internal_control@bugs.debian.org -->
+<!-- time:1485515548 -->
+<!-- new_data:
+$new_data = {};
+-->
+<!-- old_data:
+$old_data = {};
+-->
+<strong>Bug archived.</strong>
+Request was from <code>Debbugs Internal Request &lt;owner@bugs.debian.org&gt;</code>
+to <code>internal_control@bugs.debian.org</code>.
+ (Fri, 27 Jan 2017 11:12:28 GMT) (<a href="bugreport.cgi?bug=841878;msg=41">full text</a>, <a href="bugreport.cgi?bug=841878;mbox=yes;msg=41">mbox</a>, <a href="#40">link</a>).</p></p></div>
+
+<hr>
+<p class="msgreceived">Send a report that <a href="https://bugs.debian.org/cgi-bin/bugspam.cgi?bug=841878">this bug log contains spam</a>.</p>
+<hr>
+<ADDRESS>Debian bug tracking system administrator &lt;<A HREF="mailto:owner@bugs.debian.org">owner@bugs.debian.org</A>&gt;.
+Last modified:
+<!--timestamp-->Thu Jan 28 20:29:39 2021<!--end timestamp-->; 
+Machine Name:
+<!--machinename-->buxtehude<!--machinename-->
+<P>
+<A HREF="https://www.debian.org/Bugs/">Debian Bug tracking system</A>
+</p>
+<p>
+  Debbugs is free software and licensed under the terms of the GNU
+  Public License version 2. The current version can be obtained
+  from <a href="https://bugs.debian.org/debbugs-source/">https://bugs.debian.org/debbugs-source/</a>.
+</p>
+<p>
+Copyright © 1999 Darren O. Benham,
+1997,2003 nCipher Corporation Ltd,
+1994-97 Ian Jackson,
+2005-2017 Don Armstrong, and many other contributors.
+</p>
+</ADDRESS>
+
+</body>
+</html>

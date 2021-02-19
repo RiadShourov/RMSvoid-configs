@@ -1,0 +1,8 @@
+2021/02/18-19:18:57.447 19c5 Reusing MANIFEST /home/rshourov/.config/chromium/Default/IndexedDB/chrome-extension_afinolgkpkgmchbjjjoaiobapfbpfkoa_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/18-19:18:57.447 19c5 Recovering log #99
+2021/02/18-19:18:57.448 19c5 Reusing old log /home/rshourov/.config/chromium/Default/IndexedDB/chrome-extension_afinolgkpkgmchbjjjoaiobapfbpfkoa_0.indexeddb.leveldb/000099.log 
+2021/02/18-19:18:59.765 19c4 Level-0 table #103: started
+2021/02/18-19:18:59.766 19c4 Level-0 table #103: 0 bytes OK
+2021/02/18-19:19:00.024 19c4 Delete type=0 #99
+2021/02/18-19:19:00.073 19c4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/18-19:19:00.073 19c4 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,67 @@
+00:00:00.000243 main     VirtualBox XPCOM Server 6.1.18 r142142 linux.amd64 (Jan 24 2021 20:36:04) release log
+00:00:00.000246 main     Log opened 2021-02-16T20:03:51.815001000Z
+00:00:00.000246 main     Build Type: release
+00:00:00.000250 main     OS Product: Linux
+00:00:00.000251 main     OS Release: 5.10.16_1
+00:00:00.000252 main     OS Version: #1 SMP 1613224688
+00:00:00.000275 main     DMI Product Name: Inspiron 3442
+00:00:00.000284 main     DMI Product Version: Not Specified
+00:00:00.000293 main     Firmware type: BIOS
+00:00:00.000331 main     Host RAM: 3837MB (3.7GB) total, 2050MB (2.0GB) available
+00:00:00.000335 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.000335 main     Process ID: 16826
+00:00:00.000336 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.001898 main     IPC socket path: /tmp/.vbox-rshourov-ipc/ipcd
+00:00:00.106254 nspr-2   VirtualBox: object creation starts
+00:00:00.106353 nspr-2   Home directory: '/home/rshourov/.config/VirtualBox'
+00:00:00.106589 nspr-2   Loading settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.108817 nspr-2   USB: Unknown USB device detected (idVendor: 0x0cf3, idProduct: 0x0036)
+00:00:00.108969 nspr-2   Successfully initialised host USB using sysfs
+00:00:00.111946 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp6s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.112490 nspr-2   HostDnsMonitor: initializing
+00:00:00.112753 nspr-2   NAT: resolv.conf: nameserver 192.168.0.1
+00:00:00.112773 nspr-2   HostDnsMonitor: updating information
+00:00:00.112790 nspr-2   HostDnsMonitor: old information
+00:00:00.112796 nspr-2     no server entries
+00:00:00.112801 nspr-2     no domain set
+00:00:00.112805 nspr-2     no search string entries
+00:00:00.112810 nspr-2   HostDnsMonitor: new information
+00:00:00.112814 nspr-2     server 1: 192.168.0.1
+00:00:00.112819 nspr-2     no domain set
+00:00:00.112824 nspr-2     no search string entries
+00:00:00.114183 nspr-2   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:00:00.115068 nspr-2   rtldrNativeLoad: dlopen('/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPuelMain.so', RTLD_NOW | RTLD_LOCAL) failed: /usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPuelMain.so: undefined symbol: RTVfsFileGetSize
+00:00:00.115217 nspr-2   VD: VDInit finished with VINF_SUCCESS
+00:00:00.115301 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={027bc463-929c-40e8-bf16-fea557cd8e7e} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
+00:00:00.118450 nspr-2   Loading settings file "/mnt/collection/VMs/springdale/springdale.vbox" with version "1.16-linux"
+00:00:00.118950 nspr-2   VirtualBox: object created
+00:00:00.807881 nspr-2   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:01:42.752954 ExtPackInst ExtPack: Executing '/usr/lib/virtualbox/VBoxExtPackHelperApp' 'install' '--base-dir' '/usr/lib/virtualbox/ExtensionPacks' '--cert-dir' '/usr/share/virtualbox/ExtPackCertificates' '--name' 'Oracle VM VirtualBox Extension Pack' '--tarball' '/home/rshourov/Downloads/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack' '--sha-256' 'd609e35accff5c0819ca9be47de302abf094dc1b6d4c54da8fdda639671f267e' '--replace'
+00:01:44.574245 ExtPackInst ExtPack: enmReason=1 iStatus=127 stderr='Error creating textual authentication agent: Error opening current controlling terminal for the process (`/dev/tty'): No such device or address
+00:01:44.574256 ExtPackInst '
+00:01:44.574317 ExtPackInst ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={70401eef-c8e9-466b-9660-45cb3e9979e4} aComponent={ExtPackManagerWrap} aText={The installer failed with exit code 127: Error creating textual authentication agent: Error opening current controlling terminal for the process (`/dev/tty'): No such device or address}, preserve=false aResultDetail=0
+00:03:08.187037 nspr-4   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:08.252380 nspr-3   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:08.319818 nspr-2   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:08.410047 nspr-2   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:08.453812 nspr-2   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:12.184423 nspr-4   Failed to open "/dev/vboxdrvu", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:03:28.869373 ExtPackUninst ExtPack: Executing '/usr/lib/virtualbox/VBoxExtPackHelperApp' 'uninstall' '--base-dir' '/usr/lib/virtualbox/ExtensionPacks' '--name' 'Oracle VM VirtualBox Extension Pack'
+00:03:28.988278 ExtPackUninst ExtPack: enmReason=1 iStatus=127 stderr='Error creating textual authentication agent: Error opening current controlling terminal for the process (`/dev/tty'): No such device or address
+00:03:28.988283 ExtPackUninst '
+00:03:28.988309 ExtPackUninst ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={70401eef-c8e9-466b-9660-45cb3e9979e4} aComponent={ExtPackManagerWrap} aText={The installer failed with exit code 127: Error creating textual authentication agent: Error opening current controlling terminal for the process (`/dev/tty'): No such device or address}, preserve=false aResultDetail=0
+00:03:28.989501 ExtPackUninst OCI: Local config file '/home/rshourov/.config/VirtualBox/oci_config' does not exist
+00:03:28.989530 ExtPackUninst OCI: Original config file '/home/rshourov/.oci/config' does not exist
+00:03:28.989538 ExtPackUninst OCI: Reading profiles finished with status NS_OK
+00:03:28.989547 ExtPackUninst ExtPack: Created cloud provider 'OCI' (hrc=NS_OK)
+00:03:37.244634 nspr-2   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:37.315991 nspr-2   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:37.382268 nspr-3   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:37.467834 nspr-2   Saving settings file "/home/rshourov/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:03:43.054708 main     VirtualBox: object deletion starts
+00:03:43.054778 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/mnt/collection/VMs/springdale/springdale.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:03:43.055245 main     HostDnsMonitor: shutting down ...
+00:03:43.057546 main     HostDnsMonitor: shut down
+00:03:43.180617 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={d0a0163f-e254-4e5b-a1f2-011cf991c38d} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:03:48.061782 main     {00007f251c0192b0} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_TIMEOUT
+00:03:48.062807 main     VirtualBox: object deleted

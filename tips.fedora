@@ -1,0 +1,357 @@
+
+
+# to change the setting for updating database of yum
+	* yum updates database everytime it is used. So, to save bandwidth, /etc/yum.conf can be changed.
+	 'metadata_expire' can be set to 14400m (10 days) to check after 10 days. if manual database 
+	 updating is needed, it is done by 'yum makecache'.
+	* set 'keepcache=1' to save the rpm file in /var/cache/yum
+
+# newly installed apps
+	* dmenu
+	* ratpoison
+	* conky
+	* w3m
+	* w3m-img
+	* mplayer ( needs rpmfusion)
+    * mplayer2 (from Downloads/)
+    * mpv ( a nice fork of mplayer with more features)
+	* trayer (download from pbone.net)
+	* feh
+	* dzen2
+	* hardinfo (for hardware info graphically)
+	* vim
+	* gvim 
+	* gpm
+	* netwrok-manager-applet (this is the nm-applet in fedora)
+	* ranger
+	* dwb
+	* volumeicon (this is the volume-applet)
+	* mscorefonts (https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm)
+	*playonlinux (check this site: http://www.hecticgeek.com/2013/01/run-windows-programs-fedora-18-playonlinux/)
+	* gnupg (needed for playonlinux)
+	* bleachbit
+	* zathura & its all extensions
+	* git
+	* htop
+	* gparted
+	* usermode-gtk ( needed for running graphical sudo for gparted, although it is a dependency of gparted)
+	* polkit-gnome (need to check how it is used)
+	* unrar
+	* pcmanfm
+	* xclip ( it is required to handle clipboard contents; for example sending firefox url to a shell command)
+	* pnmixer (tray volume icon)
+	* todo.txt (ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/imclem/Fedora_18/i686/todo.txt-2.9.39-57.1.i686.rpm)
+	* irssi
+	* acpi ( tmux needs it to show battery level)
+	* bashmount (to mount partitions)
+	* words (for dictionary in vim)
+	* pencil ( paint app)
+	* typespeed
+	* vim-latex-suite & vim-latex-doc
+    * hostapd
+    * dhcp
+    * gedit-plugins
+    * python-pip (for installing python packages)
+    * caca-utils (for showing image in ascii art)
+    * fbreader (for epub files)
+    * testdisk ( photorec command can recover files)
+    * rsnapshot ( for backing up; check this site: http://www.thegeekstuff.com/2009/08/tutorial-backup-linux-using-rsnapshot-rsync-utility/#more-1682)
+    * livecd-tools (for creating liveusb)
+    * fedup (fedora upgrade tool; use it someday)
+    * dialog ( to create interactive shell scripts for terminal)
+    * xdialog (to create interactive box for X)
+
+# To install extra repositories for softwares which are not in fedora (like mplayer) (https://fedoraproject.org/wiki/Third_party_repositories)
+	* install rpmfusion like this:
+	 	su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
+
+	* install livna like this:
+		su -c "rpm -ivh http://rpm.livna.org/livna-release.rpm"
+
+# to install any apps by downloading rpm:
+	* you can use yum localinstall like this:
+		su -c 'yum localinstall --nogpgcheck ftp://ftp.pbone.net/mirror/ftp.afterstep.org/stable/rpms/RPMS/fc/18/i386/trayer-1.1.5-1.fc18.i686.rpm'
+	this install trayer resolving its dependencies.
+
+# copy following files:
+	* /usr/bin/ratpoison-personalized
+	* .ratpoisonkeys
+	*.ratpoisonrc
+	* bin/weather.sh
+	* edit /usr/share/xsessions/ratpoison.desktop
+	* .tmux.conf
+	* .w3m/keymap
+	* .w3m/bookmarks.html
+	* bin/
+    * build/
+    * .inputrc
+    * .xmodmap
+
+
+
+# INSTALL NVIDIA graphics ( http://www.if-not-true-then-false.com/2013/fedora-19-nvidia-guide/) (also needs rpmfusion)
+	* first update kernel & reboot
+		yum update kernel* selinux-policy*
+		reboot
+
+	* install akmod-nvidia-304-xxx (other one has bug)
+		yum install akmod-nvidia-304xx xorg-x11-drv-nvidia-304xx-libs
+		reboot
+
+
+	
+# how to unzip: unzip FILE.zip -d DESTINATION
+
+# how to untar gz : tar xvzf FILE.gz -C <DIR>
+	x - extract
+	v - verbose; show extracting
+	z - gunzip 
+	f - extract here in filesystem
+	j - for bz file
+	-C - destination directory
+
+
+# install sniffy
+	Install followings:
+	* quvi
+	* libquvi-devel
+	* libpcap-devel
+	* Cython
+	* python-pypcap : ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/zhonghuaren/Fedora_19/i686/python-pypcap-1.1-15.1.i686.rpm
+	* python-libquvi from https://github.com/metal3d/python-libquvi ; save the master zip, sudo python setup.py install
+	* sniffy from https://github.com/tlvince/sniffy : save the master zip; sudo python setup.py install
+	* usage : sudo sniffy -i ppp0 -m mplayer
+
+
+
+# to view videos using quvi: quvi -f fmt17_144p --exec="mplayer %u" URL
+        * to check supported file type: quvi -F URL
+        * you can also use wget to download file
+        * to download with wget : quvi -f fmt17_144p --exec="wget -c -O %t %u" URL 
+
+
+# how to install offline stardict dictionary
+        * sudo yum install sdcv
+        * download dict file from here : http://abloz.com/huzheng/stardict-dic/dict.org/
+        *  sudo mkdir -p /usr/share/stardict/dic/
+        * sudo tar -xvjf downloaded.tar.bz2 -C /usr/share/stardict/dic
+        * now you can search word with : sdcv <word>
+
+# how to install infinitysvg-conky
+
+
+# how to install office 2007 in playonlinux
+	* install playonlinux
+		su -c 'rpm -ivh http://rpm.playonlinux.com/playonlinux-yum-4-1.noarch.rpm'
+		su -c 'yum install playonlinux'
+	* install gnupg : sudo yum install gnupg
+	* then open playonlinux, select install, open office 2007
+	* when it asks for cdrom ,give the path : /run/media/rshourov/SOFT/Office_2007 ; don't give a / at the end
+	* give the cd key when needed, it will be installed
+
+
+# Customizing htop:
+	* in setup>Display Options, 
+		tick the 'hide userland thread'; this will show only the base process rather than all the trees
+		tick the 'Highlight program basename'; it will highlight basename
+
+# shell scripting for firefox:
+	* xclip can be used to use clipboard contents ( in this case copy the url), another likewise app is xsel
+
+# setting apps for firefox:
+  * in Preference>Application, set defaults for different filetype; i.e. for mp4 video, set mplayer; for pdf, set always ask
+
+# quicktime in firefox:
+  * download the mplayerplug-in.so for firefox, and put it in .mozilla/plugins folder, now you can see this plugin in addon>plugins
+
+# Firefox twicking for speed:
+
+# setup mpv:
+    * to run mpv in pcmanfm, use this option: mpv --really-quiet %F
+    * mpv can directly play youtube videos using quvi; check bin/ytdl-vid.sh
+    * the config file in : .mpv/config
+
+# it is possible to show current command as xterm window title, needed code is added in .bashrc
+
+# How to install skype-4.2 in fedora 19
+
+	* become root:
+		su 
+	* install dependencies:
+		yum install alsa-lib.i686 fontconfig.i686 freetype.i686 glib2.i686 libSM.i686 libXScrnSaver.i686 libXi.i686 libXrandr.i686 libXrender.i686 libXv.i686 libstdc++.i686 pulseaudio-libs.i686 qt.i686 qt-x11.i686 zlib.i686 qtwebkit.i686
+	* download skype:
+		cd /tmp
+		wget --trust-server-names http://www.skype.com/go/getskype-linux-dynamic
+	* extract skype:
+		mkdir /opt/skype
+		tar xvf skype-4.2* -C /opt/skype --strip-components=1
+	*  Create Launcher, Link icons, lang and sounds:
+		ln -s /opt/skype/skype.desktop /usr/share/applications/skype.desktop
+		ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/icons/skype.png
+		ln -s /opt/skype/icons/SkypeBlue_48x48.png /usr/share/pixmaps/skype.png
+ 
+		touch /usr/bin/skype
+		chmod 755 /usr/bin/skype
+
+	* put this in /usr/bin/skype :
+		#!/bin/sh
+		export SKYPE_HOME="/opt/skype"
+		 
+		$SKYPE_HOME/skype --resources=$SKYPE_HOME $* 
+
+	* start skype 
+
+# How to use todo.txt (check todotxt.com) :
+	* put config and config-conky (for conky) file in ~todo/ folder
+	* put these 2 lines in .bashrc:
+		export TODOTXT_DEFAULT_ACTION=ls
+		alias t='todo -d /home/rshourov/todo/config'
+	* command for add new item : t a "YOUR ITEM HERE"
+	* check config file, where you can put default action to 'ls'
+	* to put priority t p ITEM# PRIORITY
+
+# xlsfonts command will show the name of fonts that can be used in terminal or console
+
+# Customize i3:
+	* edit /usr/bin/i3-personalized & /usr/share/xsessions/i3.desktop for i3
+	* install i3status (if conky is not used)
+	* u can use this to find class name for windows: xprop | grep 'WM_CLASS(STRING)'	
+    * install quickswitch-i3 from here for switching windows: https://github.com/proxypoke/quickswitch-for-i3
+
+
+# SHIFT+INSERT will emulate mouse middle-click copy-paste
+
+# you can change Super key to Caps_Lock if needed (check xmodmap archwiki page):
+	* create a file ~/.Xmodmap ( check current config)
+	* thern command: xmodmap .Xmodmap
+	* you can use it to startup scripts ( for my case, i3-personalized, ratpoison-personalized)
+
+
+# time <APP> will give the time required to start that app
+
+
+# Weather in conky
+	to find your location use this link provided by 
+
+		http://thale.accu-weather.com/widget/thale/city-find.asp?location=
+
+	add your location at the end of the link like this
+
+		http://thale.accu-weather.com/widget/thale/city-find.asp?location=MAGURA
+
+
+
+# Vim:
+	* 'BundleSearch! tex' will search tex in github
+	* learn to use NerdTree and vfexplorer
+	* % moves between the parentheses
+	* Ctrl-N will start omnicomplete for filetypes
+	* install ctags.i686
+	* install solarized colorscheme
+	* change .Xdefaults for solarized colorscheme (https://github.com/dgoodlad/solarized/blob/d92260842894914c260266a9de24f6c0b5aba4dc/xresources-colors-solarized/Xresources)
+	* learn all plugins installed
+	* to smoothly paste in vim files :
+		:set paste
+	  now paste your things
+	  to return back to normal insert
+		:set nopaste
+	* install words.noarch and download moby thesaurus (roget file) for use in vim  
+
+    
+    * another option is remove .vim folder & .vimrc.
+    * install plugin collection from here: https://github.com/amix/vimrc
+    * install vim-latex by this: 
+          cd ~/.vim_runtime
+          git clone git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex sources_non_forked/vim-latex
+    * now, configure .vimrc to detect tex file, check the vimrc file
+
+
+
+# in zathura typing s will zoom to screen size
+
+
+# adding user to group: ( also check archwiki groups)
+	* to create new group : sudo groupadd storage
+	* to add user to the group : sudo useradd -a -G storage rshourov
+	* add to these groups: plugdev, storage, networkmanager, locate, wireshark, audio, video, uucp, wheel, qemu, cdrom
+	* another option is to use gpasswd
+		gpasswd -a rshourov wireshark : this will add user to the group
+		gpasswd -d rshourov wireshark : this will remove user from the group
+
+#### to automount partitions: (https://bbs.archlinux.org/viewtopic.php?id=109307)(https://gist.github.com/ledti/838039)
+	* udisks is the current mount handler, so in any xsessions, which has udisks, its no problem to mount.
+	but if it isn't mentioned, then file manager cannot mount from that window manager.
+	* save the file bin/udisks_functions
+	* source this in .bashrc --- in .bashrc, 'source /home/rshourov/bin/udisks_functions
+	* to mount all in sda : sdm sda
+	* to mount a specific drive: sdm sda8
+
+
+
+#### configuring octave:
+	* install octave-communications
+	* install octave-doc
+	* install matio (matlab file read/write ability)
+	* save custom functions in ~octave/
+	* add ~octave/ to path : in .octaverc : addpath ("~octave/")
+
+
+# use .inputrc file for bash, i.e. for ignore-case autocomplete in bash
+
+# install mercurial, vimwiki for note taking, projects, journal etc
+
+
+# github:
+	* my github account name	: rmshourov
+	* email				: riadmashrub.shourov@gmail.com
+	* as usual my passwd
+
+# drobbox: (http://www.zealfortechnology.com/2013/07/install-dropbox-fedora.html) 
+	* email: riadmashrub.shourov@gmail.com
+	* as usual my passwd
+
+# to change keyboard layout
+    * use the command: setxkbmap -option grp:alt_shift_toggle us,bd
+
+# fixing resolution after playing games with wine:
+    * to revert to original resolution: xrandr -s 1280x800
+      another alternative: xrandr -s 0
+
+# creating wifi hotspot: 
+    * install - hostapd, dhcp, dnsmasq, iptables
+
+
+
+# installing avro
+    * install ibus-avro following https://github.com/sarim/ibus-avro/issues/46
+      su
+      cd /etc/yum.repos.d/
+      curl -L -O http://download.opensuse.org/repositories/home:sarimkhan/Fedora_19/home:sarimkhan.repo
+      yum install ibus-avro
+    
+    * start ibus in /usr/bin/i3-personalized : exec ibus-daemon --xim -d &
+    * select input methods avro from preference
+    * set shortcut 
+    * add this to .bashrc to set for most x apps:(http://code.google.com/p/ibus/wiki/Install)
+        export GTK_IM_MODULE=ibus
+        export QT_IM_MODULE=ibus
+        export XMODIFIERS="@im=ibus"
+    * if any problem in ibus then: 
+        pkill -9 ibus
+        ps -ef | grep ibus
+        /usr/bin/ibus-daemon --xim &
+
+
+
+
+# in laptop simaltaneous press of left & right click means middle click
+
+
+# for backing up home folder: 
+    * command : sudo rsync -rlpogxz --delete  /home /run/media/rshourov/SOFT/Linux_Fedora_Backup/ 
+    * much easier option : rsync -rltuz --delete /home /run/media/rshourov/SOFT/Linux_Fedora_Backup/ (use this one)
+
+# for changing feh keys like vi; save the keys file in .config/feh/keys
+
+
+

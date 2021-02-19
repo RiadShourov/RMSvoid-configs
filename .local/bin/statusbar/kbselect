@@ -1,0 +1,31 @@
+#!/bin/sh
+# works on any init system
+# requirements: dmenu, xorg-setxkbmap
+# kb="$(setxkbmap -query | grep -oP 'layout:\s*\K\w+')" || exit 1
+setxkbmap -query | grep -oP 'layout:\s*\K\w+' || exit 1
+# pkill -RTMIN+8 "${STATUSBAR:-dwmblocks}"
+
+# case $BLOCK_BUTTON in
+# 	# 1) kb_choice="$(awk '/! layout/{flag=1; next} /! variant/{flag=0} flag {print $2, "- " $1}' /usr/share/X11/xkb/rules/base.lst | dmenu -l 15)"
+# 	# kb="$(echo "$kb_choice" | awk '{print $3}')"
+# 	# setxkbmap "$kb"
+# 	# pkill -RTMIN+30 "${STATUSBAR:-dwmblocks}";;
+# 	1) notify-send "⌨  Keyboard/language module" "$(printf "%s" "\- Current layout: $(setxkbmap -query | grep -oP 'layout:\s*\K\w+')")
+# - Mod + F6 for US layout
+# - Mod + F7 for Probhat layout
+# - Left or right click to show this message.";;
+# 	3) notify-send "⌨  Keyboard/language module" "$(printf "%s" "\- Current layout: $(setxkbmap -query | grep -oP 'layout:\s*\K\w+')")
+# - Mod + F6 for US layout
+# - Mod + F7 for Probhat layout
+# - Left or right click to show this message.";;
+# 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+# esac
+
+# echo "$kb"
+
+# if [ "$kb" -gt "us" ]; then
+# 	icon="us"
+# else
+# 	icon="bd"
+
+# echo "$icon"
